@@ -1,0 +1,1213 @@
+{
+    "filename": "ddl_synonym.sql",
+    "numb_objects": 43,
+    "type": "synonym",
+    "type_hex": "67ae03c4b42f19460e4c0fcec181714d",
+    "encryption_key_type": "synonym.key",
+    "inventory": [
+        {
+            "name": "TOP_PROD_RECMND_LOAD",
+            "encrypted_name": "e5c14adb64aa4a286f6fd537f4af6b567ac64e26ea0627aea89cda834d4836b1",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.TOP_PROD_RECMND_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.e5c14adb64aa4a286f6fd537f4af6b567ac64e26ea0627aea89cda834d4836b1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'TOP_PROD_RECMND_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'TOP_PROD_RECMND_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.TOP_PROD_RECMND_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.TOP_PROD_RECMND_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "BAK_SYN_CUST_CORP",
+            "encrypted_name": "98c4b19eb75aa9f7905c59bc2cd6224b104ad5b6771aacb5d4fc8cf75f84667e",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.BAK_SYN_CUST_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.98c4b19eb75aa9f7905c59bc2cd6224b104ad5b6771aacb5d4fc8cf75f84667e",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'BAK_SYN_CUST_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'BAK_CUST_CORP' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.BAK_CUST_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.BAK_SYN_CUST_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_AGGR",
+            "encrypted_name": "5ae3860e3a9cc6553d425201e8ee66e6",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.5ae3860e3a9cc6553d425201e8ee66e6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'PIM_CORP_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'PIM_CORP_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.PIM_CORP_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PIM_CORP_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_PLUS_PRSPCT_CORP",
+            "encrypted_name": "e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_PLUS_PRSPCT_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_PLUS_PRSPCT_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_PLUS_PRSPCT_CORP_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_PLUS_PRSPCT_CORP_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_PLUS_PRSPCT_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_AVG_PNTRTN_RATE",
+            "encrypted_name": "c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_AVG_PNTRTN_RATE",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_AVG_PNTRTN_RATE' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_AVG_PNTRTN_RATE_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_AVG_PNTRTN_RATE_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_AVG_PNTRTN_RATE"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR_LOAD",
+            "encrypted_name": "ff163ba8e97ea19bf3b06ac034605983671d05b30d492d79f9b555e90d3d3f55",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ff163ba8e97ea19bf3b06ac034605983671d05b30d492d79f9b555e90d3d3f55",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_WK_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_WK_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CLSFCTN_CORP_WK",
+            "encrypted_name": "dae10c3db84becb01a5f27f69c8dc0a5a0022be6253b33fcae3676a7a218bfc3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CLSFCTN_CORP_WK",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5a0022be6253b33fcae3676a7a218bfc3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_CLSFCTN_CORP_WK' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CLSFCTN_CORP_WK_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CLSFCTN_CORP_WK_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_CLSFCTN_CORP_WK"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_CUST_CORP_20140517",
+            "encrypted_name": "c23c75d8d0c6a7e372b820dc882f715460491bbf06c697a139ac76f3291b5b88",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_CUST_CORP_20140517",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c23c75d8d0c6a7e372b820dc882f715460491bbf06c697a139ac76f3291b5b88",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SYN_CUST_CORP_20140517' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CORP_20140517' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CORP_20140517"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SYN_CUST_CORP_20140517"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_WKLY",
+            "encrypted_name": "ee68e0badf9923be64bd0277d4c2b04ad56e4d59b65f47aeafa9bbb0026bc256",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_WKLY",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04ad56e4d59b65f47aeafa9bbb0026bc256",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_PYR_WKLY' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_PYR_WKLY_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_WKLY_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_WKLY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "KEY_VAL_ITMS",
+            "encrypted_name": "228dab999cff1b2ac3621ac4e534f3a9",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.KEY_VAL_ITMS",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.228dab999cff1b2ac3621ac4e534f3a9",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'KEY_VAL_ITMS' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'KEY_VAL_ITMS_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.KEY_VAL_ITMS_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.KEY_VAL_ITMS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_CLNDRMO_CORP",
+            "encrypted_name": "026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_CLNDRMO_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_CLNDRMO_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_CLNDRMO_CORP_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_CLNDRMO_CORP_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_CLNDRMO_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_PRJ_LOAD",
+            "encrypted_name": "fe4dadc36a8183d854f867225c5fc2eb68442cfdb0504f2e606b756f9e91577c",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_PRJ_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb68442cfdb0504f2e606b756f9e91577c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_PYR_PRJ_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_PYR_PRJ_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_PRJ_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_PRJ_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_AGGR",
+            "encrypted_name": "ffb3fab38b23351e6a37e03595dad8577b1701e081c5dafaa01beb2cfe7a013c",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8577b1701e081c5dafaa01beb2cfe7a013c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_PYR_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_PYR_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR",
+            "encrypted_name": "e611a6873f094125163fef9fdfcb4ba5",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.e611a6873f094125163fef9fdfcb4ba5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_WK_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_WK_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_WKLY_LOAD",
+            "encrypted_name": "ee68e0badf9923be64bd0277d4c2b04a4386a35e27a3b2d393b409a50b892721",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_WKLY_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04a4386a35e27a3b2d393b409a50b892721",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_PYR_WKLY_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object '' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_WKLY_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_WKLY_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_MRCH_AGGR",
+            "encrypted_name": "a7cf8b514cf93fa2f4d3275817d813c6bb57eaa41b903e3b9cd39e4edef75761",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_MRCH_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6bb57eaa41b903e3b9cd39e4edef75761",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'PIM_CORP_MRCH_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'PIM_CORP_MRCH_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.PIM_CORP_MRCH_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PIM_CORP_MRCH_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_RGN_WK_PRJ",
+            "encrypted_name": "8d628a0c4cb01e73e3eb8de259876d5623748394ddc16fc3e7c234d17e643ca3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_RGN_WK_PRJ",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.8d628a0c4cb01e73e3eb8de259876d5623748394ddc16fc3e7c234d17e643ca3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_RGN_WK_PRJ' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_RGN_WK_PRJ_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_RGN_WK_PRJ_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_RGN_WK_PRJ"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "DDMADM_SIS_SLS_DTL_CORP",
+            "encrypted_name": "8d6895004ec5c0a6c2478256c3e69b611eeeb2e5166c759a8766603d10c5e5c1",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.DDMADM_SIS_SLS_DTL_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.8d6895004ec5c0a6c2478256c3e69b611eeeb2e5166c759a8766603d10c5e5c1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'DDMADM_SIS_SLS_DTL_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SIS_SLS_DTL_CORP' in the schema 'DDMADM' at the database link 'IWSTGPRD_DBLINK.MAIN.USFOOD.COM'."
+                ]
+            },
+            "upstream_dependencies": [
+                "DDMADM.SIS_SLS_DTL_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.DDMADM_SIS_SLS_DTL_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_LNS_AGGR",
+            "encrypted_name": "f8063c28520771993684b0074a7f5950",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_LNS_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.f8063c28520771993684b0074a7f5950",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CKBK_LNS_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CKBK_LNS_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CKBK_LNS_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CKBK_LNS_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_SLS_RNK_ORG",
+            "encrypted_name": "bb246eaa6687d40ae5b194591d1f8fe8",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_SLS_RNK_ORG",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.bb246eaa6687d40ae5b194591d1f8fe8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SYN_SLS_RNK_ORG' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SLS_RNK_ORG' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SLS_RNK_ORG"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SYN_SLS_RNK_ORG"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_MKTPLUS_AGGR",
+            "encrypted_name": "c3dd4a06185f604596ff6e07a82f3e06bb57eaa41b903e3b9cd39e4edef75761",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_MKTPLUS_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c3dd4a06185f604596ff6e07a82f3e06bb57eaa41b903e3b9cd39e4edef75761",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_MKTPLUS_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_MKTPLUS_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_MKTPLUS_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_MKTPLUS_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_RSN_EXCLD_LOAD",
+            "encrypted_name": "2af34e0a6d3ca64934a4c255e28b44eca3cfd9be25b4748f6c24071aa76204c6",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_RSN_EXCLD_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.2af34e0a6d3ca64934a4c255e28b44eca3cfd9be25b4748f6c24071aa76204c6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CKBK_RSN_EXCLD_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CKBK_RSN_EXCLD_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CKBK_RSN_EXCLD_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CKBK_RSN_EXCLD_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR_TST",
+            "encrypted_name": "6601bca11e1db4f1cb7c56e9de1b8b0823748394ddc16fc3e7c234d17e643ca3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR_TST",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.6601bca11e1db4f1cb7c56e9de1b8b0823748394ddc16fc3e7c234d17e643ca3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_WK_AGGR_TST' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_WK_AGGR_B_TST' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_B_TST"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_TST"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR_LOAD_TST",
+            "encrypted_name": "ff163ba8e97ea19bf3b06ac034605983fb9b7557b431b50734d37a422f01ee03",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR_LOAD_TST",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ff163ba8e97ea19bf3b06ac034605983fb9b7557b431b50734d37a422f01ee03",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_WK_AGGR_LOAD_TST' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_WK_AGGR_A_TST' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_A_TST"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_WK_AGGR_LOAD_TST"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_LNS_AGGR_LOAD",
+            "encrypted_name": "a096f2c69b38bdfc58ad9774f8d4beaf08ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_LNS_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.a096f2c69b38bdfc58ad9774f8d4beaf08ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CKBK_LNS_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CKBK_LNS_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CKBK_LNS_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CKBK_LNS_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CLSFCTN_CORP_WK_LOAD",
+            "encrypted_name": "dae10c3db84becb01a5f27f69c8dc0a5b4485578749a3a984f5e5984f0aa64a8",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CLSFCTN_CORP_WK_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5b4485578749a3a984f5e5984f0aa64a8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_CLSFCTN_CORP_WK_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CLSFCTN_CORP_WK_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CLSFCTN_CORP_WK_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_CLSFCTN_CORP_WK_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "TOP_PROD_RECMND",
+            "encrypted_name": "8044fdf02cf3463ed06cad299252251c",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.TOP_PROD_RECMND",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.8044fdf02cf3463ed06cad299252251c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'TOP_PROD_RECMND' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'TOP_PROD_RECMND_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.TOP_PROD_RECMND_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.TOP_PROD_RECMND"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_MRCH_AGGR_LOAD",
+            "encrypted_name": "a7cf8b514cf93fa2f4d3275817d813c6c81bd5196d8a3d7deba246d9fabe1065",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_MRCH_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6c81bd5196d8a3d7deba246d9fabe1065",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'PIM_CORP_MRCH_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'PIM_CORP_MRCH_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.PIM_CORP_MRCH_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PIM_CORP_MRCH_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_RGN_WK_AGGR",
+            "encrypted_name": "da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_RGN_WK_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_RGN_WK_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_RGN_WK_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_RGN_WK_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_RGN_WK_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_CUST_MRCH",
+            "encrypted_name": "84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_CUST_MRCH",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_CUST_MRCH' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_CUST_MRCH_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_CUST_MRCH_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_CUST_MRCH"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_MRCH_AGGR",
+            "encrypted_name": "6b6e1108ab16224bfed98b8088abba22c62f2d6bc915b0ca914ec19c1db11fc3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_MRCH_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba22c62f2d6bc915b0ca914ec19c1db11fc3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_MRCH_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object '' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_MRCH_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_MRCH_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_CUST_CORP",
+            "encrypted_name": "d8b640f6e233c4a6c59270703c906414",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_CUST_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.d8b640f6e233c4a6c59270703c906414",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SYN_CUST_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CORP' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SYN_CUST_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_RSN_EXCLD",
+            "encrypted_name": "795e4b861aaa0399232fb1ddd3de49d9",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_RSN_EXCLD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.795e4b861aaa0399232fb1ddd3de49d9",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CKBK_RSN_EXCLD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CKBK_RSN_EXCLD_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CKBK_RSN_EXCLD_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CKBK_RSN_EXCLD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CORP_PYR_AGGR",
+            "encrypted_name": "bdfea6cc5f5641706c04029087308890bb57eaa41b903e3b9cd39e4edef75761",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CORP_PYR_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890bb57eaa41b903e3b9cd39e4edef75761",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_CORP_PYR_AGGR' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CORP_PYR_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CORP_PYR_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_CORP_PYR_AGGR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_PRJ",
+            "encrypted_name": "fe4dadc36a8183d854f867225c5fc2eb02ce8684c1a0ec3d99db6461d54aaf63",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_PRJ",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb02ce8684c1a0ec3d99db6461d54aaf63",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_PYR_PRJ' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_PYR_PRJ_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_PRJ_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_PRJ"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_AGGR_LOAD",
+            "encrypted_name": "ffb3fab38b23351e6a37e03595dad8574313146e1f5f83678b4829642f66ee02",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8574313146e1f5f83678b4829642f66ee02",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_PYR_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_PYR_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_PYR_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "KEY_VAL_ITMS_LOAD",
+            "encrypted_name": "c80315b82050f824e9e286078b824d61671d05b30d492d79f9b555e90d3d3f55",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.KEY_VAL_ITMS_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c80315b82050f824e9e286078b824d61671d05b30d492d79f9b555e90d3d3f55",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'KEY_VAL_ITMS_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'KEY_VAL_ITMS_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.KEY_VAL_ITMS_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.KEY_VAL_ITMS_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_DIV_CORP",
+            "encrypted_name": "ec8603b1243dc011308058eb61b072e2",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_DIV_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ec8603b1243dc011308058eb61b072e2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SYN_DIV_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'DIV_CORP' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.DIV_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SYN_DIV_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_CUST_CLSFCTN_CORP",
+            "encrypted_name": "426b088ae4481260ead9b5366d97db940ac262c501fd3cf6990794b809d16914",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_CUST_CLSFCTN_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.426b088ae4481260ead9b5366d97db940ac262c501fd3cf6990794b809d16914",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SYN_CUST_CLSFCTN_CORP' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CLSFCTN_CORP' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CLSFCTN_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SYN_CUST_CLSFCTN_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_AGGR_LOAD",
+            "encrypted_name": "da285294918e9b52c9b949e37926a8d108ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.da285294918e9b52c9b949e37926a8d108ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'PIM_CORP_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'PIM_CORP_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.PIM_CORP_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PIM_CORP_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_MRCH_AGGR_LOAD",
+            "encrypted_name": "6b6e1108ab16224bfed98b8088abba222d32801b780bcd7658be8387ccb752c7",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_MRCH_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba222d32801b780bcd7658be8387ccb752c7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'SALES_SUMM_MRCH_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'SALES_SUMM_MRCH_AGGR_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.SALES_SUMM_MRCH_AGGR_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.SALES_SUMM_MRCH_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CORP_PYR_AGGR_LOAD",
+            "encrypted_name": "bdfea6cc5f5641706c04029087308890c81bd5196d8a3d7deba246d9fabe1065",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CORP_PYR_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890c81bd5196d8a3d7deba246d9fabe1065",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_CORP_PYR_AGGR_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_CORP_PYR_AGGR_B' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_CORP_PYR_AGGR_B"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_CORP_PYR_AGGR_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_AVG_PNTRTN_RATE_LOAD",
+            "encrypted_name": "c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_AVG_PNTRTN_RATE_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'CUST_AVG_PNTRTN_RATE_LOAD' is created or replaced in the schema 'XDMADM'.",
+                    "2. The synonym is created for the object 'CUST_AVG_PNTRTN_RATE_A' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "XDMADM.CUST_AVG_PNTRTN_RATE_A"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.CUST_AVG_PNTRTN_RATE_LOAD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "filename": "DDL_trigger.sql",
+    "numb_objects": 2,
+    "type": "trigger",
+    "type_hex": "6ea1f0f4c3cb2d4274409e2f9146ff47",
+    "encryption_key_type": "trigger.key",
+    "inventory": [
+        {
+            "name": "DROP_CORP_ORIG_LDR_TM_T",
+            "encrypted_name": "f5af0af8e0886ac48330418d1d6e17cbc001126bd6190da400b5a26712e7bfd8",
+            "type": "trigger",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "230196a0088fcb49b31998f1afbbca13",
+            "fully_qualified_name": "XDMADM.DROP_CORP_ORIG_LDR_TM_T",
+            "encrypted_fqn": "230196a0088fcb49b31998f1afbbca13.f5af0af8e0886ac48330418d1d6e17cbc001126bd6190da400b5a26712e7bfd8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The trigger is created with the name 'DROP_CORP_ORIG_LDR_TM_T' in the schema 'XDMADM'.",
+                    "2. The trigger is defined to execute before an insert operation on the table 'DROP_CORP'.",
+                    "3. The trigger is set to execute for each row being inserted.",
+                    "4. The trigger code assigns the value of the column 'ORIG_LDR_TM' in the same row to the column 'LDR_TM' in the same row.",
+                    "5. The trigger is enabled for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 1,
+                    "Unique Operators": 1,
+                    "Unique Operands": 1,
+                    "Vocabulary Size": 2,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [
+                "NEW.LDR_TM",
+                "XDMADM.DROP_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.DROP_CORP_ORIG_LDR_TM_T"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "TRG_U_I_CUST_CHNSUMM_CORP",
+            "encrypted_name": "972cadda85ba1f89df039c7916320b6765c595bd91ed1b1594126e76bbf464a3",
+            "type": "trigger",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "230196a0088fcb49b31998f1afbbca13",
+            "fully_qualified_name": "XDMADM.TRG_U_I_CUST_CHNSUMM_CORP",
+            "encrypted_fqn": "230196a0088fcb49b31998f1afbbca13.972cadda85ba1f89df039c7916320b6765c595bd91ed1b1594126e76bbf464a3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The trigger is named 'TRG_U_I_CUST_CHNSUMM_CORP'.",
+                    "2. The trigger is created in the schema 'XDMADM'.",
+                    "3. The trigger is defined as a BEFORE UPDATE OR INSERT trigger.",
+                    "4. The trigger is defined on the table 'CUST_CHNSUMM_CORP' in the schema 'XDMADM'.",
+                    "5. The trigger is defined to execute for each row affected by the UPDATE or INSERT operation.",
+                    "6. The trigger includes a conditional statement using IF-THEN-ELSE logic.",
+                    "7. The condition checks if the value of the column 'LDR_TM' in the table 'NEW' is NOT NULL and if it is different from the value of the column 'LDR_TM' in the table 'OLD' compared to the value of the column 'LDR_TM' in the table 'NEW'.",
+                    "8. If the condition is true, the trigger does nothing (null statement).",
+                    "9. If the condition is false, the trigger assigns the current date and time in the format 'yyyymmddhh24miss' to the column 'LDR_TM' in the table 'NEW'.",
+                    "10. The trigger is enabled after creation."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 8,
+                    "Unique Operators": 6,
+                    "Unique Operands": 6,
+                    "Vocabulary Size": 12,
+                    "Program Volume": 18,
+                    "Program Difficulty": 1.5,
+                    "Program Effort": 27,
+                    "Program Bugs": 0.01
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.TRG_U_I_CUST_CHNSUMM_CORP"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

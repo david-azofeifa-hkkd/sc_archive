@@ -1,0 +1,1070 @@
+{
+    "filename": "DDL_view.sql",
+    "numb_objects": 30,
+    "type": "view",
+    "type_hex": "b86427d3f5d3c44097b95d175b34d9ae",
+    "encryption_key_type": "view.key",
+    "inventory": [
+        {
+            "name": "VW_SLS_TRTRY_MAP",
+            "encrypted_name": "812053e98a3172670b26f5b5afee19948d9580344567eff93950316463fe05bf",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_SLS_TRTRY_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.812053e98a3172670b26f5b5afee19948d9580344567eff93950316463fe05bf",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '812053e98a3172670b26f5b5afee19948d9580344567eff93950316463fe05bf' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 15 columns: DIV_NBR, TRADE_CLASS, TRTRY_CD, TRTRY_TYPE, DSTRCT_CD, DSTRCT_NM, DSTRCT_SLS_MGR_NM, DSTRCT_SLS_MGR_ID, DSTRCT_SLS_MGR_NM_ID, TRTRY_MGR_ID, TRTRY_MGR_NM, TRTRY_MGR_NM_ID, RGN_SLS_MGR_ID, RGN_SLS_MGR_NM, RGN_SLS_MGR_NM_ID.",
+                    "4. The view is constructed using a UNION of two SELECT DISTINCT queries.",
+                    "5. The first SELECT DISTINCT query retrieves data from the table 'cbc96f3cce8bdaaa3a0be45b179efb1d.57a2092c990e5b9c70616182607c7141'.",
+                    "6. The second SELECT DISTINCT query retrieves data from the table 'cbc96f3cce8bdaaa3a0be45b179efb1d.b80ccaf81a45f2375c146f0fea3a364dd5ec4d5b959c35c375504f4f25367d1c'.",
+                    "7. Both SELECT queries include a constant value '1' for the TRADE_CLASS column.",
+                    "8. The DSTRCT_SLS_MGR_NM_ID, TRTRY_MGR_NM_ID, and RGN_SLS_MGR_NM_ID columns are derived using CASE statements to concatenate values with specific formats or return NULL or '(NOT APPLICABLE)' based on conditions.",
+                    "9. The view ensures distinct rows by using the DISTINCT keyword in both SELECT queries.",
+                    "10. The view combines data from two different tables with similar structures and logic to create a unified result set."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.CBC96F3CCE8BDAAA3A0BE45B179EFB1D.57A2092C990E5B9C70616182607C7141",
+                "CCF925CE0B54913EC758E2779B9B1672.CBC96F3CCE8BDAAA3A0BE45B179EFB1D.B80CCAF81A45F2375C146F0FEA3A364DD5EC4D5B959C35C375504F4F25367D1C"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.812053E98A3172670B26F5B5AFEE19948D9580344567EFF93950316463FE05BF"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_PIM_BRND_MAP",
+            "encrypted_name": "2b49310c4acdd8eda9e78770362b461f",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_PIM_BRND_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.2b49310c4acdd8eda9e78770362b461f",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '2b49310c4acdd8eda9e78770362b461f' and is located in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: PIM_BRND_ID, PIM_BRND_NM, PIM_BRND_TYP, PIM_BRND_ABRV_ASYS, PIM_BRND_ABRV_PSYS, PIM_USF_MFR_ID, PIM_USF_BRND_OWN, PIM_SPCL_LBL, PIM_EB_MFR, INACT_DT, LOAD_DATE_1010, LOAD_DATETIME_1010.",
+                    "4. The view is defined using a SELECT statement that retrieves data from the table 'c6a04803b82ea04fd59d210a5a712753' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns PIM_BRND_ID, PIM_BRND_NM, PIM_BRND_TYP, PIM_BRND_ABRV_ASYS, PIM_BRND_ABRV_PSYS, PIM_USF_MFR_ID, PIM_USF_BRND_OWN, PIM_SPCL_LBL, PIM_EB_MFR, and INACT_DT are directly selected from the source table.",
+                    "6. The column LOAD_DATE_1010 is derived by converting the current system date (SYSDATE) to a number in the format 'YYYYMMDD'.",
+                    "7. The column LOAD_DATETIME_1010 is derived by selecting the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.C6A04803B82EA04FD59D210A5A712753"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.2B49310C4ACDD8EDA9E78770362B461F"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_PFV_CORP",
+            "encrypted_name": "13e56727621e09e2d8f509548633b24d",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_PFV_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.13e56727621e09e2d8f509548633b24d",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '13e56727621e09e2d8f509548633b24d' and is located in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: DIV_NBR, PRCH_FROM_VNDR_NBR, PRCH_FROM_VNDR_NM, ADDR_LN_1, ADDR_LN_2, CITY, ST, ZIP_CD, CNTCT_NM, PHN_NBR, PHN_NBR_EXTNS, FAX_NBR, FAX_NBR_EXTNS, PFV_CMPNY_VNDR_NBR, PFV_CMPNY_VNDR_NM, NATL_VNDR_ADDED_DT, NATL_VNDR_MAINT_DT, STAT_CD, STAT_CD_MAINT_DT, VNDR_SPLY_TYP, KRAFT_VNDR_IND, CAN_ZIP_CD_IND, CMPNY_VNDR_IND, INTER_CMPNY_DIV_NBR, BUYR_NBR, BUYR_NETWRK_ID, BUYR_TYP_ID, BUYR_NM, LEAD_TM_DYS, SHIP_FROM_VNDR_NBR, ORD_FROM_VNDR_NBR, AP_VNDR_NBR, AP_VNDR_TYP_ID, DIV_CMNT_1, DIV_CMNT_2, DIV_VNDR_ADDED_DT, DIV_VNDR_MAINT_DT, VNDR_PYMNT_TRM_PCT, VNDR_PYMNT_TRM_DYS, VNDR_PYMNT_TRM_NET_DYS, VNDR_PYMNT_TRM_BASE, VNDR_PYMNT_TRM_LAST_MAINT_DT, RCVNG_DIV_NBR, PICKUP_PNT_FOB_CD, CDE_TYP, CDE_VAL, NTV_ORD_FROM_VNDR_NBR, NTV_SHIP_FROM_VNDR_NBR, LDR_TM, INACT_DT, MEAN_AVG_DVTN_LEAD_TM, LOAD_DATE_1010, LOAD_DATETIME_1010.",
+                    "4. The view is based on a SELECT statement that retrieves data from the table '811c325c02c098c2138c6c3e071b92c5' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns in the view are directly mapped from the columns in the source table, with the exception of LOAD_DATE_1010 and LOAD_DATETIME_1010.",
+                    "6. The LOAD_DATE_1010 column is derived using the TO_NUMBER and TO_CHAR functions to convert the current date (SYSDATE) to a numeric format 'YYYYMMDD'.",
+                    "7. The LOAD_DATETIME_1010 column is directly assigned the current date and time using SYSDATE."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.811C325C02C098C2138C6C3E071B92C5"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.13E56727621E09E2D8F509548633B24D"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_ACCTBLTY_MAP",
+            "encrypted_name": "3668eed23fc1fe0bd062a1c6a598f4cad33d5e3b3b08f92f62da6a3044f465c0",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_ACCTBLTY_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.3668eed23fc1fe0bd062a1c6a598f4cad33d5e3b3b08f92f62da6a3044f465c0",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '3668eed23fc1fe0bd062a1c6a598f4cad33d5e3b3b08f92f62da6a3044f465c0' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has five columns: CUST_ACCTBLTY_FLG, CUST_ACCTBLTY_DESC, CUST_ACCTBLTY_CD_DESC, LOAD_DATE_1010, and LOAD_DATETIME_1010.",
+                    "4. The view's definition is based on a SELECT statement that retrieves data from the table '6bad6c6947ccdc0cca5d26f51617c83c06ef0db62b98233e042fd1e2485cbaef' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The SELECT statement includes the following columns from the source table: CUST_ACCTBLTY_FLG, CUST_ACCTBLTY_DESC, and CUST_ACCTBLTY_CD_DESC.",
+                    "6. The LOAD_DATE_1010 column is derived by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it to a number.",
+                    "7. The LOAD_DATETIME_1010 column is directly assigned the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.6BAD6C6947CCDC0CCA5D26F51617C83C06EF0DB62B98233E042FD1E2485CBAEF"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.3668EED23FC1FE0BD062A1C6A598F4CAD33D5E3B3B08F92F62DA6A3044F465C0"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_MKTPLUS_ALL",
+            "encrypted_name": "a935b67d6cfa3e9cb78c28b651c35b7bd41b161bdfc6c1296617ae1ddae578b8",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_MKTPLUS_ALL",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.a935b67d6cfa3e9cb78c28b651c35b7bd41b161bdfc6c1296617ae1ddae578b8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'a935b67d6cfa3e9cb78c28b651c35b7bd41b161bdfc6c1296617ae1ddae578b8' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has a large number of columns, each with a specific alias, such as 'CUST_PLUS_PRSPCT_SK', 'CUST_ACCT_TYP_CD', 'CUST_ACCT_TYP_DESC', etc.",
+                    "4. The view's SELECT statement retrieves data from multiple tables, specifically 'cbc96f3cce8bdaaa3a0be45b179efb1d.404ac46a71af8163be1e80ab305d35680375271b3b465533ed60fda14d94685e' (aliased as 'p'), 'cbc96f3cce8bdaaa3a0be45b179efb1d.036fb2f96b7d4cdf7bfd27d95e6b2c7d' (aliased as 'c'), and 'cbc96f3cce8bdaaa3a0be45b179efb1d.4cfd13972e46b3d97e43edb5e6d26880' (aliased as 'm').",
+                    "5. The view uses LEFT JOIN operations to combine data from these tables based on specific conditions.",
+                    "6. The first LEFT JOIN condition matches 'c7932790e9fa4ed8db2b8d27d4777db2.23e060b03dc8e64190d777dd74802df5' with '4ffa5865f0e03be657c8a8becf456967.23e060b03dc8e64190d777dd74802df5' and 'c7932790e9fa4ed8db2b8d27d4777db2.b4599b3889c46512ff4970b516d68509' with '4ffa5865f0e03be657c8a8becf456967.b4599b3889c46512ff4970b516d68509'.",
+                    "7. The second LEFT JOIN condition matches 'c7932790e9fa4ed8db2b8d27d4777db2.ae899760105e976c747c2fa238d3ead5' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.ae899760105e976c747c2fa238d3ead5', 'c7932790e9fa4ed8db2b8d27d4777db2.b4599b3889c46512ff4970b516d68509' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.b4599b3889c46512ff4970b516d68509', and 'c7932790e9fa4ed8db2b8d27d4777db2.77973809f6748f8d643224ba3f996de8' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.77973809f6748f8d643224ba3f996de8'.",
+                    "8. The SELECT statement includes a large number of columns from the joined tables, each with a specific alias to match the view's column names.",
+                    "9. The view is designed to combine customer and child account information from the specified tables, providing a comprehensive dataset with detailed customer and account attributes."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.404AC46A71AF8163BE1E80AB305D35680375271B3B465533ED60FDA14D94685E",
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.036FB2F96B7D4CDF7BFD27D95E6B2C7D",
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.4CFD13972E46B3D97E43EDB5E6D26880"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.A935B67D6CFA3E9CB78C28B651C35B7BD41B161BDFC6C1296617AE1DDAE578B8"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_PROD_RECALL_CUST_CNTCT",
+            "encrypted_name": "a9697e8ac58f6941cc75a5553e246268f05586641c084c1aae984f5e2b96e1c5",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_PROD_RECALL_CUST_CNTCT",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.a9697e8ac58f6941cc75a5553e246268f05586641c084c1aae984f5e2b96e1c5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced with the name 'a9697e8ac58f6941cc75a5553e246268f05586641c084c1aae984f5e2b96e1c5' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "2. The view has the following columns: DIV_NBR, CUST_NBR, RECALL_EMAIL_ADDR, RECALL_FRST_NM, RECALL_LST_NM, RECALL_JOB_TITLE, RECALL_PHONE, RECALL_MOBILE, ESCALATION_1_EMAIL_ADDR, ESCALATION_1_FRST_NM, ESCALATION_1_LST_NM, ESCALATION_1_JOB_TITLE, ESCALATION_1_PHONE, ESCALATION_1_MOBILE, ESCALATION_2_EMAIL_ADDR, ESCALATION_2_FRST_NM, ESCALATION_2_LST_NM, ESCALATION_2_JOB_TITLE, ESCALATION_2_PHONE, ESCALATION_2_MOBILE.",
+                    "3. The view is constructed using a SELECT statement that combines data from multiple subqueries.",
+                    "4. The first subquery (aliased as 'rcl') selects the most recent 'Recall' contact for each division and customer, based on the highest cntct_id and accnt_id, and filters for active contacts.",
+                    "5. The second subquery (aliased as 'rcl1') selects the most recent 'Recall Escalation 1' contact for each division and customer, based on the highest cntct_id and accnt_id, and filters for active contacts.",
+                    "6. The third subquery (aliased as 'rcl2') selects the most recent 'Recall Escalation 2' contact for each division and customer, based on the highest cntct_id and accnt_id, and filters for active contacts.",
+                    "7. The fourth subquery (aliased as 'org') selects distinct division and customer numbers from the table, filtering for active contacts with a non-null contact category.",
+                    "8. The main SELECT statement joins the results of these subqueries on the division and customer numbers, using outer joins to ensure all relevant data is included even if some subqueries do not return results.",
+                    "9. The view includes several outer join conditions to combine data from different sources, ensuring that the final result set includes all relevant contact information for each division and customer."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.3C56F6F1CDD0977B73DCF104E8B60BF0",
+                "01AC9B4243CA25E4E088C3D699E1EAEF.B4599B3889C46512FF4970B516D68509",
+                "01AC9B4243CA25E4E088C3D699E1EAEF.23E060B03DC8E64190D777DD74802DF5",
+                "13753968EAE4DE16840DD89A885D8C76.EF5C2C8EF95F393B23F641B0101C950F",
+                "13753968EAE4DE16840DD89A885D8C76.3FCDF07383E4211ECAB727D2ED68A7E9",
+                "45F260691105E4BBC1B66339A67F83A1.61821A0243D77F3F21CC68C506DC79A1C0B5488AACE61D6DCA9BDA670F66E394",
+                "45F260691105E4BBC1B66339A67F83A1.401D22150F6B9DB776C7EF58D918BB5ADDD5A4D3E0D182759C82614388BA17CA",
+                "ED49C77ED343C5053862E1FFDDD8CB2D.B80F91333126ECFBEABFB0550E4765ABC0B5488AACE61D6DCA9BDA670F66E394",
+                "ED49C77ED343C5053862E1FFDDD8CB2D.13509B228628CE8D9DD9FCCB4682C368DDD5A4D3E0D182759C82614388BA17CA"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.A9697E8AC58F6941CC75A5553E246268F05586641C084C1AAE984F5E2B96E1C5"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_SALES_MKTPLUS_AGGR_FBD",
+            "encrypted_name": "27965e0de7aed6cb34fa6e7ae7155c42065ced0b1c6dfa12e938c22eba2f29cd",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_SALES_MKTPLUS_AGGR_FBD",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.27965e0de7aed6cb34fa6e7ae7155c42065ced0b1c6dfa12e938c22eba2f29cd",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '27965e0de7aed6cb34fa6e7ae7155c42065ced0b1c6dfa12e938c22eba2f29cd' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 60 columns with specific names: 'CUST_PLUS_PRSPCT_SK', 'MP_CHD_ID', 'MP_US_FOODS_ID', 'CUST_NBR', 'DIV_NBR', 'FISC_YR_MTH', 'CURR_IND', 'LDR_TM', 'MP_MSTR_ID', 'RES_TYP_IND', 'MP_FOOD_BVRG_DSPSBL_PRCH', 'MP_FOOD_DSPSBL_PRCH', 'MP_TTL_CAT_DRY', 'MP_TTL_CAT_FRSH', 'MP_TTL_CAT_FRZ', 'MP_TTL_CAT_PROTN', 'MP_TTL_CAT_BVRG', 'MP_TTL_CAT_DSPSBL', 'MP_TTL_CAT_FRSH_FRZ', 'PERIOD_MP_FOOD_BVG_DSPSBL_PRCH', 'PERIOD_MP_FOOD_DSPSBL_PRCH', 'PERIOD_MP_TTL_CAT_DRY', 'PERIOD_MP_TTL_CAT_FRSH', 'PERIOD_MP_TTL_CAT_FRZ', 'PERIOD_MP_TTL_CAT_PROTN', 'PERIOD_MP_TTL_CAT_BVRG', 'PERIOD_MP_TTL_CAT_DSPSBL', 'PERIOD_MP_TTL_CAT_FRSH_FRZ', 'GRS_SLS_EXTND', 'LND_ACTL_GP', 'NET_WT_SHIP', 'DVT_COST_EXTND', 'PROD_ALW', 'NET_SLS_EXTND', 'DWA_COST_EXTND', 'NATL_INT_DVT', 'LOC_INT_DVT', 'NATL_VNDR_FND_DVT', 'LOC_VNDR_FND_DVT', 'TTL_LOC_ALWNC', 'TTL_NATL_ALWNC', 'NATL_PROM_ALWNC_PGMS', 'NATL_ONE_TM', 'LOC_PROM_ALWNC_PGMS', 'LOC_MRKTNG_ALWNC_PGMS', 'LOC_ONE_TM', 'NATL_MRKTNG_ALWNC_PGMS', 'INV_ACTL_GP', 'UNFRM_QTY_SHIP', 'ACTL_GP', 'DROPS', 'NET_SALES', 'NET_TAGP', 'GROSS_TGP', 'NET_TGP', 'SAGP', 'PAS', 'ALWNC_CHG', 'REBATES', 'COGS_ALWNC_CHG'.",
+                    "4. The view is based on a SELECT statement that retrieves data from a table named '2aaaf882777e8d3a6860ac956941e69af6e62a72688268503296344f57631be1' in the schema 'cbc96f3cce8bdaaa3a0be45b179efb1d'.",
+                    "5. Each column in the view corresponds to a specific column in the source table, with the source columns having obfuscated names such as '404ac46a71af8163be1e80ab305d3568ef23509e74fca719680e9724937b90f8', 'ae899760105e976c747c2fa238d3ead5', etc.",
+                    "6. The view creation ensures that the view will be created even if it already exists (using the FORCE keyword)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.2AAAF882777E8D3A6860AC956941E69AF6E62A72688268503296344F57631BE1"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.27965E0DE7AED6CB34FA6E7AE7155C42065CED0B1C6DFA12E938C22EBA2F29CD"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_CNTRCT_STAT_MAP",
+            "encrypted_name": "8be1ef8bb74a8b57d568ee880ce1ac9c43ba106c9a98426ccf89b482317b49a7",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_CNTRCT_STAT_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.8be1ef8bb74a8b57d568ee880ce1ac9c43ba106c9a98426ccf89b482317b49a7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '8be1ef8bb74a8b57d568ee880ce1ac9c43ba106c9a98426ccf89b482317b49a7' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has five columns: 'CUST_CNTRCT_FLG', 'CUST_CNTRCT_STAT_DESC', 'CUST_CNTRCT_STAT_CD_DESC', 'LOAD_DATE_1010', and 'LOAD_DATETIME_1010'.",
+                    "4. The view's SELECT statement retrieves data from the table '5bb5f44df80ac1ced47c59f86905e18cd33d5e3b3b08f92f62da6a3044f465c0' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns 'CUST_CNTRCT_FLG', 'CUST_CNTRCT_STAT_DESC', and 'CUST_CNTRCT_STAT_CD_DESC' are directly selected from the source table.",
+                    "6. The column 'LOAD_DATE_1010' is derived by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it to a number.",
+                    "7. The column 'LOAD_DATETIME_1010' is set to the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.5BB5F44DF80AC1CED47C59F86905E18CD33D5E3B3B08F92F62DA6A3044F465C0"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.8BE1EF8BB74A8B57D568EE880CE1AC9C43BA106C9A98426CCF89B482317B49A7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_SALES_MKTPLUS_AGGR_WO_FBD",
+            "encrypted_name": "27965e0de7aed6cb34fa6e7ae7155c4264cc26dcbdabe839f94b97b000b61a32",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_SALES_MKTPLUS_AGGR_WO_FBD",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.27965e0de7aed6cb34fa6e7ae7155c4264cc26dcbdabe839f94b97b000b61a32",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '27965e0de7aed6cb34fa6e7ae7155c4264cc26dcbdabe839f94b97b000b61a32' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 40 columns with the following names: 'CUST_PLUS_PRSPCT_SK', 'MP_CHD_ID', 'MP_US_FOODS_ID', 'CUST_NBR', 'DIV_NBR', 'FISC_YR_MTH', 'CURR_IND', 'LDR_TM', 'MP_MSTR_ID', 'RES_TYP_IND', 'GRS_SLS_EXTND', 'LND_ACTL_GP', 'NET_WT_SHIP', 'DVT_COST_EXTND', 'PROD_ALW', 'NET_SLS_EXTND', 'DWA_COST_EXTND', 'NATL_INT_DVT', 'LOC_INT_DVT', 'NATL_VNDR_FND_DVT', 'LOC_VNDR_FND_DVT', 'TTL_LOC_ALWNC', 'TTL_NATL_ALWNC', 'NATL_PROM_ALWNC_PGMS', 'NATL_ONE_TM', 'LOC_PROM_ALWNC_PGMS', 'LOC_MRKTNG_ALWNC_PGMS', 'LOC_ONE_TM', 'NATL_MRKTNG_ALWNC_PGMS', 'INV_ACTL_GP', 'UNFRM_QTY_SHIP', 'ACTL_GP', 'DROPS', 'NET_SALES', 'NET_TAGP', 'GROSS_TGP', 'NET_TGP', 'SAGP', 'PAS', 'ALWNC_CHG', 'REBATES', 'COGS_ALWNC_CHG'.",
+                    "4. The view is based on a SELECT statement that retrieves data from the table '2aaaf882777e8d3a6860ac956941e69af6e62a72688268503296344f57631be1' in the schema 'cbc96f3cce8bdaaa3a0be45b179efb1d'.",
+                    "5. The SELECT statement includes 40 columns, each corresponding to the columns defined in the view.",
+                    "6. The view includes a WHERE clause that filters the data based on the condition that the 'CUST_NBR' column (aliased as '23e060b03dc8e64190d777dd74802df5') is not null."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.2AAAF882777E8D3A6860AC956941E69AF6E62A72688268503296344F57631BE1"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.27965E0DE7AED6CB34FA6E7AE7155C4264CC26DCBDABE839F94B97B000B61A32"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_PROD_SRC_MAP",
+            "encrypted_name": "0bdee0684ea75a37721e7178d3e0b7ec",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_PROD_SRC_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.0bdee0684ea75a37721e7178d3e0b7ec",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '0bdee0684ea75a37721e7178d3e0b7ec' and is located in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has five columns: 'DIV_NBR', 'PROD_SRC_DIV_NBR', 'DEFAULT_CUST_NBR', 'LOAD_DATE_1010', and 'LOAD_DATETIME_1010'.",
+                    "4. The view's SELECT statement retrieves data from the table '84fb0298669119bef8e74519b60577ac' in the same schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The 'DIV_NBR', 'PROD_SRC_DIV_NBR', and 'DEFAULT_CUST_NBR' columns are directly selected from the source table.",
+                    "6. The 'LOAD_DATE_1010' column is generated by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it back to a number.",
+                    "7. The 'LOAD_DATETIME_1010' column is set to the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.84FB0298669119BEF8E74519B60577AC"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.0BDEE0684EA75A37721E7178D3E0B7EC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_CORP",
+            "encrypted_name": "28116d62375d206602bae557df4aced5",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.28116d62375d206602bae557df4aced5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '28116d62375d206602bae557df4aced5' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has a total of 200 columns, each with a specific name such as 'CUST_SK', 'CUST_NBR', 'DIV_NBR', etc.",
+                    "4. The view is defined using a SELECT statement that retrieves data from the table '9610325031501fc0f12e8e8792447474' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The SELECT statement includes all the columns specified in the view definition, ensuring that the view structure matches the table structure.",
+                    "6. Two additional columns are included in the SELECT statement:",
+                    "6.1. 'LOAD_DATE_1010' is derived using the TO_NUMBER and TO_CHAR functions to get the current date in 'YYYYMMDD' format.",
+                    "6.2. 'LOAD_DATETIME_1010' is derived using the SYSDATE function to get the current date and time.",
+                    "7. The view is designed to provide a comprehensive set of customer-related data, including customer details, address information, healthcare-related fields, sales and delivery information, tax details, and CRM-related fields.",
+                    "8. The view includes various indicators and flags such as 'CMSN_PAY_IND', 'TAX_EXMPT_IND', 'EDI_FLG', 'SPCL_CMSN_IND', 'CRM_FLG_CUST_PRFTBLTY', etc., to capture specific attributes and statuses of customers.",
+                    "9. The view also includes several date fields such as 'CUST_STRT_DT', 'CUST_REL_END_DT', 'DT_LAST_CUST_CALL', 'DT_LAST_ORD', 'FIRST_RT_TRANS_DT', 'PRIOR_RT_TRANS_DT', 'LAST_RT_TRANS_DT', etc., to track important events and timelines related to customers.",
+                    "10. The view is designed to be comprehensive and detailed, capturing a wide range of customer-related information for analysis and reporting purposes."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.9610325031501FC0F12E8E8792447474"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.28116D62375D206602BAE557DF4ACED5"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_MGT_MAP",
+            "encrypted_name": "f2fa2f4b74b9e40b56019ea20012f4f1",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_MGT_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.f2fa2f4b74b9e40b56019ea20012f4f1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'f2fa2f4b74b9e40b56019ea20012f4f1' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has five columns: 'CUST_NATL_MNGD_FLG', 'CUST_MGT_TYP_DESC', 'CUST_MGT_TYP_CD_DESC', 'LOAD_DATE_1010', and 'LOAD_DATETIME_1010'.",
+                    "4. The view's definition is based on a SELECT statement that retrieves data from the table '2347b74b9d44609ba81c02b666fd3b9d' in the same schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns 'CUST_NATL_MNGD_FLG', 'CUST_MGT_TYP_DESC', and 'CUST_MGT_TYP_CD_DESC' are directly selected from the source table.",
+                    "6. The column 'LOAD_DATE_1010' is derived by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it to a number.",
+                    "7. The column 'LOAD_DATETIME_1010' is directly assigned the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.2347B74B9D44609BA81C02B666FD3B9D"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.F2FA2F4B74B9E40B56019EA20012F4F1"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_CHNSUMM_CORP_ALL",
+            "encrypted_name": "4719910461860ba3505de22735b0ccb253e10ef32d8cd4782ca2ea12fcd0d513",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_CHNSUMM_CORP_ALL",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.4719910461860ba3505de22735b0ccb253e10ef32d8cd4782ca2ea12fcd0d513",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '4719910461860ba3505de22735b0ccb253e10ef32d8cd4782ca2ea12fcd0d513' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 22 columns: MP_CHN_ID, FISC_YR_MTH, CURR_IND, MP_TRD_NM, NBR_UNIT, ANNL_SLS, FOOD_BVRG_DSPBL, HEADQTR_ADDR1, HEADQTR_ADDR2, CITY, ST, ZIP, ST_OPR, MKT_SEG_CD, MKT_SEG_DESC, MENU_TYP_CD, MENU_TYP_DESC, SMPLFD_MENU_CD, SMPLFD_MENU_DESC, RES_TYP_IND, MP_VERIFIED, LDR_TM.",
+                    "4. The view is defined using a SELECT statement that retrieves data from a table named '39c626549c69432d914b0115f06979c7c7932790e9fa4ed8db2b8d27d4777db2' in the schema 'cbc96f3cce8bdaaa3a0be45b179efb1d'.",
+                    "5. Each column in the view corresponds to a specific column in the source table, with the columns being selected in the same order as they are defined in the view.",
+                    "6. The view does not include any WHERE clause, GROUP BY clause, or any other filtering or aggregation logic; it is a straightforward selection of columns from the source table."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.39C626549C69432D914B0115F06979C7C7932790E9FA4ED8DB2B8D27D4777DB2"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.4719910461860BA3505DE22735B0CCB253E10EF32D8CD4782CA2EA12FCD0D513"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_MKTPLUS_PTNTL",
+            "encrypted_name": "a935b67d6cfa3e9cb78c28b651c35b7bc83c789da293c6951bccdd221fa51c59",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_MKTPLUS_PTNTL",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.a935b67d6cfa3e9cb78c28b651c35b7bc83c789da293c6951bccdd221fa51c59",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'a935b67d6cfa3e9cb78c28b651c35b7bc83c789da293c6951bccdd221fa51c59' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has a large number of columns, each with a specific alias, such as 'CUST_PLUS_PRSPCT_SK', 'CUST_ACCT_TYP_CD', 'CUST_ACCT_TYP_DESC', etc.",
+                    "4. The view is defined using a SELECT statement that retrieves data from multiple tables.",
+                    "5. The main table in the FROM clause is 'cbc96f3cce8bdaaa3a0be45b179efb1d.404ac46a71af8163be1e80ab305d35680375271b3b465533ed60fda14d94685e' aliased as 'p'.",
+                    "6. The first LEFT JOIN is with the table 'cbc96f3cce8bdaaa3a0be45b179efb1d.036fb2f96b7d4cdf7bfd27d95e6b2c7d' aliased as 'c'. The join condition is based on matching columns 'c7932790e9fa4ed8db2b8d27d4777db2.23e060b03dc8e64190d777dd74802df5' with '4ffa5865f0e03be657c8a8becf456967.23e060b03dc8e64190d777dd74802df5' and 'c7932790e9fa4ed8db2b8d27d4777db2.b4599b3889c46512ff4970b516d68509' with '4ffa5865f0e03be657c8a8becf456967.b4599b3889c46512ff4970b516d68509'.",
+                    "7. The second LEFT JOIN is with the table 'cbc96f3cce8bdaaa3a0be45b179efb1d.4cfd13972e46b3d97e43edb5e6d26880c7932790e9fa4ed8db2b8d27d4777db2' aliased as 'm'. The join condition is based on matching columns 'c7932790e9fa4ed8db2b8d27d4777db2.ae899760105e976c747c2fa238d3ead5' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.ae899760105e976c747c2fa238d3ead5', 'c7932790e9fa4ed8db2b8d27d4777db2.b4599b3889c46512ff4970b516d68509' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.b4599b3889c46512ff4970b516d68509', and 'c7932790e9fa4ed8db2b8d27d4777db2.77973809f6748f8d643224ba3f996de8' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.77973809f6748f8d643224ba3f996de8'.",
+                    "8. The SELECT statement includes a large number of columns from the joined tables, each with a specific alias to match the view's column names."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.404AC46A71AF8163BE1E80AB305D35680375271B3B465533ED60FDA14D94685E",
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.036FB2F96B7D4CDF7BFD27D95E6B2C7D",
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.4CFD13972E46B3D97E43EDB5E6D26880"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.A935B67D6CFA3E9CB78C28B651C35B7BC83C789DA293C6951BCCDD221FA51C59"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_APV_CORP",
+            "encrypted_name": "6ecd5174cbd30a14c4214eae186b10b7",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_APV_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.6ecd5174cbd30a14c4214eae186b10b7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '6ecd5174cbd30a14c4214eae186b10b7' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: AP_VNDR_TYP_ID, AP_VNDR_NBR, AP_VNDR_NM, ADDR_LN_1, ADDR_LN_2, CITY, ST, ZIP_CD, CAN_ZIP_CD_IND, LAST_ACTVTY_DT, CNTCT_NM, PHN_NBR, PHN_NBR_EXTNS, FAX_NBR, VNDR_ADDED_DT, APV_CMPNY_VNDR_NBR, LDR_TM, INACT_DT, LOAD_DATE_1010, LOAD_DATETIME_1010.",
+                    "4. The view is based on a SELECT statement that retrieves data from the table 'f681eea16801f13205777cac592bcd4a' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns in the SELECT statement are directly mapped to the columns in the view, except for LOAD_DATE_1010 and LOAD_DATETIME_1010.",
+                    "6. The LOAD_DATE_1010 column is derived by converting the current system date (SYSDATE) to a number in the format 'YYYYMMDD'.",
+                    "7. The LOAD_DATETIME_1010 column is set to the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.F681EEA16801F13205777CAC592BCD4A"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.6ECD5174CBD30A14C4214EAE186B10B7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_MDM_SHIPTO",
+            "encrypted_name": "825ac7b1a999bf6597a941eb708af5c8",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_MDM_SHIPTO",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.825ac7b1a999bf6597a941eb708af5c8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '825ac7b1a999bf6597a941eb708af5c8' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has a total of 200 columns, each with a specific name such as 'SHPTO_ROW_ID', 'CHILD_ROW_ID', 'SHPTO_ACCT_NM', etc.",
+                    "4. The view is defined using a SELECT statement that retrieves data from the table '67e445f509d10e4423b4bed3fe0123f9' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns in the view are mapped to columns in the source table using aliases, for example, '49a913779ca7be4f608d8048e24c6091.\"24ba80478708496d3d6ef9a8c3eb4d38\"' is mapped to 'SHPTO_ROW_ID'.",
+                    "6. The view includes additional columns 'FROM_DT', 'TO_DT', and 'ACTIVE' which are derived using SQL functions and window functions.",
+                    "7. The 'TO_DT' column is calculated using the LEAD function to get the next 'EFF_DT' value partitioned by 'DIV_NBR' and 'CUST_NBR' and ordered by 'EFF_DT'.",
+                    "8. The 'ACTIVE' column is calculated using a CASE statement to check if the current row is the latest one for the partition of 'DIV_NBR' and 'CUST_NBR'. If it is, 'ACTIVE' is set to 'Y', otherwise 'N'.",
+                    "9. The view is based on a single table '67e445f509d10e4423b4bed3fe0123f9' aliased as 'SHIP'."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.67E445F509D10E4423B4BED3FE0123F9"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.825AC7B1A999BF6597A941EB708AF5C8"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_OFV_CORP",
+            "encrypted_name": "aedba2f9b4529ef02dc94ffbc016ab95",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_OFV_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.aedba2f9b4529ef02dc94ffbc016ab95",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'aedba2f9b4529ef02dc94ffbc016ab95' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: DIV_NBR, ORD_FROM_VNDR_NBR, ORD_FROM_VNDR_NM, ADDR_LN_1, ADDR_LN_2, CITY, ST, ZIP_CD, CNTCT_NM, PHN_NBR, PHN_NBR_EXTNS, FAX_NBR, FAX_NBR_EXTNS, OFV_CMPNY_VNDR_NBR, OFV_CMPNY_VNDR_NM, CMNT_1, CMNT_2, VNDR_ADDED_DT, VNDR_MAINT_DT, STAT_CD, STAT_CD_MAINT_DT, BROK_IND, CAN_ZIP_CD_IND, NTV_ORD_FROM_VNDR_NBR, LDR_TM, INACT_DT, LOAD_DATE_1010, LOAD_DATETIME_1010.",
+                    "4. The view's SELECT statement retrieves data from the table '026b8deb9ba624618a12cec2e49e6cad' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns in the SELECT statement are directly mapped to the columns in the view, except for LOAD_DATE_1010 and LOAD_DATETIME_1010.",
+                    "6. The LOAD_DATE_1010 column is derived by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it to a number.",
+                    "7. The LOAD_DATETIME_1010 column is directly assigned the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.026B8DEB9BA624618A12CEC2E49E6CAD"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.AEDBA2F9B4529EF02DC94FFBC016AB95"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_COV_CORP",
+            "encrypted_name": "cddb55be3467b5f4340c2d794dfc18ee",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_COV_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.cddb55be3467b5f4340c2d794dfc18ee",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'cddb55be3467b5f4340c2d794dfc18ee' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 63 columns: CMPNY_VNDR_NBR, CMPNY_VNDR_NM, ADDR_LN_1, ADDR_LN_2, CITY, ST, ZIP_CD, CNTCT_NM, PHN_NBR, PHN_NBR_EXTNS, FAX_NBR, FAX_NBR_EXTNS, PRNT_CMPNY_VNDR_NBR, PRNT_CMPNY_VNDR_NM, CMNT_1, CMNT_2, VNDR_ADDED_DT, VNDR_MAINT_DT, STAT_CD, STAT_CD_MAINT_DT, VNDR_SPLY_TYP, LIAB_INS_IND, RCL_PPR_ON_FILE, CNTRCT_AGR_IND, CONF_DSCLSR_IND, SML_BUS_IND, OWNSHP_IND, PURE_FD_GUAR_IND, USDA_MEAT_CERT_NBR, USDA_PLTRY_CERT_NBR, SEAFD_INSPCTN_IND, PROD_NBR_PRT, DT_IND_CD, DT_TYP_CD, DT_CD_PRT, DT_CD_BOL, DT_CD_BASIS, KRAFT_VNDR_IND, CAN_ZIP_CD_IND, PVT_LBL_AGR_IND, VNDR_ETHN_CD, VNDR_MNRTY_CD, AR_CUST_NBR, VNDR_MNTRY_MBE_IND, VNDR_MNTRY_WBE_IND, VNDR_MNTRY_MWBE_IND, VNDR_MNTRY_SDB_IND, VNDR_MNTRY_HUB_IND, VNDR_MNTRY_DBE_IND, VNDR_MNTRY_SBA8_IND, VNDR_MNTRY_DIS_IND, VNDR_MNTRY_VET_IND, VNDR_MNTRY_DVET_IND, VNDR_MNTRY_GOVT_IND, VNDR_MNTRY_NP_IND, VNDR_MNTRY_HBCU_IND, LDR_TM, INACT_DT, CMPNY_VNDR_NM_NBR, PIM_MRCH_DRCTR_ID, PIM_MRCH_DRCTR_LAST_UPDT_ID, PIM_MRCH_DRCTR_LAST_UPDT_TM, ZERO_PA_RATE_RPT_EXCLSN_IND, INTRCMPNY_PA_RPT_EXCLSN_IND, LOAD_DATE_1010, LOAD_DATETIME_1010.",
+                    "4. The view is based on a SELECT statement from the table '98e186fae46e61853cff5a6b127ba4b9' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns in the view are directly mapped from the columns in the source table, except for LOAD_DATE_1010 and LOAD_DATETIME_1010.",
+                    "6. The LOAD_DATE_1010 column is derived using the TO_NUMBER and TO_CHAR functions on the SYSDATE, formatted as 'YYYYMMDD'.",
+                    "7. The LOAD_DATETIME_1010 column is directly assigned the current system date and time using the SYSDATE function."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.98E186FAE46E61853CFF5A6B127BA4B9"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.CDDB55BE3467B5F4340C2D794DFC18EE"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_FACT_CUST_CORP",
+            "encrypted_name": "6f19cb4004a9942a963dc2f8e926719b06ef0db62b98233e042fd1e2485cbaef",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_FACT_CUST_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.6f19cb4004a9942a963dc2f8e926719b06ef0db62b98233e042fd1e2485cbaef",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced with the name '6f19cb4004a9942a963dc2f8e926719b06ef0db62b98233e042fd1e2485cbaef' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "2. The view has the following columns: CUST_NBR, DIV_NBR, PROD_NBR, PIM_USF_STD_PROD_CD, CRM_MP_FBD_PRCH_OVRD_IND, CRM_TTL_WKLY_PTNL, MP_FOOD_BVRG_DSPSBL_PRCH, AVG_MTHLY_PTNL, LAST_RT_TRANS_DT, AVG_PNTRTN_RATE, LAST_FISC_MTH_SOS_CNT.",
+                    "3. The view selects data from three tables: '9610325031501fc0f12e8e8792447474' (aliased as C), '8b805cb0fd6356ea59d9716805ed41aa06ef0db62b98233e042fd1e2485cbaef' (aliased as CMC), and '05f0c007345be80aaa0027c0672ffd34a463ab320fb02af7a72f2410431d8ed7' (aliased as CPR).",
+                    "4. The columns in the SELECT statement are mapped as follows:",
+                    "   - CUST_NBR: 34c54e05b76d0713a1258afb6a02e112.262e898f23821ff643ee22b97c4a5c73",
+                    "   - DIV_NBR: 34c54e05b76d0713a1258afb6a02e112.0a1d64f55cf2c27b11a1410ca8ca4d92",
+                    "   - PROD_NBR: '99999999999'",
+                    "   - PIM_USF_STD_PROD_CD: 0",
+                    "   - CRM_MP_FBD_PRCH_OVRD_IND: 34c54e05b76d0713a1258afb6a02e112.43de656388f93a2001082519f32bfa9f92ab605d685e6199470530e11c873f70",
+                    "   - CRM_TTL_WKLY_PTNL: 34c54e05b76d0713a1258afb6a02e112.a61ffd444338c5501f559cad1ebd6b25403c0bb82979a4f84632eb7a9a119a8c",
+                    "   - MP_FOOD_BVRG_DSPSBL_PRCH: 4b8cfc1ed9195ae5d4feb2c5040cd051.35ecda02d7cdd0d47ba7900215a5c8531760818216892ca3597e6b480cdaa529",
+                    "   - AVG_MTHLY_PTNL: Calculated using a CASE statement based on conditions involving columns 34c54e05b76d0713a1258afb6a02e112.43de656388f93a2001082519f32bfa9f92ab605d685e6199470530e11c873f70 and 4b8cfc1ed9195ae5d4feb2c5040cd051.35ecda02d7cdd0d47ba7900215a5c8531760818216892ca3597e6b480cdaa529.",
+                    "   - LAST_RT_TRANS_DT: 34c54e05b76d0713a1258afb6a02e112.7caa5c87d854f17d8d3bbf7651728a148d9580344567eff93950316463fe05bf",
+                    "   - AVG_PNTRTN_RATE: NVL(6721c4e81112e90d46ed11e5df90d879.06acb6862fb8fa067382c94a4ac8a0c9, 435f9310ccc95ccb392b7515d207faa7.d7a1bb618a9c1b93628e006924ec8a31)",
+                    "   - LAST_FISC_MTH_SOS_CNT: last_fisc_mth_sos_cnt",
+                    "5. The view includes a WHERE clause with the following conditions:",
+                    "   - 4ffa5865f0e03be657c8a8becf456967.b4599b3889c46512ff4970b516d68509 = 3c81d4a1d8028562526899332c27ca97.b4599b3889c46512ff4970b516d68509(+)",
+                    "   - 4ffa5865f0e03be657c8a8becf456967.23e060b03dc8e64190d777dd74802df5 = 3c81d4a1d8028562526899332c27ca97.23e060b03dc8e64190d777dd74802df5(+)",
+                    "   - 3c81d4a1d8028562526899332c27ca97.b6cc207ce3ae56c51c524d7e2bdc4500(+) = 'Y'",
+                    "   - 4ffa5865f0e03be657c8a8becf456967.dac31287ee4b3739e164684e1f2ee84f = f5af7bcf01820d0f44201c6d5443e5a9.dac31287ee4b3739e164684e1f2ee84f(+)"
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.9610325031501FC0F12E8E8792447474",
+                "CCF925CE0B54913EC758E2779B9B1672.8B805CB0FD6356EA59D9716805ED41AA06EF0DB62B98233E042FD1E2485CBAEF",
+                "CCF925CE0B54913EC758E2779B9B1672.05F0C007345BE80AAA0027C0672FFD34A463AB320FB02AF7A72F2410431D8ED7",
+                "4FFA5865F0E03BE657C8A8BECF456967.B4599B3889C46512FF4970B516D68509",
+                "3C81D4A1D8028562526899332C27CA97.B4599B3889C46512FF4970B516D68509",
+                "4FFA5865F0E03BE657C8A8BECF456967.23E060B03DC8E64190D777DD74802DF5",
+                "3C81D4A1D8028562526899332C27CA97.23E060B03DC8E64190D777DD74802DF5",
+                "3C81D4A1D8028562526899332C27CA97.B6CC207CE3AE56C51C524D7E2BDC4500",
+                "4FFA5865F0E03BE657C8A8BECF456967.DAC31287EE4B3739E164684E1F2EE84F",
+                "F5AF7BCF01820D0F44201C6D5443E5A9.DAC31287EE4B3739E164684E1F2EE84F"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.6F19CB4004A9942A963DC2F8E926719B06EF0DB62B98233E042FD1E2485CBAEF"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_DIV_SZ_CD_MAP",
+            "encrypted_name": "aa1dfb3554be78327f504135e63406bb8d9580344567eff93950316463fe05bf",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_DIV_SZ_CD_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.aa1dfb3554be78327f504135e63406bb8d9580344567eff93950316463fe05bf",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'aa1dfb3554be78327f504135e63406bb8d9580344567eff93950316463fe05bf' and is located in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has five columns: 'DIV_SZ_CD', 'DIV_SZ_DLR_HG_LMT', 'DIV_SZ_DLR_LW_LMT', 'LOAD_DATE_1010', and 'LOAD_DATETIME_1010'.",
+                    "4. The view's SELECT statement retrieves data from the table '08714d39ca5e9d1dbcf86ee0e4d1b96b' in the same schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns 'DIV_SZ_CD', 'DIV_SZ_DLR_HG_LMT', and 'DIV_SZ_DLR_LW_LMT' are directly selected from the source table.",
+                    "6. The column 'LOAD_DATE_1010' is derived by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it back to a number.",
+                    "7. The column 'LOAD_DATETIME_1010' is directly assigned the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.08714D39CA5E9D1DBCF86EE0E4D1B96B"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.AA1DFB3554BE78327F504135E63406BB8D9580344567EFF93950316463FE05BF"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_AOP_HEDGE_WKLY",
+            "encrypted_name": "63f566a8aa1242e8bdcd2993802c3ebc4b8904e22d504f9b9b1b850a6b30f16e",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_AOP_HEDGE_WKLY",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.63f566a8aa1242e8bdcd2993802c3ebc4b8904e22d504f9b9b1b850a6b30f16e",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '63f566a8aa1242e8bdcd2993802c3ebc4b8904e22d504f9b9b1b850a6b30f16e' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: FISC_YR_WK, FISC_YR, FISC_MTH_OF_YR, FISC_WK_OF_YR, CLNDR_WK_STRT_DT, CLNDR_WK_END_DT, CASES_AOP, AOP_TYPE, LOAD_DATE_1010, and LOAD_DATETIME_1010.",
+                    "4. The view is defined using a SELECT statement that retrieves data from the table '58610e248b91038abb5cbfd06ad4be55' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns FISC_YR_WK, FISC_YR, FISC_MTH_OF_YR, FISC_WK_OF_YR, CLNDR_WK_STRT_DT, CLNDR_WK_END_DT, CASES_AOP, and AOP_TYPE are directly selected from the source table.",
+                    "6. The column LOAD_DATE_1010 is derived by converting the current system date (SYSDATE) to a string in 'YYYYMMDD' format and then converting it to a number.",
+                    "7. The column LOAD_DATETIME_1010 is derived by selecting the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.58610E248B91038ABB5CBFD06AD4BE55"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.63F566A8AA1242E8BDCD2993802C3EBC4B8904E22D504F9B9B1B850A6B30F16E"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_EMP_PIM_SUPRCLS_NO_DSM",
+            "encrypted_name": "44173139e04d218a0a5c351513b5f887697052e72dd9f8256625349d28956899",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_EMP_PIM_SUPRCLS_NO_DSM",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.44173139e04d218a0a5c351513b5f887697052e72dd9f8256625349d28956899",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '44173139e04d218a0a5c351513b5f887697052e72dd9f8256625349d28956899' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: USER_ID, USER_NM, ROLE, TITLE, CRM_STAT, PIM_SUPRCLS_ID, DSTRCT_SLS_MGR_ID, and INACTV_DT.",
+                    "4. The view selects distinct values from a subquery to ensure no duplicate rows are included.",
+                    "5. The subquery selects columns from the table 'bf9c3a209071bd90f55848bbc5e5b265' within the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "6. The subquery includes a FIRST_VALUE analytic function to determine the first value of DSTRCT_SLS_MGR_ID and INACTV_DT within each partition defined by '9f3ccc5692dc031cb0ea7a3575ce8c30.6aa7b54e9b62fe955a7735b7d542dc44', ordered by INACTV_DT with NULLS FIRST.",
+                    "7. The columns selected in the subquery are aliased to match the column names defined in the view.",
+                    "8. The view ensures that the data is partitioned and ordered correctly to retrieve the first values for DSTRCT_SLS_MGR_ID and INACTV_DT."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.BF9C3A209071BD90F55848BBC5E5B265"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.44173139E04D218A0A5C351513B5F887697052E72DD9F8256625349D28956899"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_MKTPLUS",
+            "encrypted_name": "7b82740869c677dd8d1701ebfde4bf39",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_MKTPLUS",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.7b82740869c677dd8d1701ebfde4bf39",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '7b82740869c677dd8d1701ebfde4bf39' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has a large number of columns, each with a specific alias, such as 'CUST_PLUS_PRSPCT_SK', 'CUST_ACCT_TYP_CD', 'CUST_ACCT_TYP_DESC', etc.",
+                    "4. The view is defined using a SELECT statement that retrieves data from multiple tables.",
+                    "5. The main table in the FROM clause is 'cbc96f3cce8bdaaa3a0be45b179efb1d.404ac46a71af8163be1e80ab305d35680375271b3b465533ed60fda14d94685e' aliased as 'p'.",
+                    "6. The first LEFT JOIN is with the table 'cbc96f3cce8bdaaa3a0be45b179efb1d.036fb2f96b7d4cdf7bfd27d95e6b2c7d' aliased as 'c'. The join condition is based on matching columns 'c7932790e9fa4ed8db2b8d27d4777db2.23e060b03dc8e64190d777dd74802df5' with '4ffa5865f0e03be657c8a8becf456967.23e060b03dc8e64190d777dd74802df5' and 'c7932790e9fa4ed8db2b8d27d4777db2.b4599b3889c46512ff4970b516d68509' with '4ffa5865f0e03be657c8a8becf456967.b4599b3889c46512ff4970b516d68509'.",
+                    "7. The second LEFT JOIN is with the table 'cbc96f3cce8bdaaa3a0be45b179efb1d.4cfd13972e46b3d97e43edb5e6d26880' aliased as 'm'. The join condition is based on matching columns 'c7932790e9fa4ed8db2b8d27d4777db2.ae899760105e976c747c2fa238d3ead5' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.ae899760105e976c747c2fa238d3ead5', 'c7932790e9fa4ed8db2b8d27d4777db2.b4599b3889c46512ff4970b516d68509' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.b4599b3889c46512ff4970b516d68509', and 'c7932790e9fa4ed8db2b8d27d4777db2.77973809f6748f8d643224ba3f996de8' with 'c3ff9a59e7350a97cd0d7eceb2fd960e.77973809f6748f8d643224ba3f996de8'. Additionally, the condition 'c3ff9a59e7350a97cd0d7eceb2fd960e.bda6ab67787854ef26191a3eccbb2786 <> 'POTENTIAL'' is applied.",
+                    "8. The SELECT clause includes a mix of columns from the main table 'p', the first joined table 'c', and the second joined table 'm'. Each column is given an alias that matches the view's column names."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.404AC46A71AF8163BE1E80AB305D35680375271B3B465533ED60FDA14D94685E",
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.036FB2F96B7D4CDF7BFD27D95E6B2C7D",
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.4CFD13972E46B3D97E43EDB5E6D26880"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.7B82740869C677DD8D1701EBFDE4BF39"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "COV_CORP_VW",
+            "encrypted_name": "00466f68fcca0c92cbe1a84886dac09b",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.COV_CORP_VW",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.00466f68fcca0c92cbe1a84886dac09b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '00466f68fcca0c92cbe1a84886dac09b' and is owned by the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 63 columns with specific names such as CMPNY_VNDR_NBR, CMPNY_VNDR_NM, ADDR_LN_1, ADDR_LN_2, BILL_CMPNY_VNDR_NBR, CITY, ST, ZIP_CD, CNTCT_NM, PHN_NBR, PHN_NBR_EXTNS, FAX_NBR, FAX_NBR_EXTNS, PRNT_CMPNY_VNDR_NBR, PRNT_CMPNY_VNDR_NM, CMNT_1, CMNT_2, VNDR_ADDED_DT, VNDR_MAINT_DT, STAT_CD, STAT_CD_MAINT_DT, VNDR_SPLY_TYP, LIAB_INS_IND, RCL_PPR_ON_FILE, CNTRCT_AGR_IND, CONF_DSCLSR_IND, SML_BUS_IND, OWNSHP_IND, PURE_FD_GUAR_IND, USDA_MEAT_CERT_NBR, USDA_PLTRY_CERT_NBR, SEAFD_INSPCTN_IND, PROD_NBR_PRT, DT_IND_CD, DT_TYP_CD, DT_CD_PRT, DT_CD_BOL, DT_CD_BASIS, KRAFT_VNDR_IND, CAN_ZIP_CD_IND, PVT_LBL_AGR_IND, VNDR_ETHN_CD, VNDR_MNRTY_CD, AR_CUST_NBR, VNDR_MNTRY_MBE_IND, VNDR_MNTRY_WBE_IND, VNDR_MNTRY_MWBE_IND, VNDR_MNTRY_SDB_IND, VNDR_MNTRY_HUB_IND, VNDR_MNTRY_DBE_IND, VNDR_MNTRY_SBA8_IND, VNDR_MNTRY_DIS_IND, VNDR_MNTRY_VET_IND, VNDR_MNTRY_DVET_IND, VNDR_MNTRY_GOVT_IND, VNDR_MNTRY_NP_IND, VNDR_MNTRY_HBCU_IND, LDR_TM, INACT_DT, CMPNY_VNDR_NM_NBR, PIM_MRCH_DRCTR_ID, PIM_MRCH_DRCTR_LAST_UPDT_ID, PIM_MRCH_DRCTR_LAST_UPDT_TM, ZERO_PA_RATE_RPT_EXCLSN_IND, INTRCMPNY_PA_RPT_EXCLSN_IND.",
+                    "4. The view is based on a SELECT statement that retrieves data from the table '071d714b5e14b606369acfed5ad6b68c' in the schema 'cbc96f3cce8bdaaa3a0be45b179efb1d'.",
+                    "5. The SELECT statement includes a list of columns that are directly mapped from the source table, with one exception: the column BILL_CMPNY_VNDR_NBR is derived from the CMPNY_VNDR_NBR column of the source table.",
+                    "6. The view does not include any joins, filters, or additional logic beyond the column selection and the aliasing of the BILL_CMPNY_VNDR_NBR column."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.071D714B5E14B606369ACFED5AD6B68C"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.00466F68FCCA0C92CBE1A84886DAC09B"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_OPPRTNT_DTL",
+            "encrypted_name": "d94b9b28d311a9fc30b6c0f7838a02d0",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_OPPRTNT_DTL",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.d94b9b28d311a9fc30b6c0f7838a02d0",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'd94b9b28d311a9fc30b6c0f7838a02d0' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: CRM_UNIQ_ID, CRM_LOGIN_ID, BRNCH_CD, CUST_NBR, DIV_NBR, OPPRTNT_TYP, OPPRTNT_PHS, USER_ID, EVENT_DT, PRCS_DT.",
+                    "4. The view is based on a SELECT statement that retrieves data from the table '9dd9bea5afb6f61f092e0708461ce4f1' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The SELECT statement includes a WHERE clause that filters rows where INACT_DT is NULL.",
+                    "6. The SELECT statement includes a GROUP BY clause that groups the results by the columns: CRM_UNIQ_ID, CRM_LOGIN_ID, BRNCH_CD, CUST_NBR, DIV_NBR, OPPRTNT_TYP, OPPRTNT_PHS, USER_ID, EVENT_DT, PRCS_DT."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.9DD9BEA5AFB6F61F092E0708461CE4F1"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.D94B9B28D311A9FC30B6C0F7838A02D0"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_EMP_SEGMENT_NO_DSM",
+            "encrypted_name": "ea1d174dccef8ededfdd1f4e8ae36d7807265effe52d90c3e2f786b7a9400aa7",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_EMP_SEGMENT_NO_DSM",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.ea1d174dccef8ededfdd1f4e8ae36d7807265effe52d90c3e2f786b7a9400aa7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced with the name 'ea1d174dccef8ededfdd1f4e8ae36d7807265effe52d90c3e2f786b7a9400aa7' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "2. The view has the following columns: USER_ID, USER_NM, ROLE, TITLE, CRM_STAT, SMPLFD_MENU_CD, DSTRCT_SLS_MGR_ID, INACTV_DT.",
+                    "3. The view selects distinct rows from a subquery.",
+                    "4. The subquery selects columns USER_ID, USER_NM, ROLE, TITLE, CRM_STAT, SMPLFD_MENU_CD from the table 'cf06b8f72fea06a32e8f94496bebc455' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The subquery uses the FIRST_VALUE analytic function to determine the values for DSTRCT_SLS_MGR_ID and INACTV_DT.",
+                    "6. The FIRST_VALUE function is partitioned by the column '6aa7b54e9b62fe955a7735b7d542dc44' from the table 'cf06b8f72fea06a32e8f94496bebc455'.",
+                    "7. The FIRST_VALUE function orders the partitions by the column 'inactv_dt' with NULLS FIRST.",
+                    "8. The DSTRCT_SLS_MGR_ID is derived from the column '7614c66a5870ea113f63d91cdbc3fdda5d1915cc5b241e8d6c6d87bb139f948e' from the table 'cf06b8f72fea06a32e8f94496bebc455'.",
+                    "9. The INACTV_DT is derived from the column 'a0baf5df899f6ec25c547328672b27e9' from the table 'cf06b8f72fea06a32e8f94496bebc455'."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.CF06B8F72FEA06A32E8F94496BEBC455"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.EA1D174DCCEF8EDEDFDD1F4E8AE36D7807265EFFE52D90C3E2F786B7A9400AA7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_FISC_MTH_TIME_CORP",
+            "encrypted_name": "e6f04991a885f6a3a9c939e6263306bf2b1b4710dcfcacfccb9d90a5eea511a6",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_FISC_MTH_TIME_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.e6f04991a885f6a3a9c939e6263306bf2b1b4710dcfcacfccb9d90a5eea511a6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'e6f04991a885f6a3a9c939e6263306bf2b1b4710dcfcacfccb9d90a5eea511a6' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: FISC_YR, FISC_MTH_OF_YR, FISC_MTH_NM, FISC_QTR_OF_YR, FISC_HALF_OF_YR, FISC_YR_QTR, FISC_YR_MTH, FISC_WKS_THIS_PD, FISC_MTH_STRT_DT, FISC_MTH_END_DT.",
+                    "4. The view is defined using a SELECT statement that retrieves data from the table '77b00863c95111442831cc2d6d8e5bad' in the schema 'cbc96f3cce8bdaaa3a0be45b179efb1d'.",
+                    "5. The SELECT statement includes the following columns: fisc_yr, fisc_mth_of_yr, fisc_mth_nm, fisc_qtr_of_yr, fisc_half_of_yr, fisc_yr_qtr, fisc_yr_mth, fisc_wks_this_pd.",
+                    "6. The SELECT statement also includes aggregate functions MIN(clndr_dt) as fisc_mth_strt_dt and MAX(clndr_dt) as fisc_mth_end_dt.",
+                    "7. The data is grouped by the following columns: fisc_yr, fisc_mth_of_yr, fisc_mth_nm, fisc_qtr_of_yr, fisc_half_of_yr, fisc_yr_qtr, fisc_yr_mth, fisc_wks_this_pd."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.77B00863C95111442831CC2D6D8E5BAD"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.E6F04991A885F6A3A9C939E6263306BF2B1B4710DCFCACFCCB9D90A5EEA511A6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_SFV_CORP",
+            "encrypted_name": "4be72ac0e2ccb986c4c8e6561af7cb31",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_SFV_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.4be72ac0e2ccb986c4c8e6561af7cb31",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '4be72ac0e2ccb986c4c8e6561af7cb31' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has 64 columns: DIV_NBR, SHIP_FROM_VNDR_NBR, SHIP_FROM_VNDR_NM, ADDR_LN_1, ADDR_LN_2, CITY, ST, ZIP_CD, CNTCT_NM, PHN_NBR, PHN_NBR_EXTNS, FAX_NBR, FAX_NBR_EXTNS, SFV_CMPNY_VNDR_NBR, SFV_CMPNY_VNDR_NM, NATL_CMNT_1, NATL_CMNT_2, NATL_VNDR_ADDED_DT, NATL_VNDR_MAINT_DT, STAT_CD, STAT_CD_MAINT_DT, CAN_ZIP_CD_IND, SHIPPER, PICKUP_IND, SHIP_VIA_TRUCK, SHIP_VIA_RAIL, SHIP_VIA_AIR, SHIP_VIA_WTR, PALLET_IND, SLIP_SHT_IND, FLR_STACK_IND, FRGHT_PPAID_IND, FRGHT_PPAY_ADD_IND, FRGHT_BILL_IND, FRGHT_BCKHL_IND, CTMS_IND, FRGHT_TRM_CD, FRGHT_TRM_TYP, FRGHT_ALWNC_RATE, FRGHT_ALWNC_TYP, FRGHT_ALWNC_DT, PPAY_ADD_RATE, PPAY_ADD_TYP, PPAY_ADD_DT, FRGHT_BILL_RATE, FRGHT_BILL_TYP, FRGHT_BILL_DT, BCKHL_BILL_RATE, BCKHL_BILL_TYP, BCKHL_BILL_DT, MKT_FRGHT_RATE, MKT_FRGHT_TYP, MKT_FRGHT_DT, DIV_CMNT_1, DIV_CMNT_2, DIV_VNDR_ADDED_DT, DIV_VNDR_MAINT_DT, LINE_ITEM_FRGHT_IND, FRGHT_WGHT_TYP, NTV_SHIP_FROM_VNDR_NBR, LDR_TM, INACT_DT, LOAD_DATE_1010, LOAD_DATETIME_1010.",
+                    "4. The view's columns are selected from the table '88d4ce614105d91b02dd5dd432e4a13c' in the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns in the view are directly mapped from the columns in the source table, except for the last two columns.",
+                    "6. The column LOAD_DATE_1010 is derived from the current system date (SYSDATE) formatted as 'YYYYMMDD' and converted to a number.",
+                    "7. The column LOAD_DATETIME_1010 is derived directly from the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.88D4CE614105D91B02DD5DD432E4A13C"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.4BE72AC0E2CCB986C4C8E6561AF7CB31"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_CUST_CHNSUMM_CORP",
+            "encrypted_name": "4719910461860ba3505de22735b0ccb204fbbaab940d2f213f4469eaa27675e2",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_CUST_CHNSUMM_CORP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.4719910461860ba3505de22735b0ccb204fbbaab940d2f213f4469eaa27675e2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named '4719910461860ba3505de22735b0ccb204fbbaab940d2f213f4469eaa27675e2' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: MP_CHN_ID, FISC_YR_MTH, CURR_IND, MP_TRD_NM, NBR_UNIT, ANNL_SLS, HEADQTR_ADDR1, HEADQTR_ADDR2, CITY, ST, ZIP, ST_OPR, MKT_SEG_CD, MKT_SEG_DESC, MENU_TYP_CD, MENU_TYP_DESC, SMPLFD_MENU_CD, SMPLFD_MENU_DESC, RES_TYP_IND, MP_VERIFIED, LDR_TM.",
+                    "4. The view is defined using a SELECT statement that retrieves data from the table '39c626549c69432d914b0115f06979c7c7932790e9fa4ed8db2b8d27d4777db2' in the schema 'cbc96f3cce8bdaaa3a0be45b179efb1d'.",
+                    "5. The columns in the SELECT statement are mapped to the columns in the view as follows:",
+                    "5.1. MP_CHN_ID is mapped to a650c4af3b086cdd2e20da49c088bcc4.",
+                    "5.2. FISC_YR_MTH is mapped to 02bc0c2238557b79f0f0c42ab352cc5c.",
+                    "5.3. CURR_IND is mapped to b6cc207ce3ae56c51c524d7e2bdc4500.",
+                    "5.4. MP_TRD_NM is mapped to 6423a8040494cb8ce648b20ef382a40e.",
+                    "5.5. NBR_UNIT is mapped to c7dbb46a4cd7085d21b57a7b3bb99591.",
+                    "5.6. ANNL_SLS is mapped to 7638be1be9c722d5c872179a41b1a549.",
+                    "5.7. HEADQTR_ADDR1 is mapped to b1c33e7e7901626584d07456cf5f029f.",
+                    "5.8. HEADQTR_ADDR2 is mapped to ef84107fdfac25adc332f93beccbdf19.",
+                    "5.9. CITY is mapped to fed3746c59191ad6707db63b61753319.",
+                    "5.10. ST is mapped to d7ca6b3364454b19bed0a64adb619fc0.",
+                    "5.11. ZIP is mapped to 6b2843c3e90a0afb85ce9d41e52314f4.",
+                    "5.12. ST_OPR is mapped to f16144cc46ec1b4e7af05a48597b8728.",
+                    "5.13. MKT_SEG_CD is mapped to c1c225f61b0d9143f6c77953c56cd8dd.",
+                    "5.14. MKT_SEG_DESC is mapped to c2281d5d77f63f63af7eab553bad525d.",
+                    "5.15. MENU_TYP_CD is mapped to dac31287ee4b3739e164684e1f2ee84f.",
+                    "5.16. MENU_TYP_DESC is mapped to db6b77f6b72e7296788481adff4ab31b.",
+                    "5.17. SMPLFD_MENU_CD is mapped to 414ccda1d1e7fb81d59778fa6bc517fb.",
+                    "5.18. SMPLFD_MENU_DESC is mapped to 2910f208f9bcfcb220755fb55da526788d9580344567eff93950316463fe05bf.",
+                    "5.19. RES_TYP_IND is mapped to 71cf25c24e410e23633cc8ea357e0a75.",
+                    "5.20. MP_VERIFIED is mapped to 2d42d048557f5d606d870453bb1323fa.",
+                    "5.21. LDR_TM is mapped to cbbd01070311f44085ceadf8cb4e2573.",
+                    "6. The view retrieves all columns from the specified table without any additional filtering or joins."
+                ]
+            },
+            "upstream_dependencies": [
+                "CBC96F3CCE8BDAAA3A0BE45B179EFB1D.39C626549C69432D914B0115F06979C7C7932790E9FA4ED8DB2B8D27D4777DB2"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.4719910461860BA3505DE22735B0CCB204FBBAAB940D2F213F4469EAA27675E2"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "VW_DSBC_MAP",
+            "encrypted_name": "d4252d06ff3f5ed10944b1e7a330897b",
+            "type": "view",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "ccf925ce0b54913ec758e2779b9b1672",
+            "fully_qualified_name": "XDMADM.VW_DSBC_MAP",
+            "encrypted_fqn": "ccf925ce0b54913ec758e2779b9b1672.d4252d06ff3f5ed10944b1e7a330897b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created or replaced using the CREATE OR REPLACE FORCE VIEW statement.",
+                    "2. The view is named 'd4252d06ff3f5ed10944b1e7a330897b' and belongs to the schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "3. The view has the following columns: REASON_CODE, REASON_DESC, PLANNED_UNPLANNED, RULES_SEQUENCE, OWNER_GROUP, CRT_DT, UPD_DT, UPD_USR_ID, LOAD_DATE_1010, and LOAD_DATETIME_1010.",
+                    "4. The view's definition is based on a SELECT statement that retrieves data from the table 'a092acb2554a4420ba8b8d45331c1d0d' in the same schema 'ccf925ce0b54913ec758e2779b9b1672'.",
+                    "5. The columns REASON_CODE, REASON_DESC, PLANNED_UNPLANNED, RULES_SEQUENCE, OWNER_GROUP, CRT_DT, UPD_DT, and UPD_USR_ID are directly selected from the source table.",
+                    "6. The column LOAD_DATE_1010 is derived by converting the current system date (SYSDATE) to a number in the format 'YYYYMMDD'.",
+                    "7. The column LOAD_DATETIME_1010 is derived by selecting the current system date and time (SYSDATE)."
+                ]
+            },
+            "upstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.A092ACB2554A4420BA8B8D45331C1D0D"
+            ],
+            "downstream_dependencies": [
+                "CCF925CE0B54913EC758E2779B9B1672.D4252D06FF3F5ED10944B1E7A330897B"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

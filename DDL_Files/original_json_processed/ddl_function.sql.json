@@ -1,0 +1,2902 @@
+{
+    "filename": "ddl_function.sql",
+    "numb_objects": 80,
+    "type": "function",
+    "type_hex": "1ab166ab08078d6e8e2d91ad06a6fe5d",
+    "encryption_key_type": "function.key",
+    "inventory": [
+        {
+            "name": "FN_SLS_NO_XFER_VPD",
+            "encrypted_name": "ff59f473a7d59673450ce4cfea1a50029d8b3fe8760b7fe8c45d1255ce1ebaf6",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SLS_NO_XFER_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.ff59f473a7d59673450ce4cfea1a50029d8b3fe8760b7fe8c45d1255ce1ebaf6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named divs_c is declared, which takes two parameters, p_user and p_sbjct_area, and performs a SELECT query from specific tables based on certain conditions.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the ctladm.pkg_vpd_debug_util.vpd_debug procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 29,
+                    "Program Volume": 97.47,
+                    "Program Difficulty": 3.8,
+                    "Program Effort": 370.45,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.3b1288ed835b1b524e9500bb13544956e6e6300089dae5a98e31814d0406060f",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.0eaf613ab52a53601d1496b5650de81e",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.ff59f473a7d59673450ce4cfea1a50029d8b3fe8760b7fe8c45d1255ce1ebaf6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_ENABLE_SUB_PART_IND",
+            "encrypted_name": "59c2c612b1a3187a72e464765bf9afe5b894ca47235060b55395c823d08aebbb",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_ENABLE_SUB_PART_IND",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.59c2c612b1a3187a72e464765bf9afe5b894ca47235060b55395c823d08aebbb",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes four input parameters: V_TABLE_OWNER (VARCHAR2), V_TABLE_NAME (VARCHAR2), V_PARTITION_VALUE (VARCHAR2), and V_INDEX_NAME (VARCHAR2).",
+                    "2. Constant declaration: CON_PROCESS_NAME is declared as a VARCHAR2 constant with a value of 'FN_ENABLE_SUB_PART_IND'.",
+                    "3. Cursor declaration: c1 is declared as a cursor that retrieves subpartition names from various system tables based on specific conditions.",
+                    "4. Local variables declaration: v_subpartition_name (SYS.all_ind_subpartitions.SUBPARTITION_NAME%TYPE) and v_dynamic_sql_stmt (VARCHAR2) are declared to store values retrieved from the database.",
+                    "5. Begin Block:",
+                    "5.1. The block starts with outputting the start time and process name using dbms_output.put_line.",
+                    "5.2. Local variables v_prcs_nm, v_prcs_pram, and v_prcs_stp are assigned values based on the input parameters and process name.",
+                    "5.3. The cursor c1 is opened.",
+                    "5.4. A loop named compress_sub_partitions is initiated to iterate through the fetched subpartition names.",
+                    "5.4.1. Within the loop, the index of each subpartition is rebuilt using the ALTER INDEX statement and the subpartition name.",
+                    "5.4.2. The rebuilt index is committed, and the loop continues until all subpartitions are processed.",
+                    "5.5. A loop named Wrap_Program is initiated to perform final commit and close the cursor.",
+                    "5.6. The function ends with outputting the end time and process name using dbms_output.put_line.",
+                    "5.7. The function returns 0 to indicate successful execution.",
+                    "6. Exception handling block: If any exception occurs, it logs the error details and returns -1.",
+                    "7. The function ends with the END statement."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 25,
+                    "Unique Operators": 9,
+                    "Unique Operands": 14,
+                    "Vocabulary Size": 23,
+                    "Program Volume": 92.807,
+                    "Program Difficulty": 3.111,
+                    "Program Effort": 288.68,
+                    "Program Bugs": 0.031
+                }
+            },
+            "upstream_dependencies": [
+                "sys.all_ind_subpartitions",
+                "sys.all_ind_partitions",
+                "sys.all_indexes",
+                "sys.all_tables"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.59c2c612b1a3187a72e464765bf9afe5b894ca47235060b55395c823d08aebbb"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_WK_AGGR_LOAD_INTRVL",
+            "encrypted_name": "2ebfd02960dfc60d4e4216bc68c3ff4de71a0ef0a0b2acdca9756a0532f786aa",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_WK_AGGR_LOAD_INTRVL",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.2ebfd02960dfc60d4e4216bc68c3ff4de71a0ef0a0b2acdca9756a0532f786aa",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 10,
+                    "Unique Operators": 6,
+                    "Unique Operands": 6,
+                    "Vocabulary Size": 12,
+                    "Program Volume": 24,
+                    "Program Difficulty": 0.5,
+                    "Program Effort": 12,
+                    "Program Bugs": 0.01
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.2ebfd02960dfc60d4e4216bc68c3ff4de71a0ef0a0b2acdca9756a0532f786aa"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CLSFCTN_CORP_WK_LOAD",
+            "encrypted_name": "5a29470c6a3d464325075a185f279be519a1d3122aa0e85f2fc3ccfcbdad89b5",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CLSFCTN_CORP_WK_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.5a29470c6a3d464325075a185f279be519a1d3122aa0e85f2fc3ccfcbdad89b5",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.5a29470c6a3d464325075a185f279be519a1d3122aa0e85f2fc3ccfcbdad89b5"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_GETSTAT_TBL",
+            "encrypted_name": "b0fbcaece4c8b9138365d9d1ba63d0bd",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_GETSTAT_TBL",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.b0fbcaece4c8b9138365d9d1ba63d0bd",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, V_TABLE_OWNER (VARCHAR2) and V_TABLE_NAME (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including CON_PROCESS_NAME, CON_PRRTY_SEVERE, CON_PRRTY_WARN, CON_PRRTY_INFO, CON_PRRTY_DEBUG, CON_ERR_LVL, CON_REC_LIMIT, and CON_COMM_LIMIT.",
+                    "3. Several local variables are declared, such as v_dynamic_sql_stmt, v_prcs_nm, v_prcs_stp, v_prcs_pram, v_prcs_err_cd, v_prcs_err_msg, and v_getstats_retval.",
+                    "4. Begin Block:",
+                    "4.1. The function outputs the start time and the value of v_prcs_pram using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "4.2. A label named compress_sub_partitions is defined.",
+                    "4.3. The DBMS_STATS.gather_table_stats procedure is called to gather statistics for the specified table (V_TABLE_OWNER.V_TABLE_NAME).",
+                    "4.4. If the SQLCODE is 0, indicating successful execution, a message is outputted using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "4.5. If the SQLCODE is not 0, indicating an error, an error message is outputted and -1 is returned.",
+                    "4.6. Another label named Wrap_Program is defined.",
+                    "4.7. The commit statement is executed to finalize the changes made.",
+                    "4.8. The end time is outputted using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "4.9. The function returns 0.",
+                    "5. Exception Block:",
+                    "5.1. If an exception occurs, the error details are outputted using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "5.2. The function returns -1."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 14,
+                    "Vocabulary Size": 24,
+                    "Program Volume": 96,
+                    "Program Difficulty": 4.666666666666667,
+                    "Program Effort": 448,
+                    "Program Bugs": 0.032
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_OUTPUT",
+                "DBMS_STATS"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.b0fbcaece4c8b9138365d9d1ba63d0bd"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_COMPRESS_TBL_PARTITIONS",
+            "encrypted_name": "83efd6d8dd9a916c973da5f80938eb224b0a34bbfb1857df2585d5dad5cf5437",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_COMPRESS_TBL_PARTITIONS",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.83efd6d8dd9a916c973da5f80938eb224b0a34bbfb1857df2585d5dad5cf5437",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 47,
+                    "Unique Operators": 16,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 49,
+                    "Program Volume": 221.5,
+                    "Program Difficulty": 6.625,
+                    "Program Effort": 1465.5,
+                    "Program Bugs": 0.07383333333333333
+                }
+            },
+            "upstream_dependencies": [
+                "all_tab_partitions",
+                "all_indexes",
+                "all_tables",
+                "de459e2fe7f96e4d958537b31b946b26.38f728116050e697e55873f59a78047fefbef1475632241e266038ba376333db",
+                "de459e2fe7f96e4d958537b31b946b26.59c2c612b1a3187a72e464765bf9afe5b894ca47235060b55395c823d08aebbb"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.83efd6d8dd9a916c973da5f80938eb224b0a34bbfb1857df2585d5dad5cf5437"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CORP_PYR_AGGR_LOAD",
+            "encrypted_name": "8f7de65fd07824e2eb265c460d4cd197afe8a26aa5c9bd45f837d26a84cb4cac",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CORP_PYR_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.8f7de65fd07824e2eb265c460d4cd197afe8a26aa5c9bd45f837d26a84cb4cac",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes no input parameters and returns a NUMBER value.",
+                    "2. Local variables are declared to store various values, including dates, numbers, and strings.",
+                    "3. Constant declarations are made for success and error codes, as well as for schema and table names.",
+                    "4. Custom exceptions are declared.",
+                    "5. The function begins with an EXECUTE IMMEDIATE statement to retrieve the table name associated with a synonym.",
+                    "6. Conditional statements are used to check if the retrieved table name matches the expected table name and raise an exception if they don't match.",
+                    "7. Another EXECUTE IMMEDIATE statement is used to retrieve the count of records in the retrieved table.",
+                    "8. If the count is greater than 0, the table is truncated using a custom procedure and the return code is checked. If the return code is not 0, an exception is raised.",
+                    "9. The function then performs a SELECT statement to count the number of distinct customer attributes from a specific table.",
+                    "10. The count is printed using DBMS_OUTPUT.PUT_LINE.",
+                    "11. The function inserts distinct records into another table using a SELECT statement.",
+                    "12. The number of inserted rows is printed using DBMS_OUTPUT.PUT_LINE.",
+                    "13. The inserted table is analyzed using a custom procedure and the return code is checked. If the return code is not 0, an exception is raised.",
+                    "14. The function performs another SELECT statement to count the number of records in the inserted table.",
+                    "15. The count is printed using DBMS_OUTPUT.PUT_LINE.",
+                    "16. If the count of distinct customer attributes matches the count of records in the inserted table, a success message is printed. Otherwise, an error message is printed.",
+                    "17. The function ends with exception handling blocks for specific exceptions and a generic exception block to handle any other exceptions that may occur."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 19,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 66,
+                    "Program Volume": 313.47,
+                    "Program Difficulty": 7.89,
+                    "Program Effort": 2469.84,
+                    "Program Bugs": 0.1
+                }
+            },
+            "upstream_dependencies": [
+                "user_synonyms",
+                "de459e2fe7f96e4d958537b31b946b26.0ad6212deb7aa1fcea6c3846d02d7978cdc81057bcd87469c7825d00b68d1ace",
+                "de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9",
+                "de459e2fe7f96e4d958537b31b946b26.323243f2aa8db4e082ef5ed345b40143a31dd53d2d6cfbbd9546588c1ad0a6c4",
+                "de459e2fe7f96e4d958537b31b946b26.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.8f7de65fd07824e2eb265c460d4cd197afe8a26aa5c9bd45f837d26a84cb4cac"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CKBK_LNS_AGGR_LOAD",
+            "encrypted_name": "4685302dcf9ba7457ce15bdafd11a15e33458271b6f4a5ac93cddb79fbe15687",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CKBK_LNS_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.4685302dcf9ba7457ce15bdafd11a15e33458271b6f4a5ac93cddb79fbe15687",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.4685302dcf9ba7457ce15bdafd11a15e33458271b6f4a5ac93cddb79fbe15687"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_AUGEO_CUST_EXTRCT",
+            "encrypted_name": "2d75038dfcaa622736f8f8931b90d666fe9bab5e0563d804ec3773118c5fcdd7",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_AUGEO_CUST_EXTRCT",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.2d75038dfcaa622736f8f8931b90d666fe9bab5e0563d804ec3773118c5fcdd7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 0
+                },
+                "Halstead": {
+                    "Program Length": 0,
+                    "Unique Operators": 0,
+                    "Unique Operands": 0,
+                    "Vocabulary Size": 0,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.2d75038dfcaa622736f8f8931b90d666fe9bab5e0563d804ec3773118c5fcdd7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SWITCH_SYNONYM",
+            "encrypted_name": "590e6463ac088fe2368334fe0bbd95feabdf79d26e6b64e5df538ee9f33855da",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SWITCH_SYNONYM",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.590e6463ac088fe2368334fe0bbd95feabdf79d26e6b64e5df538ee9f33855da",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, v_schema_name (VARCHAR2) and v_synonym_name (VARCHAR2), and returns a NUMBER value.",
+                    "2. Local variables are declared, including v_prcs_nm, v_prcs_stp, n_ret, and v_table_name, to store values used in the function.",
+                    "3. The function includes a labeled block named SELECT_INCT_TABLE.",
+                    "4. Within the SELECT_INCT_TABLE block, the v_prcs_stp variable is assigned a value indicating the purpose of the subsequent SELECT statement.",
+                    "5. A SELECT statement is executed to retrieve the tbl_nm value from a specific table based on the condition that actv_ind is 'N' and synonym_nm matches the v_synonym_name parameter.",
+                    "6. The retrieved tbl_nm value is stored in the v_table_name variable.",
+                    "7. The function outputs the value of v_table_name using the dbms_output.put_line procedure.",
+                    "8. The v_prcs_stp variable is assigned a value indicating the purpose of the subsequent procedure call.",
+                    "9. A procedure named f21751d25bb3675b2a3778f4f03c7da6 is called with the parameters v_synonym_name, v_schema_name, and v_table_name.",
+                    "10. The return value of the procedure call is stored in the n_ret variable.",
+                    "11. The v_prcs_stp variable is assigned a value indicating the successful completion of the synonym switch.",
+                    "12. The v_prcs_stp variable is assigned a value indicating the purpose of the subsequent UPDATE statement.",
+                    "13. An UPDATE statement is executed to set the actv_ind column to 'N' and update the last_updt column in a specific table based on the condition that actv_ind is 'Y' and synonym_nm matches the v_synonym_name parameter.",
+                    "14. Another UPDATE statement is executed to set the actv_ind column to 'Y' and update the last_updt column in a specific table based on the condition that tbl_nm matches the v_table_name parameter and synonym_nm matches the v_synonym_name parameter.",
+                    "15. A COMMIT statement is executed to save the changes made by the UPDATE statements.",
+                    "16. The function returns the value 0.",
+                    "17. An exception handling block is included using the WHEN NO_DATA_FOUND clause to catch the exception when no data is found in the SELECT statement. It logs the error details and returns the value 3.",
+                    "18. Another exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details, performs a rollback, and returns the value 2."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 34,
+                    "Unique Operators": 10,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 29,
+                    "Program Volume": 97.47,
+                    "Program Difficulty": 6.32,
+                    "Program Effort": 615.47,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "9751bbbcfea690cc0be4d58830a6fe2e.56ac3befbcbada23fa9268d8fe6d5242",
+                "0e03d5c46556a742ba46252698396ef2.f21751d25bb3675b2a3778f4f03c7da6"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.590e6463ac088fe2368334fe0bbd95feabdf79d26e6b64e5df538ee9f33855da"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_RNK_USR_DIV_ALL_VPD",
+            "encrypted_name": "c54d261e5e8cdaaca4095a3e178a17fbc34d4c636f81fbc24dcc4928e333a28e",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_RNK_USR_DIV_ALL_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.c54d261e5e8cdaaca4095a3e178a17fbc34d4c636f81fbc24dcc4928e333a28e",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.c54d261e5e8cdaaca4095a3e178a17fbc34d4c636f81fbc24dcc4928e333a28e"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CASES_AND_DOLLARS_TEMP_WK",
+            "encrypted_name": "a35377af85801a576ad44a3ad9cace2d0fd77a9cafec138338d4d544c2c7ff8b",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CASES_AND_DOLLARS_TEMP_WK",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a35377af85801a576ad44a3ad9cace2d0fd77a9cafec138338d4d544c2c7ff8b",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a35377af85801a576ad44a3ad9cace2d0fd77a9cafec138338d4d544c2c7ff8b"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_GET_PAST_FUT_WKS",
+            "encrypted_name": "1dde8113836b4c140d518174269b76a19804ec6cef3fbf360c9c6a1b14f8ea2c",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_GET_PAST_FUT_WKS",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.1dde8113836b4c140d518174269b76a19804ec6cef3fbf360c9c6a1b14f8ea2c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_fisc_yr_wk (VARCHAR2) and p_num_wk (NUMBER), and returns a VARCHAR2 value.",
+                    "2. A local variable l_fisc_yr_wk is declared to store the result of a SELECT query.",
+                    "3. Begin Block:",
+                    "3.1. The function performs a SELECT query to retrieve the fisc_yr_wk value from a table named de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001 t based on the clndr_dt value.",
+                    "3.2. The clndr_dt value is calculated by adding (7 * p_num_wk) to the minimum clndr_dt value from the same table where fisc_yr_wk matches p_fisc_yr_wk.",
+                    "3.3. The retrieved fisc_yr_wk value is stored in the l_fisc_yr_wk variable.",
+                    "4. The l_fisc_yr_wk value is returned as the result of the function.",
+                    "5. End of the function."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 8,
+                    "Unique Operators": 6,
+                    "Unique Operands": 8,
+                    "Vocabulary Size": 14,
+                    "Program Volume": 33.219280948873624,
+                    "Program Difficulty": 1.3333333333333333,
+                    "Program Effort": 44.29237459849817,
+                    "Program Bugs": 0.011073093649625726
+                }
+            },
+            "upstream_dependencies": [
+                "de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001",
+                "de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.1dde8113836b4c140d518174269b76a19804ec6cef3fbf360c9c6a1b14f8ea2c"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_ALL_DIV_ACTIVE_VPD",
+            "encrypted_name": "78ffad08765c3bc847733a8db03b397a582c2cac885aecb64ece08d1c6a748c5",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_ALL_DIV_ACTIVE_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.78ffad08765c3bc847733a8db03b397a582c2cac885aecb64ece08d1c6a748c5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named all_divs_c is declared, which selects data from the dec387908a0954ddc8689c4ad37c8a3c table based on certain conditions.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_div_count.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the all_divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the 9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 61,
+                    "Unique Operators": 16,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 49,
+                    "Program Volume": 238.47,
+                    "Program Difficulty": 6.25,
+                    "Program Effort": 1490.44,
+                    "Program Bugs": 0.08
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "de459e2fe7f96e4d958537b31b946b26.dec387908a0954ddc8689c4ad37c8a3c",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa",
+                "05809d328a80b20ac6b3d7abdb3f24ec.839c4ffb4bfaae1bb58eab4dee67d96a"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.78ffad08765c3bc847733a8db03b397a582c2cac885aecb64ece08d1c6a748c5"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_TMS_VLDTN",
+            "encrypted_name": "6dacadb7253a1e9ee782e0f15ad986ed",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_TMS_VLDTN",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.6dacadb7253a1e9ee782e0f15ad986ed",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 9,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 25,
+                    "Program Volume": 96,
+                    "Program Difficulty": 4.444444444444445,
+                    "Program Effort": 426.6666666666667,
+                    "Program Bugs": 0.032
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.6dacadb7253a1e9ee782e0f15ad986ed"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CHANGE_CUST_LOAD",
+            "encrypted_name": "e743cb7848cb703b6dc280ca7c0fb3d0a7d2c123ab08f9acde20fb7e42f4f726",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CHANGE_CUST_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.e743cb7848cb703b6dc280ca7c0fb3d0a7d2c123ab08f9acde20fb7e42f4f726",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.e743cb7848cb703b6dc280ca7c0fb3d0a7d2c123ab08f9acde20fb7e42f4f726"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CASES_BY_GL_ACCT_LOAD",
+            "encrypted_name": "2f8696bfcff6d0014b353a4e3caa58a54843539a446edf629a1efb6180b9ca50",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CASES_BY_GL_ACCT_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.2f8696bfcff6d0014b353a4e3caa58a54843539a446edf629a1efb6180b9ca50",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.2f8696bfcff6d0014b353a4e3caa58a54843539a446edf629a1efb6180b9ca50"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_COMPRESS_SUB_PART_TBL",
+            "encrypted_name": "3ab1a934c1e73af48d255295c1b11bcdd45bab88ce33eb06efb7fa7143b3813e",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_COMPRESS_SUB_PART_TBL",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.3ab1a934c1e73af48d255295c1b11bcdd45bab88ce33eb06efb7fa7143b3813e",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes three input parameters: V_TABLE_OWNER (VARCHAR2), V_TABLE_NAME (VARCHAR2), and V_PARTITION_VALUE (VARCHAR2).",
+                    "2. The function returns a VARCHAR2 value.",
+                    "3. The function includes a constant declaration for CON_PROCESS_NAME, which is set to 'FN_COMPRESS_SUB_PART_TBL'.",
+                    "4. A cursor named c1 is declared, which retrieves the subpartition names from the sys.ALL_TAB_SUBPARTITIONS table based on the provided table owner, table name, and partition value.",
+                    "5. The function declares variables v_subpartition_name, v_prcs_nm, v_prcs_stp, and v_prcs_pram to store values retrieved from the database.",
+                    "6. The function begins with printing the start time and process name using dbms_output.put_line.",
+                    "7. The function opens the cursor c1.",
+                    "8. The function enters a loop to fetch each subpartition name from the cursor and executes an ALTER TABLE statement to compress the subpartition.",
+                    "9. After compressing all subpartitions, the function closes the cursor, commits the changes, and prints the completion message with the end time.",
+                    "10. The function handles exceptions using the WHEN OTHERS clause, which logs the error details and returns -1.",
+                    "11. The function ends with a return statement, returning 0 if the execution is successful."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 20,
+                    "Unique Operators": 9,
+                    "Unique Operands": 14,
+                    "Vocabulary Size": 23,
+                    "Program Volume": 77.973,
+                    "Program Difficulty": 3.111,
+                    "Program Effort": 242.244,
+                    "Program Bugs": 0.026
+                }
+            },
+            "upstream_dependencies": [
+                "sys.ALL_TAB_SUBPARTITIONS",
+                "sys.all_tab_partitions"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.3ab1a934c1e73af48d255295c1b11bcdd45bab88ce33eb06efb7fa7143b3813e"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SALES_SUMM_CUST_MRCH_LOAD",
+            "encrypted_name": "a9ca92b9d6fb7b13e7a2fefda1446c430702efe2a150fc3c5e2f2dbab67f988c",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SALES_SUMM_CUST_MRCH_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a9ca92b9d6fb7b13e7a2fefda1446c430702efe2a150fc3c5e2f2dbab67f988c",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a9ca92b9d6fb7b13e7a2fefda1446c430702efe2a150fc3c5e2f2dbab67f988c"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_AVG_PNTRTN_RATE_LOAD",
+            "encrypted_name": "6de3baca193cc9bf0be1a67a62475191947d06e5e267e8ca75830a056730fd45",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_AVG_PNTRTN_RATE_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.6de3baca193cc9bf0be1a67a62475191947d06e5e267e8ca75830a056730fd45",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 0
+                },
+                "Halstead": {
+                    "Program Length": 0,
+                    "Unique Operators": 0,
+                    "Unique Operands": 0,
+                    "Vocabulary Size": 0,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.6de3baca193cc9bf0be1a67a62475191947d06e5e267e8ca75830a056730fd45"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_AOP_TYPE_CORP_VPD",
+            "encrypted_name": "870a7b94217c94919950e9e3c20b86556f3bf1564d2f7da4e41552c0a7d78051",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_AOP_TYPE_CORP_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.870a7b94217c94919950e9e3c20b86556f3bf1564d2f7da4e41552c0a7d78051",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named divs_c is declared, which takes two parameters, p_user and p_sbjct_area, and performs a SELECT query from specific tables based on certain conditions.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the ctladm.pkg_vpd_debug_util.vpd_debug procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 48,
+                    "Unique Operators": 10,
+                    "Unique Operands": 23,
+                    "Vocabulary Size": 33,
+                    "Program Volume": 157.47,
+                    "Program Difficulty": 6.3,
+                    "Program Effort": 990.79,
+                    "Program Bugs": 0.05
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.3b1288ed835b1b524e9500bb13544956e6e6300089dae5a98e31814d0406060f",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.0eaf613ab52a53601d1496b5650de81e",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.870a7b94217c94919950e9e3c20b86556f3bf1564d2f7da4e41552c0a7d78051"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_GET_FISC_TIME",
+            "encrypted_name": "f4e695c1cd078a60bfb5f5d30ce0d271e32f6dd38f333cde68119d1f277367cd",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_GET_FISC_TIME",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.f4e695c1cd078a60bfb5f5d30ce0d271e32f6dd38f333cde68119d1f277367cd",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes three input parameters: p_clndr_dt (DATE), p_timeframe (VARCHAR2), and p_remove_prev_on_last_day (VARCHAR2, default value 'N').",
+                    "2. The function returns a VARCHAR2 value.",
+                    "3. Local variables are declared to store values retrieved from the database, including l_fisc_yr_wk, l_fisc_yr_mth, l_fisc_yr, l_prev_fisc_yr_wk, l_prev_fisc_wk_yr_mth, l_prev_fisc_yr_mth, l_prev_fisc_yr, l_last_dt_mth, and l_timeframe.",
+                    "4. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the input parameters and the values retrieved from the database.",
+                    "5. The function performs SELECT queries to retrieve data from the table de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001 and assigns the results to the local variables.",
+                    "6. The function utilizes the retrieved data to construct the desired output based on the value of l_timeframe.",
+                    "7. The function performs additional SELECT queries from the table wkly_time_corp to retrieve data and construct the desired output based on the value of l_timeframe.",
+                    "8. The function performs additional SELECT queries from the table time_corp to retrieve data and construct the desired output based on the value of l_timeframe.",
+                    "9. The function returns the final output based on the value of l_timeframe."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 6
+                },
+                "Halstead": {
+                    "Program Length": 47,
+                    "Unique Operators": 16,
+                    "Unique Operands": 26,
+                    "Vocabulary Size": 42,
+                    "Program Volume": 207.47,
+                    "Program Difficulty": 6.5,
+                    "Program Effort": 1349.05,
+                    "Program Bugs": 0.07
+                }
+            },
+            "upstream_dependencies": [
+                "de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001",
+                "wkly_time_corp",
+                "time_corp"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.f4e695c1cd078a60bfb5f5d30ce0d271e32f6dd38f333cde68119d1f277367cd"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CORP_AGGR_LOAD",
+            "encrypted_name": "9815a06262a394064c428e37cc22329b1f117328deac51b12eb944fb47e5fb71",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CORP_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.9815a06262a394064c428e37cc22329b1f117328deac51b12eb944fb47e5fb71",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes no input parameters and returns a NUMBER value.",
+                    "2. Local variables are declared, including v_out_msg, v_table_owner, v_table_name, v_truncate_tbl, v_prcs_stp, and cust_corp_aggr_tbl_cnt, to store values.",
+                    "3. An exception named all_exceptions is declared.",
+                    "4. Begin Block:",
+                    "4.1. The function calls a procedure named 8e64339f96bb08058f5d52f1c04f954a.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac to truncate/delete records from the CUST_CORP_AGGR table.",
+                    "4.2. If the value of v_truncate_tbl is not equal to 0, an error message is displayed and the all_exceptions exception is raised.",
+                    "4.3. A success message is displayed if the table is truncated successfully.",
+                    "4.4. Rows are inserted into the CUST_CORP_AGGR table using a SELECT statement from multiple tables.",
+                    "4.5. The count of inserted rows is stored in the cust_corp_aggr_tbl_cnt variable.",
+                    "4.6. A commit is performed to save the changes.",
+                    "4.7. The function returns 0.",
+                    "5. Exception Block:",
+                    "5.1. If any exception occurs, an error message is displayed along with the SQLCODE and SQLERRM values.",
+                    "5.2. The function returns 1."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 29,
+                    "Program Volume": 97.63,
+                    "Program Difficulty": 3.33,
+                    "Program Effort": 325.43,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "de459e2fe7f96e4d958537b31b946b26.52982d3bbc1ebc2720d9504c7ea2ed3f",
+                "corp_mu_map",
+                "prnt_mlt_unit_map",
+                "f3adb4eedb21b24e381d9e9f805f1e27e472b097974b0d6a9a7d2ed170324906"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.9815a06262a394064c428e37cc22329b1f117328deac51b12eb944fb47e5fb71"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_DOLLARS_BY_PYR_SEG_LOAD_WK",
+            "encrypted_name": "9e8ebfa5ad793019faa2c6d2cf5206decd1916184571ec542fb7a7b2f5c39c29",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_DOLLARS_BY_PYR_SEG_LOAD_WK",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.9e8ebfa5ad793019faa2c6d2cf5206decd1916184571ec542fb7a7b2f5c39c29",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.9e8ebfa5ad793019faa2c6d2cf5206decd1916184571ec542fb7a7b2f5c39c29"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_DIV_ALL_VPD",
+            "encrypted_name": "4712e64c7f21bf99d27d8bddf6b04fa2",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_DIV_ALL_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.4712e64c7f21bf99d27d8bddf6b04fa2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named divs_c is declared, which takes two parameters, p_user and p_sbjct_area, and performs a SELECT query from specific tables based on certain conditions.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the ctladm.pkg_vpd_debug_util.vpd_debug procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 24,
+                    "Unique Operators": 9,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 25,
+                    "Program Volume": 82.91,
+                    "Program Difficulty": 2.67,
+                    "Program Effort": 221.07,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.3b1288ed835b1b524e9500bb13544956e6e6300089dae5a98e31814d0406060f",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.0eaf613ab52a53601d1496b5650de81e",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.0f460756ee76d4a2460733464cda5f95"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.4712e64c7f21bf99d27d8bddf6b04fa2"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SAME_DAY_LOAD_VPD",
+            "encrypted_name": "6471bfa11afdec706d0ce83e6e0e2b906f3bf1564d2f7da4e41552c0a7d78051",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SAME_DAY_LOAD_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.6471bfa11afdec706d0ce83e6e0e2b906f3bf1564d2f7da4e41552c0a7d78051",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 6
+                },
+                "Halstead": {
+                    "Program Length": 97,
+                    "Unique Operators": 23,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 70,
+                    "Program Volume": 322.47,
+                    "Program Difficulty": 11.74,
+                    "Program Effort": 3787.47,
+                    "Program Bugs": 0.11
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.6471bfa11afdec706d0ce83e6e0e2b906f3bf1564d2f7da4e41552c0a7d78051"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_FWB_MDL_UPDT",
+            "encrypted_name": "55064c1180f6ab336267c27277a24dab",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_FWB_MDL_UPDT",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.55064c1180f6ab336267c27277a24dab",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 26,
+                    "Program Volume": 96.386,
+                    "Program Difficulty": 3.2,
+                    "Program Effort": 308.5152,
+                    "Program Bugs": 0.032128
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.55064c1180f6ab336267c27277a24dab"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_WK_AGGR_SYN_TST",
+            "encrypted_name": "2ebfd02960dfc60d4e4216bc68c3ff4dc4f53311af4ec5c633c2502cce362e64",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_WK_AGGR_SYN_TST",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.2ebfd02960dfc60d4e4216bc68c3ff4dc4f53311af4ec5c633c2502cce362e64",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes one input parameter, odate (DATE), and returns a NUMBER value.",
+                    "2. Constant declarations are made, including c_success, c_error, c_schema, c_aggr_tbl_syn_nm, c_aggr_load_syn_nm, representing various constant values.",
+                    "3. Several local variables are declared, such as l_return_code, l_out_msg, l_aggr_tbl_nm, and l_load_tbl_nm, to store values retrieved from the database.",
+                    "4. Begin Block:",
+                    "4.1. The function checks if the input parameter odate is null and returns an error if it is.",
+                    "4.2. The function executes dynamic SQL statements to retrieve table names based on synonyms and stores them in the l_aggr_tbl_nm and l_load_tbl_nm variables.",
+                    "4.3. The function outputs the retrieved table names using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "4.4. The function calls two external functions, de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9 and de459e2fe7f96e4d958537b31b946b26.f21751d25bb3675b2a3778f4f03c7da6, passing different parameters, and stores the return codes in the l_return_code variable.",
+                    "4.5. The function checks if the return codes are not equal to 0 and returns an error if they are not.",
+                    "4.6. The function calls another external function, 8e64339f96bb08058f5d52f1c04f954a.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac, passing different parameters, and stores the return code in the l_return_code variable.",
+                    "4.7. The function outputs the return code and message using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "4.8. The function checks if the return code is not equal to 0 and returns an error if it is not.",
+                    "4.9. The function returns the constant value c_success if all the steps are executed successfully.",
+                    "4.10. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and returns the constant value c_error."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 29,
+                    "Program Volume": 97.68,
+                    "Program Difficulty": 4.2,
+                    "Program Effort": 409.54,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "user_synonyms",
+                "de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9",
+                "de459e2fe7f96e4d958537b31b946b26.f21751d25bb3675b2a3778f4f03c7da6",
+                "8e64339f96bb08058f5d52f1c04f954a.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.2ebfd02960dfc60d4e4216bc68c3ff4dc4f53311af4ec5c633c2502cce362e64"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_MRCH_NTL_AVG_LOAD",
+            "encrypted_name": "bd677c4f64c73b5f396efd5a440a8be1948fe48fba5007554ba603acfef8b08d",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_MRCH_NTL_AVG_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.bd677c4f64c73b5f396efd5a440a8be1948fe48fba5007554ba603acfef8b08d",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 5
+                },
+                "Halstead": {
+                    "Program Length": 84,
+                    "Unique Operators": 29,
+                    "Unique Operands": 61,
+                    "Vocabulary Size": 90,
+                    "Program Volume": 365.47,
+                    "Program Difficulty": 7.59,
+                    "Program Effort": 2775.79,
+                    "Program Bugs": 0.12
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.bd677c4f64c73b5f396efd5a440a8be1948fe48fba5007554ba603acfef8b08d"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_NO_CC_DIV_VPD",
+            "encrypted_name": "9babd78549fcf52c85e9a0113e87bffee32f6dd38f333cde68119d1f277367cd",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_NO_CC_DIV_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.9babd78549fcf52c85e9a0113e87bffee32f6dd38f333cde68119d1f277367cd",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 61,
+                    "Unique Operators": 17,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 50,
+                    "Program Volume": 207.47,
+                    "Program Difficulty": 7.94,
+                    "Program Effort": 1648.84,
+                    "Program Bugs": 0.07
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.9babd78549fcf52c85e9a0113e87bffee32f6dd38f333cde68119d1f277367cd"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_XDM_SALES_CORP_UPD_AN",
+            "encrypted_name": "8a7dc331f2181d5e6ec25c055901932f1214a603159393433e3ed3f38ae2175a",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_XDM_SALES_CORP_UPD_AN",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.8a7dc331f2181d5e6ec25c055901932f1214a603159393433e3ed3f38ae2175a",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.8a7dc331f2181d5e6ec25c055901932f1214a603159393433e3ed3f38ae2175a"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CLS_DLY",
+            "encrypted_name": "e048cb729ea7e0498c639d0c4635e261",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CLS_DLY",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.e048cb729ea7e0498c639d0c4635e261",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.e048cb729ea7e0498c639d0c4635e261"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CLS_CORP_WKLY_RECLS",
+            "encrypted_name": "6ed4b6f3334125cd8e95581577ce6a607f6e73c66a4a5e01d3b1c9c28dca86ff",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CLS_CORP_WKLY_RECLS",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.6ed4b6f3334125cd8e95581577ce6a607f6e73c66a4a5e01d3b1c9c28dca86ff",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.6ed4b6f3334125cd8e95581577ce6a607f6e73c66a4a5e01d3b1c9c28dca86ff"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CRT_SYNONYM",
+            "encrypted_name": "60ac4f2269d203f666e8df2b3b5485d6",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CRT_SYNONYM",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.60ac4f2269d203f666e8df2b3b5485d6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes three input parameters, p_syn_nm (VARCHAR2), p_tbl_owner (VARCHAR2), and p_tbl_nm (VARCHAR2), and returns a NUMBER value.",
+                    "2. A local variable v_dyn_sql (VARCHAR2) is declared to store the dynamically generated SQL statement.",
+                    "3. The v_dyn_sql variable is assigned a value by concatenating the input parameters to create a CREATE OR REPLACE SYNONYM statement.",
+                    "4. The DBMS_OUTPUT.PUT_LINE procedure is used to display the generated SQL statement.",
+                    "5. The execute immediate statement is used to execute the dynamically generated SQL statement.",
+                    "6. The function returns 0 if the execution is successful.",
+                    "7. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution.",
+                    "8. Within the exception handling block, the error details are logged using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "9. The SQLCODE and SQLERRM functions are used to retrieve the error code and error message, which are also logged using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "10. The function returns 1 in case of an exception."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 3,
+                    "Unique Operators": 3,
+                    "Unique Operands": 6,
+                    "Vocabulary Size": 9,
+                    "Program Volume": 18,
+                    "Program Difficulty": 1,
+                    "Program Effort": 18,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_OUTPUT",
+                "execute immediate"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.60ac4f2269d203f666e8df2b3b5485d6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_ACQSTN_SLS_EXCLUDE_VPD",
+            "encrypted_name": "fceb5158121ed80c87b34472f6b284952880ee29336f388c5a42fe7ae1fc13a0",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_ACQSTN_SLS_EXCLUDE_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.fceb5158121ed80c87b34472f6b284952880ee29336f388c5a42fe7ae1fc13a0",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named all_divs_c is declared, which selects a column from a table based on a condition.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the all_divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the 9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 61,
+                    "Unique Operators": 16,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 49,
+                    "Program Volume": 207.47,
+                    "Program Difficulty": 6.25,
+                    "Program Effort": 1296.69,
+                    "Program Bugs": 0.07
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "de459e2fe7f96e4d958537b31b946b26.dec387908a0954ddc8689c4ad37c8a3c",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa",
+                "05809d328a80b20ac6b3d7abdb3f24ec.839c4ffb4bfaae1bb58eab4dee67d96a"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.fceb5158121ed80c87b34472f6b284952880ee29336f388c5a42fe7ae1fc13a0"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_FWB_CYCLE_LOAD",
+            "encrypted_name": "f605c9c0dcb6ca53aa18de96c97195f1a95a09b2641cac5597ee63e380dd2738",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_FWB_CYCLE_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.f605c9c0dcb6ca53aa18de96c97195f1a95a09b2641cac5597ee63e380dd2738",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 14,
+                    "Vocabulary Size": 24,
+                    "Program Volume": 82.91,
+                    "Program Difficulty": 3.33,
+                    "Program Effort": 276.37,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.f605c9c0dcb6ca53aa18de96c97195f1a95a09b2641cac5597ee63e380dd2738"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_ACQSTN_AGGR_LOAD",
+            "encrypted_name": "3eef0a9f26803c56343159adeaca10f8a7d2c123ab08f9acde20fb7e42f4f726",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_ACQSTN_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.3eef0a9f26803c56343159adeaca10f8a7d2c123ab08f9acde20fb7e42f4f726",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.3eef0a9f26803c56343159adeaca10f8a7d2c123ab08f9acde20fb7e42f4f726"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_XDM_SALES_MKTPLUS_AGGR_LOAD",
+            "encrypted_name": "6171714221d0069ddcdc7b81983cee54dfa3c71a89585da450b005deb0a7b9c7",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_XDM_SALES_MKTPLUS_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.6171714221d0069ddcdc7b81983cee54dfa3c71a89585da450b005deb0a7b9c7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 100,
+                    "Unique Operators": 32,
+                    "Unique Operands": 68,
+                    "Vocabulary Size": 100,
+                    "Program Volume": 442.68,
+                    "Program Difficulty": 15.94,
+                    "Program Effort": 7052.47,
+                    "Program Bugs": 0.15
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.6171714221d0069ddcdc7b81983cee54dfa3c71a89585da450b005deb0a7b9c7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SLS_SUMM_CLNDRMO_RFRSH",
+            "encrypted_name": "902847b34476217ba69f6ad1b09299eff7d3324de0c6c5829d4545718335f281",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SLS_SUMM_CLNDRMO_RFRSH",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.902847b34476217ba69f6ad1b09299eff7d3324de0c6c5829d4545718335f281",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 26,
+                    "Program Volume": 96.861,
+                    "Program Difficulty": 4.8,
+                    "Program Effort": 464.291,
+                    "Program Bugs": 0.032
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.902847b34476217ba69f6ad1b09299eff7d3324de0c6c5829d4545718335f281"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PYR_SLS_SYN_SWAP",
+            "encrypted_name": "a4628e525d38523907591ec36481d1e98013bf5b8be037b748b31a500198bbd1",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PYR_SLS_SYN_SWAP",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a4628e525d38523907591ec36481d1e98013bf5b8be037b748b31a500198bbd1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 0
+                },
+                "Halstead": {
+                    "Program Length": 0,
+                    "Unique Operators": 0,
+                    "Unique Operands": 0,
+                    "Vocabulary Size": 0,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a4628e525d38523907591ec36481d1e98013bf5b8be037b748b31a500198bbd1"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_XDM_CUST_PRSPCT_LOAD",
+            "encrypted_name": "24eb58bafbe385c02936b04ede7b1696217c80690c883eb1a2d192ffbb747dd4",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_XDM_CUST_PRSPCT_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.24eb58bafbe385c02936b04ede7b1696217c80690c883eb1a2d192ffbb747dd4",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.24eb58bafbe385c02936b04ede7b1696217c80690c883eb1a2d192ffbb747dd4"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_WK_AGGR_SYN",
+            "encrypted_name": "2ebfd02960dfc60d4e4216bc68c3ff4d4ed5d7418efdff0224f78050bb9d6c48",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_WK_AGGR_SYN",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.2ebfd02960dfc60d4e4216bc68c3ff4d4ed5d7418efdff0224f78050bb9d6c48",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes one input parameter, odate (DATE), and returns a NUMBER value.",
+                    "2. Constant declarations are made, including c_success and c_error with a value of 0, c_schema with a value of 'XDMADM', c_aggr_tbl_syn_nm with a value of 'CUST_WK_AGGR', and c_aggr_load_syn_nm with a value of 'CUST_WK_AGGR_LOAD'.",
+                    "3. Several local variables are declared, including l_return_code of type NUMBER, l_out_msg of type VARCHAR2, l_aggr_tbl_nm of type VARCHAR2, and l_load_tbl_nm of type VARCHAR2.",
+                    "4. The function checks if the input parameter odate is null and outputs an error message if it is.",
+                    "5. The function executes dynamic SQL statements to retrieve table names from user_synonyms based on the synonym names c_aggr_tbl_syn_nm and c_aggr_load_syn_nm, and stores the results in l_aggr_tbl_nm and l_load_tbl_nm variables respectively.",
+                    "6. The function outputs the retrieved table names.",
+                    "7. The function calls a procedure de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9 to analyze the table specified by l_load_tbl_nm and stores the return code in l_return_code.",
+                    "8. The function checks if the return code from the analyze procedure is not equal to 0 and outputs an error message if it is.",
+                    "9. The function calls a procedure de459e2fe7f96e4d958537b31b946b26.f21751d25bb3675b2a3778f4f03c7da6 to create a synonym for the aggregate table specified by c_aggr_tbl_syn_nm and l_load_tbl_nm, and stores the return code in l_return_code.",
+                    "10. The function checks if the return code from the create synonym procedure is not equal to 0 and outputs an error message if it is.",
+                    "11. The function calls the same create synonym procedure to create a synonym for the aggregate load table specified by c_aggr_load_syn_nm and l_aggr_tbl_nm, and stores the return code in l_return_code.",
+                    "12. The function checks if the return code from the create synonym procedure is not equal to 0 and outputs an error message if it is.",
+                    "13. The function calls a procedure 8e64339f96bb08058f5d52f1c04f954a.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac to truncate the previous aggregate table specified by l_aggr_tbl_nm and stores the return code in l_return_code.",
+                    "14. The function outputs the return code and message from the truncate procedure.",
+                    "15. The function checks if the return code from the truncate procedure is not equal to 0 and outputs an error message if it is.",
+                    "16. The function returns the constant value c_success if all the steps are executed successfully.",
+                    "17. An exception handling block is included to catch any unexpected errors that may occur during execution. It logs the error details and returns the constant value c_error.",
+                    "18. The function ends."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 29,
+                    "Program Volume": 97.68,
+                    "Program Difficulty": 4.2,
+                    "Program Effort": 409.54,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "user_synonyms",
+                "de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9",
+                "de459e2fe7f96e4d958537b31b946b26.f21751d25bb3675b2a3778f4f03c7da6",
+                "8e64339f96bb08058f5d52f1c04f954a.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.2ebfd02960dfc60d4e4216bc68c3ff4d4ed5d7418efdff0224f78050bb9d6c48"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_RGN_SLS_SYN_SWAP",
+            "encrypted_name": "a292a8ff5202643cb4f9d751c3e975c98013bf5b8be037b748b31a500198bbd1",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_RGN_SLS_SYN_SWAP",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a292a8ff5202643cb4f9d751c3e975c98013bf5b8be037b748b31a500198bbd1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 18,
+                    "Unique Operands": 38,
+                    "Vocabulary Size": 56,
+                    "Program Volume": 267.47,
+                    "Program Difficulty": 9.44,
+                    "Program Effort": 2523.84,
+                    "Program Bugs": 0.09
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a292a8ff5202643cb4f9d751c3e975c98013bf5b8be037b748b31a500198bbd1"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CASES_AND_DOLLARS_TEMP_LOAD",
+            "encrypted_name": "a35377af85801a576ad44a3ad9cace2de9470df0dd42e4429863cc91496f306a",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CASES_AND_DOLLARS_TEMP_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a35377af85801a576ad44a3ad9cace2de9470df0dd42e4429863cc91496f306a",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a35377af85801a576ad44a3ad9cace2de9470df0dd42e4429863cc91496f306a"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CASES_BY_GL_ACCT_LOAD_WK",
+            "encrypted_name": "2f8696bfcff6d0014b353a4e3caa58a5c10e2302d31431641848a526ce24a458",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CASES_BY_GL_ACCT_LOAD_WK",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.2f8696bfcff6d0014b353a4e3caa58a5c10e2302d31431641848a526ce24a458",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.2f8696bfcff6d0014b353a4e3caa58a5c10e2302d31431641848a526ce24a458"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PIM_CORP_AGGR_LOAD",
+            "encrypted_name": "df66b9bd4b64f11b6d366edcb20f62c333458271b6f4a5ac93cddb79fbe15687",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PIM_CORP_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.df66b9bd4b64f11b6d366edcb20f62c333458271b6f4a5ac93cddb79fbe15687",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes several local variables to store values and perform calculations.",
+                    "2. It executes dynamic SQL statements to retrieve information from the database.",
+                    "3. It performs conditional checks and raises exceptions based on certain conditions.",
+                    "4. It inserts data into the PIM_CORP_AGGR_LOAD table.",
+                    "5. It analyzes the PIM_CORP_AGGR_LOAD table.",
+                    "6. It compares the count of distinct PIM attributes with the count of records inserted into PIM_CORP_AGGR_LOAD.",
+                    "7. It handles exceptions and logs error messages.",
+                    "8. It returns a number indicating the success or failure of the function."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 61,
+                    "Unique Operators": 19,
+                    "Unique Operands": 38,
+                    "Vocabulary Size": 57,
+                    "Program Volume": 238.47,
+                    "Program Difficulty": 9.47,
+                    "Program Effort": 2256.47,
+                    "Program Bugs": 0.08
+                }
+            },
+            "upstream_dependencies": [
+                "user_synonyms",
+                "de459e2fe7f96e4d958537b31b946b26.0ad6212deb7aa1fcea6c3846d02d7978cdc81057bcd87469c7825d00b68d1ace",
+                "PIM_CORP_AGGR_LOAD",
+                "de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.df66b9bd4b64f11b6d366edcb20f62c333458271b6f4a5ac93cddb79fbe15687"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PYR_SLS_AGGR_LOAD",
+            "encrypted_name": "ab4278f1500ebdb78989a5fd47ca876b0eb3d570257e690253f62cef87e53109",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PYR_SLS_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.ab4278f1500ebdb78989a5fd47ca876b0eb3d570257e690253f62cef87e53109",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.ab4278f1500ebdb78989a5fd47ca876b0eb3d570257e690253f62cef87e53109"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_USR_DIV_ALL_VPD",
+            "encrypted_name": "c6aee0e87266ff801fcba6872d6bbcfb9d8b3fe8760b7fe8c45d1255ce1ebaf6",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_USR_DIV_ALL_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.c6aee0e87266ff801fcba6872d6bbcfb9d8b3fe8760b7fe8c45d1255ce1ebaf6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 5
+                },
+                "Halstead": {
+                    "Program Length": 61,
+                    "Unique Operators": 16,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 49,
+                    "Program Volume": 238.47,
+                    "Program Difficulty": 6.06,
+                    "Program Effort": 1445.68,
+                    "Program Bugs": 0.08
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.c6aee0e87266ff801fcba6872d6bbcfb9d8b3fe8760b7fe8c45d1255ce1ebaf6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SYN_SWAP",
+            "encrypted_name": "b0c7b228cc9d5cd4595cb075b166be06",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SYN_SWAP",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.b0c7b228cc9d5cd4595cb075b166be06",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 19,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 66,
+                    "Program Volume": 315.47,
+                    "Program Difficulty": 9.79,
+                    "Program Effort": 3084.47,
+                    "Program Bugs": 0.11
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.b0c7b228cc9d5cd4595cb075b166be06"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_FWB_MDL_BRIDGE_LOAD",
+            "encrypted_name": "15d4545d5a22d40c60e901338b3fe0114173ca9ff31147ddcb0ed93eaee4ca62",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_FWB_MDL_BRIDGE_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.15d4545d5a22d40c60e901338b3fe0114173ca9ff31147ddcb0ed93eaee4ca62",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 0
+                },
+                "Halstead": {
+                    "Program Length": 0,
+                    "Unique Operators": 0,
+                    "Unique Operands": 0,
+                    "Vocabulary Size": 0,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.15d4545d5a22d40c60e901338b3fe0114173ca9ff31147ddcb0ed93eaee4ca62"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_FWB_PURGE",
+            "encrypted_name": "a93ba0884a2d1758654db9afe97084d3",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_FWB_PURGE",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a93ba0884a2d1758654db9afe97084d3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 47,
+                    "Unique Operators": 16,
+                    "Unique Operands": 26,
+                    "Vocabulary Size": 42,
+                    "Program Volume": 207.47,
+                    "Program Difficulty": 6.25,
+                    "Program Effort": 1296.69,
+                    "Program Bugs": 0.07
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a93ba0884a2d1758654db9afe97084d3"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_RNK_EXCLUDE_VPD",
+            "encrypted_name": "a59faff99f77e1b37b9a35aed0e628999d8b3fe8760b7fe8c45d1255ce1ebaf6",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_RNK_EXCLUDE_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a59faff99f77e1b37b9a35aed0e628999d8b3fe8760b7fe8c45d1255ce1ebaf6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_exclude_cnt, to store values retrieved from the database.",
+                    "4. Begin Block:",
+                    "4.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "4.2. The function performs a SELECT query to retrieve the count of records from a specific table based on certain conditions.",
+                    "4.3. The function constructs a security predicate based on the count of records and other variables.",
+                    "4.4. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "4.5. Debug logging is implemented using the 9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 16,
+                    "Unique Operands": 38,
+                    "Vocabulary Size": 54,
+                    "Program Volume": 267.47,
+                    "Program Difficulty": 9.5,
+                    "Program Effort": 2540.02,
+                    "Program Bugs": 0.09
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "de459e2fe7f96e4d958537b31b946b26.1531773130eedd41bd3a1fa8035bfa17c73cfccbabc9dd99fae7eea844197a25",
+                "de459e2fe7f96e4d958537b31b946b26.de40ae7be8b2eb3858d46af8d107f3db"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a59faff99f77e1b37b9a35aed0e628999d8b3fe8760b7fe8c45d1255ce1ebaf6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CLSFCTN_CORP_WKLY",
+            "encrypted_name": "5a29470c6a3d464325075a185f279be578927c4aa5b984a887dc1b46384bc787",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CLSFCTN_CORP_WKLY",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.5a29470c6a3d464325075a185f279be578927c4aa5b984a887dc1b46384bc787",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 16,
+                    "Unique Operands": 38,
+                    "Vocabulary Size": 54,
+                    "Program Volume": 267.47,
+                    "Program Difficulty": 9.5,
+                    "Program Effort": 2540.02,
+                    "Program Bugs": 0.09
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.5a29470c6a3d464325075a185f279be578927c4aa5b984a887dc1b46384bc787"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SALES_SUMM_CUST_DLY_LOAD",
+            "encrypted_name": "a9ca92b9d6fb7b13e7a2fefda1446c433bcc2e4a396c374ad5b2fffde085ad4b",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SALES_SUMM_CUST_DLY_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.a9ca92b9d6fb7b13e7a2fefda1446c433bcc2e4a396c374ad5b2fffde085ad4b",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.a9ca92b9d6fb7b13e7a2fefda1446c433bcc2e4a396c374ad5b2fffde085ad4b"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_XDM_SALES_CORP_UPD_AP",
+            "encrypted_name": "8a7dc331f2181d5e6ec25c055901932fa57ac70fbb19e03921766fa61d3932fb",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_XDM_SALES_CORP_UPD_AP",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.8a7dc331f2181d5e6ec25c055901932fa57ac70fbb19e03921766fa61d3932fb",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.8a7dc331f2181d5e6ec25c055901932fa57ac70fbb19e03921766fa61d3932fb"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PYR_SLS_AGGR_LOAD_11G",
+            "encrypted_name": "ab4278f1500ebdb78989a5fd47ca876bff4a2a68239e25934bce2ab808c4cfdc",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PYR_SLS_AGGR_LOAD_11G",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.ab4278f1500ebdb78989a5fd47ca876bff4a2a68239e25934bce2ab808c4cfdc",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.ab4278f1500ebdb78989a5fd47ca876bff4a2a68239e25934bce2ab808c4cfdc"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_RVNUE_BY_GL_ACCT_LOAD",
+            "encrypted_name": "4a746717fb433d92a5a49a34d309c5314843539a446edf629a1efb6180b9ca50",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_RVNUE_BY_GL_ACCT_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.4a746717fb433d92a5a49a34d309c5314843539a446edf629a1efb6180b9ca50",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.4a746717fb433d92a5a49a34d309c5314843539a446edf629a1efb6180b9ca50"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_RVNUE_BY_GL_ACCT_LOAD_WK",
+            "encrypted_name": "4a746717fb433d92a5a49a34d309c531c10e2302d31431641848a526ce24a458",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_RVNUE_BY_GL_ACCT_LOAD_WK",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.4a746717fb433d92a5a49a34d309c531c10e2302d31431641848a526ce24a458",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.4a746717fb433d92a5a49a34d309c531c10e2302d31431641848a526ce24a458"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SYN_SALES_MKTPLUS_AGGR_LOAD",
+            "encrypted_name": "46f16dafd4b70a10a470bfb47416289adfa3c71a89585da450b005deb0a7b9c7",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SYN_SALES_MKTPLUS_AGGR_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.46f16dafd4b70a10a470bfb47416289adfa3c71a89585da450b005deb0a7b9c7",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.46f16dafd4b70a10a470bfb47416289adfa3c71a89585da450b005deb0a7b9c7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_HYBRID_PO_EXTRACT",
+            "encrypted_name": "50475e04147f4e799b20502d8b4b0e153c57f19e04c7059a1aac383074c20acd",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_HYBRID_PO_EXTRACT",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.50475e04147f4e799b20502d8b4b0e153c57f19e04c7059a1aac383074c20acd",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.50475e04147f4e799b20502d8b4b0e153c57f19e04c7059a1aac383074c20acd"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SYN_CUST_PLUS_PRSPCT_LOAD",
+            "encrypted_name": "93fe6b19a642a1a2313567b9dd990a4833e40dba523254790a9dbda5a6fe5783",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SYN_CUST_PLUS_PRSPCT_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.93fe6b19a642a1a2313567b9dd990a4833e40dba523254790a9dbda5a6fe5783",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 26,
+                    "Program Volume": 96.861,
+                    "Program Difficulty": 3.2,
+                    "Program Effort": 310.756,
+                    "Program Bugs": 0.032
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.93fe6b19a642a1a2313567b9dd990a4833e40dba523254790a9dbda5a6fe5783"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CKBK_RSN_EXCLD_LOAD",
+            "encrypted_name": "9927e69aa4804c9688b193a44935e59844579ad22a1d01477a4cd7ddf5ec4148",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CKBK_RSN_EXCLD_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.9927e69aa4804c9688b193a44935e59844579ad22a1d01477a4cd7ddf5ec4148",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes one input parameter, p_odate (DATE), and returns a NUMBER value.",
+                    "2. Constant declarations are made, including c_success, c_error, c_schema, c_aggr_tbl_syn_nm, c_aggr_load_syn_nm, representing various constant values.",
+                    "3. Several local variables are declared, such as l_return_code, l_out_msg, l_aggr_tbl_nm, and l_load_tbl_nm, to store values retrieved from the database.",
+                    "4. Begin Block:",
+                    "4.1. The function checks if the input parameter p_odate is null and returns an error if it is.",
+                    "4.2. The function executes dynamic SQL statements to retrieve table names based on synonyms and stores the results in l_aggr_tbl_nm and l_load_tbl_nm variables.",
+                    "4.3. The function outputs the retrieved table names using DBMS_OUTPUT.PUT_LINE.",
+                    "4.4. The function calls a procedure from another package to truncate the load table and stores the return code in l_return_code.",
+                    "4.5. The function checks if the return code is not equal to 0 and returns an error if it is.",
+                    "4.6. The function inserts data into a table using a SELECT statement.",
+                    "4.7. The function outputs the number of rows inserted using DBMS_OUTPUT.PUT_LINE.",
+                    "4.8. The function commits the transaction.",
+                    "4.9. The function calls a procedure from another package to analyze the load table and stores the return code in l_return_code.",
+                    "4.10. The function checks if the return code is not equal to 0 and returns an error if it is.",
+                    "4.11. The function creates synonyms for the aggregate table and the load table using procedures from another package and stores the return codes in l_return_code.",
+                    "4.12. The function checks if the return codes are not equal to 0 and returns an error if they are.",
+                    "4.13. The function calls a procedure from another package to truncate the previous aggregate table and stores the return code in l_return_code.",
+                    "4.14. The function checks if the return code is not equal to 0 and returns an error if it is.",
+                    "4.15. The function commits the transaction.",
+                    "4.16. The function returns a success code."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 47,
+                    "Unique Operators": 16,
+                    "Unique Operands": 38,
+                    "Vocabulary Size": 54,
+                    "Program Volume": 238.47,
+                    "Program Difficulty": 7.5,
+                    "Program Effort": 1788.53,
+                    "Program Bugs": 0.08
+                }
+            },
+            "upstream_dependencies": [
+                "user_synonyms",
+                "DBMS_OUTPUT",
+                "de459e2fe7f96e4d958537b31b946b26.8e64339f96bb08058f5d52f1c04f954a.8ffe4678890c39c7d4ed38c2ed759e24.e4b5db2b3f9b19accbb8cddbfcd05bac",
+                "de459e2fe7f96e4d958537b31b946b26.969c164d2bcd9fba70276f3ebcd57f1209407c8b2e5a4583e4773894e4cae814",
+                "de459e2fe7f96e4d958537b31b946b26.9b3711c37bca8fd1d7c76527508615f9",
+                "de459e2fe7f96e4d958537b31b946b26.f21751d25bb3675b2a3778f4f03c7da6"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.9927e69aa4804c9688b193a44935e59844579ad22a1d01477a4cd7ddf5ec4148"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SLS_ORG_XFER_VPD",
+            "encrypted_name": "f13d148c71388a902a7d8c2025fa3f8751f0cb5b5cdaeb5f21683018e0da7459",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SLS_ORG_XFER_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.f13d148c71388a902a7d8c2025fa3f8751f0cb5b5cdaeb5f21683018e0da7459",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named divs_c is declared, which takes two parameters, p_user and p_sbjct_area, and performs a SELECT query from specific tables based on certain conditions.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the ctladm.pkg_vpd_debug_util.vpd_debug procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 10,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 29,
+                    "Program Volume": 97.47,
+                    "Program Difficulty": 4.2,
+                    "Program Effort": 408.39,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.3b1288ed835b1b524e9500bb13544956e6e6300089dae5a98e31814d0406060f",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.0eaf613ab52a53601d1496b5650de81e",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.f13d148c71388a902a7d8c2025fa3f8751f0cb5b5cdaeb5f21683018e0da7459"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_DIV_COMPRESS",
+            "encrypted_name": "cf04c524bd7196254bcc9e105a462b98",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_DIV_COMPRESS",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.cf04c524bd7196254bcc9e105a462b98",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.cf04c524bd7196254bcc9e105a462b98"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SALESCB_ACCESS_VPD",
+            "encrypted_name": "3a9b3c9f3855596793f6aa3a196038f3dc6b6eb8e8d01ef6bc7325a0d378c188",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SALESCB_ACCESS_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.3a9b3c9f3855596793f6aa3a196038f3dc6b6eb8e8d01ef6bc7325a0d378c188",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_sales_cb, to store values retrieved from the database.",
+                    "4. Begin Block:",
+                    "4.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area and l_sales_cb.",
+                    "4.2. The function calls a procedure named 9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa to log debug information related to the function's execution, including various parameter values and the time taken for execution.",
+                    "4.3. The function returns the final value of the l_security_predicate variable.",
+                    "5. Exception Block:",
+                    "5.1. The exception block catches any unexpected errors that may occur during execution.",
+                    "5.2. It calls the same debug logging procedure to log the error details and sets the security predicate to '1=3' in case of an exception.",
+                    "5.3. The function returns the final value of the l_security_predicate variable."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 9,
+                    "Unique Operands": 17,
+                    "Vocabulary Size": 26,
+                    "Program Volume": 97.63,
+                    "Program Difficulty": 4.67,
+                    "Program Effort": 454.97,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.3b1288ed835b1b524e9500bb13544956e6e6300089dae5a98e31814d0406060f",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.f4a54ebc6f2c591ed4266aafe66971af",
+                "9751bbbcfea690cc0be4d58830a6fe2e.9bfb5eb7793dc8fa6800d5a61e5e3e4e1e2f6ec194927f064ce6cb31fba71a32.18b8f3c0ab3006a1a45779298981b3f3",
+                "9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.3a9b3c9f3855596793f6aa3a196038f3dc6b6eb8e8d01ef6bc7325a0d378c188"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_POWER_SELL_EXTRACT",
+            "encrypted_name": "ec93221db65670d7431bc87eff7d5d5006582a4f83ed62b663e72849041a12b6",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_POWER_SELL_EXTRACT",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.ec93221db65670d7431bc87eff7d5d5006582a4f83ed62b663e72849041a12b6",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.ec93221db65670d7431bc87eff7d5d5006582a4f83ed62b663e72849041a12b6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_GET_PAST_FUT_MTH",
+            "encrypted_name": "1dde8113836b4c140d518174269b76a17964e12a8ce0be6e33ad286b22c5be85",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_GET_PAST_FUT_MTH",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.1dde8113836b4c140d518174269b76a17964e12a8ce0be6e33ad286b22c5be85",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_fisc_yr_mth (VARCHAR2) and p_num_mth (NUMBER), and returns a VARCHAR2 value.",
+                    "2. Local variables l_fut_fisc_yr_mth and l_past_fisc_yr_mth are declared to store the values retrieved from the database.",
+                    "3. The function includes a SELECT statement to fetch the values of fut_fisc_yr_mth and past_fisc_yr_mth from a subquery.",
+                    "4. The subquery retrieves distinct fisc_yr_mth values from a specific table and uses the LEAD and LAG functions to calculate the future and past fisc_yr_mth values based on the p_num_mth parameter.",
+                    "5. The main query filters the result based on the p_fisc_yr_mth parameter and assigns the fetched values to the local variables.",
+                    "6. The function includes an IF-THEN-ELSE statement to determine the return value based on the value of p_num_mth.",
+                    "7. The function returns the appropriate fisc_yr_mth value based on the conditions in the IF-THEN-ELSE statement.",
+                    "8. The function ends with the END keyword."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 15,
+                    "Unique Operators": 7,
+                    "Unique Operands": 9,
+                    "Vocabulary Size": 16,
+                    "Program Volume": 47.5,
+                    "Program Difficulty": 2.5714285714285716,
+                    "Program Effort": 122.14285714285714,
+                    "Program Bugs": 0.015833333333333335
+                }
+            },
+            "upstream_dependencies": [
+                "de459e2fe7f96e4d958537b31b946b26.c063519e87e23d735cdb53a35832f0ff"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.1dde8113836b4c140d518174269b76a17964e12a8ce0be6e33ad286b22c5be85"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CHK_ACCRLS_LOADED",
+            "encrypted_name": "39d5f42370644380b9c93da820f6235ad7f5fe5bee2d713e3e6f3e431ca8bf42",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CHK_ACCRLS_LOADED",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.39d5f42370644380b9c93da820f6235ad7f5fe5bee2d713e3e6f3e431ca8bf42",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_div_count, and l_first, to store values retrieved from the database.",
+                    "4. A cursor named divs_c is declared, which takes two parameters, p_user and p_sbjct_area, and performs a SELECT query from specific tables based on certain conditions.",
+                    "5. Begin Block:",
+                    "5.1. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_all_divs.",
+                    "5.2. The function utilizes the declared cursor to fetch data into the divs_rec variable and constructs a security predicate based on the fetched data.",
+                    "5.3. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "5.4. Debug logging is implemented using the ctladm.pkg_vpd_debug_util.vpd_debug procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 20,
+                    "Unique Operators": 10,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 26,
+                    "Program Volume": 104,
+                    "Program Difficulty": 5.333333333333333,
+                    "Program Effort": 554.6666666666666,
+                    "Program Bugs": 0.034666666666666665
+                }
+            },
+            "upstream_dependencies": [
+                "de459e2fe7f96e4d958537b31b946b26.0b3320d3f985cd20d1ec65d9dfeed2de",
+                "de459e2fe7f96e4d958537b31b946b26.04dc4bcfc7c844c2f270ab37a87185d896db30e848b49b2cdadf713eac57e08a",
+                "de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001",
+                "24934fba42408e39f74a76ffdec4e8fa.8493610dc5a1410789d9d27235a22a6c"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.39d5f42370644380b9c93da820f6235ad7f5fe5bee2d713e3e6f3e431ca8bf42"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_XDM_SALES_CORP_UPD_REG",
+            "encrypted_name": "8a7dc331f2181d5e6ec25c055901932f7a31f0b52a1aadaf47b07f268906acad",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_XDM_SALES_CORP_UPD_REG",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.8a7dc331f2181d5e6ec25c055901932f7a31f0b52a1aadaf47b07f268906acad",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.8a7dc331f2181d5e6ec25c055901932f7a31f0b52a1aadaf47b07f268906acad"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_USR_DIV_ACTIVE_VPD",
+            "encrypted_name": "67faf5712aecba41e5747be5cc71e72d582c2cac885aecb64ece08d1c6a748c5",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_USR_DIV_ACTIVE_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.67faf5712aecba41e5747be5cc71e72d582c2cac885aecb64ece08d1c6a748c5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 84,
+                    "Unique Operators": 19,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 66,
+                    "Program Volume": 267.47,
+                    "Program Difficulty": 9.79,
+                    "Program Effort": 2617.84,
+                    "Program Bugs": 0.09
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.67faf5712aecba41e5747be5cc71e72d582c2cac885aecb64ece08d1c6a748c5"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PYR_SLS_STAT_UPD",
+            "encrypted_name": "fa8a486fd546ccab5d60f10a50cd63055008558fdc75dc9de9ea5a7b736a0d84",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PYR_SLS_STAT_UPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.fa8a486fd546ccab5d60f10a50cd63055008558fdc75dc9de9ea5a7b736a0d84",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes one input parameter, odate (DATE), and returns a NUMBER value.",
+                    "2. Local variables v_sun_dt (DATE), v_sql (VARCHAR2), and e_no_rec_updated (EXCEPTION) are declared.",
+                    "3. The function includes a SELECT statement to calculate the previous Sunday date based on the input parameter odate.",
+                    "4. An UPDATE statement is executed to update the div_load_ts column in the de459e2fe7f96e4d958537b31b946b26.0b3320d3f985cd20d1ec65d9dfeed2de table with the calculated Sunday date.",
+                    "5. An IF statement is used to check if any records were updated by the previous UPDATE statement. If not, an exception e_no_rec_updated is raised.",
+                    "6. The function commits the transaction and returns 0 if successful.",
+                    "7. An exception handling block is included to catch specific exceptions and log error messages using the DBMS_OUTPUT.PUT_LINE procedure.",
+                    "8. The function returns 1 in case of any exceptions."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 16,
+                    "Unique Operators": 9,
+                    "Unique Operands": 10,
+                    "Vocabulary Size": 19,
+                    "Program Volume": 47.5,
+                    "Program Difficulty": 1.1111111111111112,
+                    "Program Effort": 52.77777777777778,
+                    "Program Bugs": 0.015833333333333335
+                }
+            },
+            "upstream_dependencies": [
+                "dual",
+                "de459e2fe7f96e4d958537b31b946b26.0b3320d3f985cd20d1ec65d9dfeed2de",
+                "6726798abbc757d8442516fefb8c40e9.716900750ba6b5d499e5b9bc59348974"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.fa8a486fd546ccab5d60f10a50cd63055008558fdc75dc9de9ea5a7b736a0d84"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_DOLLARS_BY_PYR_SEG_LOAD",
+            "encrypted_name": "9e8ebfa5ad793019faa2c6d2cf5206de52dc5054daf0cd3164b795b2e61c4560",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_DOLLARS_BY_PYR_SEG_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.9e8ebfa5ad793019faa2c6d2cf5206de52dc5054daf0cd3164b795b2e61c4560",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.9e8ebfa5ad793019faa2c6d2cf5206de52dc5054daf0cd3164b795b2e61c4560"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SALES_UNITS_BY_PYRAMID",
+            "encrypted_name": "bc4b8ccf623a6b72fc92a248fc75707e73e172255a2c6a0709be80f80681fa64",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SALES_UNITS_BY_PYRAMID",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.bc4b8ccf623a6b72fc92a248fc75707e73e172255a2c6a0709be80f80681fa64",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 47,
+                    "Unique Operators": 16,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 49,
+                    "Program Volume": 207.47,
+                    "Program Difficulty": 7.81,
+                    "Program Effort": 1619.47,
+                    "Program Bugs": 0.07
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.bc4b8ccf623a6b72fc92a248fc75707e73e172255a2c6a0709be80f80681fa64"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PO_AUDIT_PURGE",
+            "encrypted_name": "38e2e6b465cdcfbd4267a8dc910289d81431321105d18065ee9acc870d010d5b",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PO_AUDIT_PURGE",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.38e2e6b465cdcfbd4267a8dc910289d81431321105d18065ee9acc870d010d5b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes one input parameter, months_to_keep_i (NUMBER), and returns a NUMBER value.",
+                    "2. Local variables are declared, including v_message (VARCHAR2), g_how_many (INTEGER), v_sqlcode (NUMBER), g_purge_date (DATE), g_hdr_deletes (NUMBER), and g_dtl_deletes (NUMBER), to store values used in the function.",
+                    "3. The function begins by printing the current date and the value of months_to_keep_i.",
+                    "4. The function calculates the purge date by subtracting months_to_keep_i from the current date using the add_months function and stores it in g_purge_date.",
+                    "5. If an exception occurs during the calculation of the purge date, the function prints an error message and returns 1.",
+                    "6. The function then deletes records from two tables, de459e2fe7f96e4d958537b31b946b26.b5d3e1877fb725f97fa73c9e35d75025 and de459e2fe7f96e4d958537b31b946b26.55eb0ceb38de6c239d23588281f8196b, where the entry_dt is less than the purge date.",
+                    "7. The function stores the number of deleted records in g_hdr_deletes and g_dtl_deletes.",
+                    "8. The function prints the number of header deletes and detail deletes.",
+                    "9. The function prints the end date and time.",
+                    "10. The function commits the changes made by the delete statements.",
+                    "11. The function returns 0 if successful.",
+                    "12. If an exception occurs during the execution of the function, it captures the SQLCODE and SQLERRM, logs an error message with the details, and returns 1."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 16,
+                    "Unique Operators": 7,
+                    "Unique Operands": 9,
+                    "Vocabulary Size": 16,
+                    "Program Volume": 47.755,
+                    "Program Difficulty": 2.571,
+                    "Program Effort": 122.667,
+                    "Program Bugs": 0.016
+                }
+            },
+            "upstream_dependencies": [
+                "dual",
+                "de459e2fe7f96e4d958537b31b946b26.b5d3e1877fb725f97fa73c9e35d75025",
+                "de459e2fe7f96e4d958537b31b946b26.55eb0ceb38de6c239d23588281f8196b"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.38e2e6b465cdcfbd4267a8dc910289d81431321105d18065ee9acc870d010d5b"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_CUST_CLS_WKLY",
+            "encrypted_name": "04b60e9fcf522f8ae0ac9ad879895e77e32f6dd38f333cde68119d1f277367cd",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_CUST_CLS_WKLY",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.04b60e9fcf522f8ae0ac9ad879895e77e32f6dd38f333cde68119d1f277367cd",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 8,
+                    "Unique Operators": 5,
+                    "Unique Operands": 5,
+                    "Vocabulary Size": 10,
+                    "Program Volume": 16.643856189774723,
+                    "Program Difficulty": 1.6,
+                    "Program Effort": 26.63016990363956,
+                    "Program Bugs": 0.005547952063258252
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.04b60e9fcf522f8ae0ac9ad879895e77e32f6dd38f333cde68119d1f277367cd"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_RGN_SLS_PRJ_LOAD",
+            "encrypted_name": "cbe16cab5746d7cb0053faf5c37cc5eca7d2c123ab08f9acde20fb7e42f4f726",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_RGN_SLS_PRJ_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.cbe16cab5746d7cb0053faf5c37cc5eca7d2c123ab08f9acde20fb7e42f4f726",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.cbe16cab5746d7cb0053faf5c37cc5eca7d2c123ab08f9acde20fb7e42f4f726"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_SFTY_SECURITY_VPD",
+            "encrypted_name": "4e5c031faa9723604893a36d85d853e36f3bf1564d2f7da4e41552c0a7d78051",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_SFTY_SECURITY_VPD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.4e5c031faa9723604893a36d85d853e36f3bf1564d2f7da4e41552c0a7d78051",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_schema (VARCHAR2) and p_objname (VARCHAR2), and returns a VARCHAR2 value.",
+                    "2. Constant declarations are made, including c_start, c_fn_nm, representing the function name, and various VARCHAR2 constants.",
+                    "3. Several local variables are declared, such as l_security_predicate, l_cur_sql, l_sbjct_area, l_vpd_exempt, l_all_divs, l_prcs_end_date, to store values retrieved from the database.",
+                    "4. The function includes multiple conditional statements using IF-THEN-ELSE logic to handle different scenarios based on the values of l_sbjct_area, l_vpd_exempt, and l_prcs_end_date.",
+                    "5. The function performs a SELECT query to retrieve the minimum prcs_end_dt from the wkly_dw_ctl table and stores it in the l_prcs_end_date variable.",
+                    "6. An exception handling block is included using the WHEN OTHERS clause to catch any unexpected errors that may occur during execution. It logs the error details and sets the security predicate to '1=2' in case of an exception.",
+                    "7. Debug logging is implemented using the 9751bbbcfea690cc0be4d58830a6fe2e.d4abe88ed2062b430c927bc84d61faf1f9a7aadf5998d448c2e2d1b0b47a3056.7d64937276682b23a0e16e5c61dad7aa procedure to log debug information related to the function's execution, including various parameter values and the time taken for execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 25,
+                    "Unique Operators": 10,
+                    "Unique Operands": 16,
+                    "Vocabulary Size": 26,
+                    "Program Volume": 97.63,
+                    "Program Difficulty": 3.2,
+                    "Program Effort": 312.4,
+                    "Program Bugs": 0.03
+                }
+            },
+            "upstream_dependencies": [
+                "DBMS_UTILITY",
+                "SYS_CONTEXT",
+                "wkly_dw_ctl"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.4e5c031faa9723604893a36d85d853e36f3bf1564d2f7da4e41552c0a7d78051"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_GET_FISC_TIME_DT",
+            "encrypted_name": "f4e695c1cd078a60bfb5f5d30ce0d27196d80a2abcaa623c1089db3130c3d181",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_GET_FISC_TIME_DT",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.f4e695c1cd078a60bfb5f5d30ce0d27196d80a2abcaa623c1089db3130c3d181",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The function takes two input parameters, p_clndr_dt (DATE) and p_timeframe (VARCHAR2), and returns a DATE value.",
+                    "2. Local variables l_st_dt and l_end_dt are declared to store the minimum and maximum clndr_dt values retrieved from a specific table.",
+                    "3. The function performs a SELECT query on the table de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001 to retrieve the minimum and maximum clndr_dt values based on certain conditions.",
+                    "4. The conditions in the WHERE clause of the SELECT query involve comparisons between p_timeframe and specific columns (fisc_yr_wk, fisc_yr_mth, fisc_yr) and the result of the fn_get_fisc_time function called with p_clndr_dt and a specific timeframe ('WK', 'MTH', 'YR').",
+                    "5. The function includes an IF-THEN-ELSE statement to check the value of p_timeframe and return either l_st_dt or l_end_dt based on the condition.",
+                    "6. The function ends with the END keyword."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 16,
+                    "Unique Operators": 9,
+                    "Unique Operands": 12,
+                    "Vocabulary Size": 21,
+                    "Program Volume": 57.91,
+                    "Program Difficulty": 2.67,
+                    "Program Effort": 154.62,
+                    "Program Bugs": 0.02
+                }
+            },
+            "upstream_dependencies": [
+                "de459e2fe7f96e4d958537b31b946b26.476a877ff313a9e06b3ba262c317b001",
+                "fn_get_fisc_time"
+            ],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.f4e695c1cd078a60bfb5f5d30ce0d27196d80a2abcaa623c1089db3130c3d181"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_PYR_SLS_PRJ_LOAD",
+            "encrypted_name": "e79ab285d163adbcdab32ba49789de45a7d2c123ab08f9acde20fb7e42f4f726",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_PYR_SLS_PRJ_LOAD",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.e79ab285d163adbcdab32ba49789de45a7d2c123ab08f9acde20fb7e42f4f726",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.e79ab285d163adbcdab32ba49789de45a7d2c123ab08f9acde20fb7e42f4f726"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FN_AUGEO_SALES_EXTRCT",
+            "encrypted_name": "03579739f6afaf29f47d72133ec89a605dd3a0cd5aacf18a29d4dcb73bc7945c",
+            "type": "function",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "0e03d5c46556a742ba46252698396ef2",
+            "fully_qualified_name": "XDMADM.FN_AUGEO_SALES_EXTRCT",
+            "encrypted_fqn": "0e03d5c46556a742ba46252698396ef2.03579739f6afaf29f47d72133ec89a605dd3a0cd5aacf18a29d4dcb73bc7945c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 0
+                },
+                "Halstead": {
+                    "Program Length": 0,
+                    "Unique Operators": 0,
+                    "Unique Operands": 0,
+                    "Vocabulary Size": 0,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "0e03d5c46556a742ba46252698396ef2.03579739f6afaf29f47d72133ec89a605dd3a0cd5aacf18a29d4dcb73bc7945c"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

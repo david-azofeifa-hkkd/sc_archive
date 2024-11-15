@@ -1,0 +1,114 @@
+{
+    "filename": "ddl_function.sql",
+    "numb_objects": 5,
+    "type": "function",
+    "type_hex": "",
+    "encryption_key_type": "",
+    "inventory": [
+        {
+            "name": "ADD_CUSTOMER",
+            "encrypted_name": "null",
+            "type": "function",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_CUSTOMER",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE FUNCTION store_demo_db.store_demo_sch.ADD_CUSTOMER(\n  p_FIRST_NAME VARCHAR2,\n  p_LAST_NAME VARCHAR2,\n  p_EMAIL VARCHAR2,\n  p_ADDRESS VARCHAR2,\n  p_PHONE NUMBER\n) RETURN NUMBER AS\n  NEW_CUSTOMER_ID NUMBER;\nBEGIN\n  INSERT INTO store_demo_db.store_demo_sch.CUSTOMERS (FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, PHONE)\n  VALUES (p_FIRST_NAME, p_LAST_NAME, p_EMAIL, p_ADDRESS, p_PHONE)\n  RETURNING CUSTOMER_ID INTO NEW_CUSTOMER_ID;\n  RETURN NEW_CUSTOMER_ID;\nEND ADD_CUSTOMER;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_CUSTOMER"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "ADD_PRODUCT",
+            "encrypted_name": "null",
+            "type": "function",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_PRODUCT",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE FUNCTION store_demo_db.store_demo_sch.ADD_PRODUCT(\n  p_PRODUCT_NAME VARCHAR2,\n  p_DESCRIPTION VARCHAR2,\n  p_PRICE NUMBER,\n  p_STOCK_QUANTITY NUMBER\n) RETURN NUMBER AS\n  NEW_PRODUCT_ID NUMBER;\nBEGIN\n  INSERT INTO store_demo_db.store_demo_sch.PRODUCTS (PRODUCT_NAME, DESCRIPTION, PRICE, STOCK_QUANTITY)\n  VALUES (p_PRODUCT_NAME, p_DESCRIPTION, p_PRICE, p_STOCK_QUANTITY)\n  RETURNING PRODUCT_ID INTO NEW_PRODUCT_ID;\n  RETURN NEW_PRODUCT_ID;\nEND ADD_PRODUCT;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_PRODUCT"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PLACE_ORDER",
+            "encrypted_name": "null",
+            "type": "function",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.PLACE_ORDER",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE FUNCTION store_demo_db.store_demo_sch.PLACE_ORDER(\n  p_CUSTOMER_ID NUMBER,\n  p_ORDER_DATE DATE,\n  p_TOTAL NUMBER\n) RETURN NUMBER AS\n  NEW_ORDER_ID NUMBER;\nBEGIN\n  INSERT INTO store_demo_db.store_demo_sch.ORDERS (CUSTOMER_ID, ORDER_DATE, TOTAL)\n  VALUES (p_CUSTOMER_ID, p_ORDER_DATE, p_TOTAL)\n  RETURNING ORDER_ID INTO NEW_ORDER_ID;\n  RETURN NEW_ORDER_ID;\nEND PLACE_ORDER;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PLACE_ORDER"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "ADD_ORDER_ITEM",
+            "encrypted_name": "null",
+            "type": "function",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_ORDER_ITEM",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE FUNCTION store_demo_db.store_demo_sch.ADD_ORDER_ITEM(\n  p_ORDER_ID NUMBER,\n  p_PRODUCT_ID NUMBER,\n  p_QUANTITY NUMBER,\n  p_UNIT_PRICE NUMBER\n) RETURN NUMBER AS\n  NEW_ORDER_ITEM_ID NUMBER;\nBEGIN\n  INSERT INTO store_demo_db.store_demo_sch.ORDER_ITEMS (ORDER_ID, PRODUCT_ID, QUANTITY, UNIT_PRICE)\n  VALUES (p_ORDER_ID, p_PRODUCT_ID, p_QUANTITY, p_UNIT_PRICE)\n  RETURNING ORDER_ITEM_ID INTO NEW_ORDER_ITEM_ID;\n  RETURN NEW_ORDER_ITEM_ID;\nEND ADD_ORDER_ITEM;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_ORDER_ITEM"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "MAKE_PAYMENT",
+            "encrypted_name": "null",
+            "type": "function",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.MAKE_PAYMENT",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE FUNCTION store_demo_db.store_demo_sch.MAKE_PAYMENT(\n  p_ORDER_ID NUMBER,\n  p_PAYMENT_DATE DATE,\n  p_PAYMENT_METHOD VARCHAR2,\n  p_AMOUNT NUMBER\n) RETURN NUMBER AS\n  NEW_PAYMENT_ID NUMBER;\nBEGIN\n  INSERT INTO store_demo_db.store_demo_sch.PAYMENTS (ORDER_ID, PAYMENT_DATE, PAYMENT_METHOD, AMOUNT)\n  VALUES (p_ORDER_ID, p_PAYMENT_DATE, p_PAYMENT_METHOD, p_AMOUNT)\n  RETURNING PAYMENT_ID INTO NEW_PAYMENT_ID;\n  RETURN NEW_PAYMENT_ID;\nEND MAKE_PAYMENT;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.MAKE_PAYMENT"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

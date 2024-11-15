@@ -1,0 +1,1213 @@
+{
+    "filename": "ddl_synonym.sql",
+    "numb_objects": 43,
+    "type": "synonym",
+    "type_hex": "67ae03c4b42f19460e4c0fcec181714d",
+    "encryption_key_type": "synonym.key",
+    "inventory": [
+        {
+            "name": "TOP_PROD_RECMND_LOAD",
+            "encrypted_name": "e5c14adb64aa4a286f6fd537f4af6b567ac64e26ea0627aea89cda834d4836b1",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.TOP_PROD_RECMND_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.e5c14adb64aa4a286f6fd537f4af6b567ac64e26ea0627aea89cda834d4836b1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'e5c14adb64aa4a286f6fd537f4af6b567ac64e26ea0627aea89cda834d4836b1' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'e5c14adb64aa4a286f6fd537f4af6b56dbb1de5e4c43ef31d505b3e5f3229f9b' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.e5c14adb64aa4a286f6fd537f4af6b56dbb1de5e4c43ef31d505b3e5f3229f9b"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.e5c14adb64aa4a286f6fd537f4af6b567ac64e26ea0627aea89cda834d4836b1"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "BAK_SYN_CUST_CORP",
+            "encrypted_name": "98c4b19eb75aa9f7905c59bc2cd6224b104ad5b6771aacb5d4fc8cf75f84667e",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.BAK_SYN_CUST_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.98c4b19eb75aa9f7905c59bc2cd6224b104ad5b6771aacb5d4fc8cf75f84667e",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '98c4b19eb75aa9f7905c59bc2cd6224b104ad5b6771aacb5d4fc8cf75f84667e' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '301567223c71d898ea4a16be51e43a40' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.301567223c71d898ea4a16be51e43a40"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.98c4b19eb75aa9f7905c59bc2cd6224b104ad5b6771aacb5d4fc8cf75f84667e"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_AGGR",
+            "encrypted_name": "5ae3860e3a9cc6553d425201e8ee66e6",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.5ae3860e3a9cc6553d425201e8ee66e6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '5ae3860e3a9cc6553d425201e8ee66e6' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'c3dab4adacf80d68098c172178482412' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c3dab4adacf80d68098c172178482412"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.5ae3860e3a9cc6553d425201e8ee66e6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_PLUS_PRSPCT_CORP",
+            "encrypted_name": "e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_PLUS_PRSPCT_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'e50d018c29827c5f9748cf7542ac47b082567dcb8b1afece6b321999a0907dab' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.e50d018c29827c5f9748cf7542ac47b00ac262c501fd3cf6990794b809d16914"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_AVG_PNTRTN_RATE",
+            "encrypted_name": "c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_AVG_PNTRTN_RATE",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'c113240d89b9e84181fcee634c6590d463430a82e91bc0a3efef94a5710e5b5b' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d42c0ede38eb7901e2088570296c6e48f9"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR_LOAD",
+            "encrypted_name": "ff163ba8e97ea19bf3b06ac034605983671d05b30d492d79f9b555e90d3d3f55",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ff163ba8e97ea19bf3b06ac034605983671d05b30d492d79f9b555e90d3d3f55",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ff163ba8e97ea19bf3b06ac034605983671d05b30d492d79f9b555e90d3d3f55' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '3eaacadda5107425fd4998cb24f7b1a4' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.3eaacadda5107425fd4998cb24f7b1a4"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ff163ba8e97ea19bf3b06ac034605983671d05b30d492d79f9b555e90d3d3f55"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CLSFCTN_CORP_WK",
+            "encrypted_name": "dae10c3db84becb01a5f27f69c8dc0a5a0022be6253b33fcae3676a7a218bfc3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CLSFCTN_CORP_WK",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5a0022be6253b33fcae3676a7a218bfc3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'dae10c3db84becb01a5f27f69c8dc0a5a0022be6253b33fcae3676a7a218bfc3' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'dae10c3db84becb01a5f27f69c8dc0a5facea24b42bfa68732e67779bffbaeeb' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5a0022be6253b33fcae3676a7a218bfc3"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5facea24b42bfa68732e67779bffbaeeb"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_CUST_CORP_20140517",
+            "encrypted_name": "c23c75d8d0c6a7e372b820dc882f715460491bbf06c697a139ac76f3291b5b88",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_CUST_CORP_20140517",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c23c75d8d0c6a7e372b820dc882f715460491bbf06c697a139ac76f3291b5b88",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'c23c75d8d0c6a7e372b820dc882f715460491bbf06c697a139ac76f3291b5b88' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '6df2e306f159c89d33573ac6858bde35161561e7dbc4088b31e51615ae50709a' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.6df2e306f159c89d33573ac6858bde35161561e7dbc4088b31e51615ae50709a"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c23c75d8d0c6a7e372b820dc882f715460491bbf06c697a139ac76f3291b5b88"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_WKLY",
+            "encrypted_name": "ee68e0badf9923be64bd0277d4c2b04ad56e4d59b65f47aeafa9bbb0026bc256",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_WKLY",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04ad56e4d59b65f47aeafa9bbb0026bc256",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ee68e0badf9923be64bd0277d4c2b04ad56e4d59b65f47aeafa9bbb0026bc256' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'ee68e0badf9923be64bd0277d4c2b04a5dd60012473313cf5873fee2b5bb534c' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04a5dd60012473313cf5873fee2b5bb534c"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04ad56e4d59b65f47aeafa9bbb0026bc256"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "KEY_VAL_ITMS",
+            "encrypted_name": "228dab999cff1b2ac3621ac4e534f3a9",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.KEY_VAL_ITMS",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.228dab999cff1b2ac3621ac4e534f3a9",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '228dab999cff1b2ac3621ac4e534f3a9' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '9e1c5335e5f45ddcbad12e32c95d50de' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.9e1c5335e5f45ddcbad12e32c95d50de"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.228dab999cff1b2ac3621ac4e534f3a9"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_CLNDRMO_CORP",
+            "encrypted_name": "026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_CLNDRMO_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '026807fb94074ea9510f79f179ca7f8aaae7a65ecf7f0842dcc7ffe3be916a46' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.026807fb94074ea9510f79f179ca7f8a5d99f9995356f63c3a479b45fd8625bf"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_PRJ_LOAD",
+            "encrypted_name": "fe4dadc36a8183d854f867225c5fc2eb68442cfdb0504f2e606b756f9e91577c",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_PRJ_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb68442cfdb0504f2e606b756f9e91577c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'fe4dadc36a8183d854f867225c5fc2eb68442cfdb0504f2e606b756f9e91577c' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'fe4dadc36a8183d854f867225c5fc2eb39c7af985a94dcecf0ca69255d850d42' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb39c7af985a94dcecf0ca69255d850d42"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb68442cfdb0504f2e606b756f9e91577c"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_AGGR",
+            "encrypted_name": "ffb3fab38b23351e6a37e03595dad8577b1701e081c5dafaa01beb2cfe7a013c",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8577b1701e081c5dafaa01beb2cfe7a013c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ffb3fab38b23351e6a37e03595dad8577b1701e081c5dafaa01beb2cfe7a013c' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'ffb3fab38b23351e6a37e03595dad8577b8599c18bc064bbf095f2a2acecbf89' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8577b8599c18bc064bbf095f2a2acecbf89"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8577b1701e081c5dafaa01beb2cfe7a013c"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR",
+            "encrypted_name": "e611a6873f094125163fef9fdfcb4ba5",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.e611a6873f094125163fef9fdfcb4ba5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'e611a6873f094125163fef9fdfcb4ba5' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '2d33fd7b3fedbbe287cf4ae567fd5fd2' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.2d33fd7b3fedbbe287cf4ae567fd5fd2"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.e611a6873f094125163fef9fdfcb4ba5"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_WKLY_LOAD",
+            "encrypted_name": "ee68e0badf9923be64bd0277d4c2b04a4386a35e27a3b2d393b409a50b892721",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_WKLY_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04a4386a35e27a3b2d393b409a50b892721",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ee68e0badf9923be64bd0277d4c2b04a4386a35e27a3b2d393b409a50b892721' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'ee68e0badf9923be64bd0277d4c2b04ad487887e0e8fd161008898aecd0e2063' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04ad487887e0e8fd161008898aecd0e2063"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ee68e0badf9923be64bd0277d4c2b04a4386a35e27a3b2d393b409a50b892721"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_MRCH_AGGR",
+            "encrypted_name": "a7cf8b514cf93fa2f4d3275817d813c6bb57eaa41b903e3b9cd39e4edef75761",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_MRCH_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6bb57eaa41b903e3b9cd39e4edef75761",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'a7cf8b514cf93fa2f4d3275817d813c6bb57eaa41b903e3b9cd39e4edef75761' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'a7cf8b514cf93fa2f4d3275817d813c6a3ee3b58850feab156ed7888978aab3e' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6a3ee3b58850feab156ed7888978aab3e"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6bb57eaa41b903e3b9cd39e4edef75761"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_RGN_WK_PRJ",
+            "encrypted_name": "8d628a0c4cb01e73e3eb8de259876d5623748394ddc16fc3e7c234d17e643ca3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_RGN_WK_PRJ",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.8d628a0c4cb01e73e3eb8de259876d5623748394ddc16fc3e7c234d17e643ca3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '8d628a0c4cb01e73e3eb8de259876d5623748394ddc16fc3e7c234d17e643ca3' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '8d628a0c4cb01e73e3eb8de259876d56ba4a3fe1dc3fbe55c12788d1101fea96' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.8d628a0c4cb01e73e3eb8de259876d56ba4a3fe1dc3fbe55c12788d1101fea96"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.8d628a0c4cb01e73e3eb8de259876d5623748394ddc16fc3e7c234d17e643ca3"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "DDMADM_SIS_SLS_DTL_CORP",
+            "encrypted_name": "8d6895004ec5c0a6c2478256c3e69b611eeeb2e5166c759a8766603d10c5e5c1",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.DDMADM_SIS_SLS_DTL_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.8d6895004ec5c0a6c2478256c3e69b611eeeb2e5166c759a8766603d10c5e5c1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '8d6895004ec5c0a6c2478256c3e69b611eeeb2e5166c759a8766603d10c5e5c1' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '09163524ef53b99ce4e94fef5928530a23748394ddc16fc3e7c234d17e643ca3' in the schema '15dff38663555b9b12febb11c16c1f4b' at the database link '5ba97d01a96be06aa859a72996729c5e.e97e82539a4aa7a935b34d0038bbdfa9.cc5f3aa286b3d2c7cd71b7948e5b6962.COM'."
+                ]
+            },
+            "upstream_dependencies": [
+                "15dff38663555b9b12febb11c16c1f4b.09163524ef53b99ce4e94fef5928530a23748394ddc16fc3e7c234d17e643ca3@5ba97d01a96be06aa859a72996729c5e.e97e82539a4aa7a935b34d0038bbdfa9.cc5f3aa286b3d2c7cd71b7948e5b6962.COM"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.8d6895004ec5c0a6c2478256c3e69b611eeeb2e5166c759a8766603d10c5e5c1"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_LNS_AGGR",
+            "encrypted_name": "f8063c28520771993684b0074a7f5950",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_LNS_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.f8063c28520771993684b0074a7f5950",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'f8063c28520771993684b0074a7f5950' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '824800ccecad0209b1ae245ea2c4622a' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.824800ccecad0209b1ae245ea2c4622a"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.f8063c28520771993684b0074a7f5950"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_SLS_RNK_ORG",
+            "encrypted_name": "bb246eaa6687d40ae5b194591d1f8fe8",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_SLS_RNK_ORG",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.bb246eaa6687d40ae5b194591d1f8fe8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'bb246eaa6687d40ae5b194591d1f8fe8' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'db348805a7d103c63ecd48f6a897125e' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.db348805a7d103c63ecd48f6a897125e"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.bb246eaa6687d40ae5b194591d1f8fe8"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_MKTPLUS_AGGR",
+            "encrypted_name": "c3dd4a06185f604596ff6e07a82f3e06bb57eaa41b903e3b9cd39e4edef75761",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_MKTPLUS_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c3dd4a06185f604596ff6e07a82f3e06bb57eaa41b903e3b9cd39e4edef75761",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'c3dd4a06185f604596ff6e07a82f3e06bb57eaa41b903e3b9cd39e4edef75761' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'c3dd4a06185f604596ff6e07a82f3e06a3ee3b58850feab156ed7888978aab3e' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c3dd4a06185f604596ff6e07a82f3e06a3ee3b58850feab156ed7888978aab3e"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c3dd4a06185f604596ff6e07a82f3e06bb57eaa41b903e3b9cd39e4edef75761"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_RSN_EXCLD_LOAD",
+            "encrypted_name": "2af34e0a6d3ca64934a4c255e28b44eca3cfd9be25b4748f6c24071aa76204c6",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_RSN_EXCLD_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.2af34e0a6d3ca64934a4c255e28b44eca3cfd9be25b4748f6c24071aa76204c6",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '2af34e0a6d3ca64934a4c255e28b44eca3cfd9be25b4748f6c24071aa76204c6' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'a3bb91286ce494a44b1c620b7b5073a423748394ddc16fc3e7c234d17e643ca3' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.a3bb91286ce494a44b1c620b7b5073a423748394ddc16fc3e7c234d17e643ca3"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.2af34e0a6d3ca64934a4c255e28b44eca3cfd9be25b4748f6c24071aa76204c6"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR_TST",
+            "encrypted_name": "6601bca11e1db4f1cb7c56e9de1b8b0823748394ddc16fc3e7c234d17e643ca3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR_TST",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.6601bca11e1db4f1cb7c56e9de1b8b0823748394ddc16fc3e7c234d17e643ca3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '6601bca11e1db4f1cb7c56e9de1b8b0823748394ddc16fc3e7c234d17e643ca3' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '42d7c9f8e2e7273197e72545dbdd249534bd10e9cdb75620f863ed6a5d5cd7fd' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.42d7c9f8e2e7273197e72545dbdd249534bd10e9cdb75620f863ed6a5d5cd7fd"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.6601bca11e1db4f1cb7c56e9de1b8b0823748394ddc16fc3e7c234d17e643ca3"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_WK_AGGR_LOAD_TST",
+            "encrypted_name": "ff163ba8e97ea19bf3b06ac034605983fb9b7557b431b50734d37a422f01ee03",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_WK_AGGR_LOAD_TST",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ff163ba8e97ea19bf3b06ac034605983fb9b7557b431b50734d37a422f01ee03",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ff163ba8e97ea19bf3b06ac034605983fb9b7557b431b50734d37a422f01ee03' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '000c8ee654e967bf746c77cd5a92fa6934bd10e9cdb75620f863ed6a5d5cd7fd' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.000c8ee654e967bf746c77cd5a92fa6934bd10e9cdb75620f863ed6a5d5cd7fd"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ff163ba8e97ea19bf3b06ac034605983fb9b7557b431b50734d37a422f01ee03"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_LNS_AGGR_LOAD",
+            "encrypted_name": "a096f2c69b38bdfc58ad9774f8d4beaf08ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_LNS_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.a096f2c69b38bdfc58ad9774f8d4beaf08ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'a096f2c69b38bdfc58ad9774f8d4beaf08ac4a62f4c1dc983c7f49ffd4bd6f44' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'b8b7561e4681f644d812325638350489' in the same schema 'f9d1f529ac0e430221845fbfa66b3160'."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.b8b7561e4681f644d812325638350489"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.a096f2c69b38bdfc58ad9774f8d4beaf08ac4a62f4c1dc983c7f49ffd4bd6f44"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CLSFCTN_CORP_WK_LOAD",
+            "encrypted_name": "dae10c3db84becb01a5f27f69c8dc0a5b4485578749a3a984f5e5984f0aa64a8",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CLSFCTN_CORP_WK_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5b4485578749a3a984f5e5984f0aa64a8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'dae10c3db84becb01a5f27f69c8dc0a5b4485578749a3a984f5e5984f0aa64a8' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'dae10c3db84becb01a5f27f69c8dc0a58181971221dedea115835510d07762fd' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a58181971221dedea115835510d07762fd"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5b4485578749a3a984f5e5984f0aa64a8"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "TOP_PROD_RECMND",
+            "encrypted_name": "8044fdf02cf3463ed06cad299252251c",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.TOP_PROD_RECMND",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.8044fdf02cf3463ed06cad299252251c",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '8044fdf02cf3463ed06cad299252251c' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'e5c14adb64aa4a286f6fd537f4af6b5611a4852b5add2010bea81204ebb90ce6' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.e5c14adb64aa4a286f6fd537f4af6b5611a4852b5add2010bea81204ebb90ce6"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.8044fdf02cf3463ed06cad299252251c"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_MRCH_AGGR_LOAD",
+            "encrypted_name": "a7cf8b514cf93fa2f4d3275817d813c6c81bd5196d8a3d7deba246d9fabe1065",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_MRCH_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6c81bd5196d8a3d7deba246d9fabe1065",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'a7cf8b514cf93fa2f4d3275817d813c6c81bd5196d8a3d7deba246d9fabe1065' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'a7cf8b514cf93fa2f4d3275817d813c68e35a4ec007831ae4c88baca5935c4c4' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c68e35a4ec007831ae4c88baca5935c4c4"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.a7cf8b514cf93fa2f4d3275817d813c6c81bd5196d8a3d7deba246d9fabe1065"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_RGN_WK_AGGR",
+            "encrypted_name": "da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_RGN_WK_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'da630c245a5b7cc987d04b2677fb8c9217cb5dcf8e0b40f6e621b2b651be3614' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.da630c245a5b7cc987d04b2677fb8c9290f882d5a4e617a611c83a66d99aaaf2"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_CUST_MRCH",
+            "encrypted_name": "84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_CUST_MRCH",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '84de1cfad52daf53740cef648b7584bcae07ab43df4de277fe6771393d81baa8' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.84de1cfad52daf53740cef648b7584bcc330c60d973fc24a9ab7be4fe538cf8b"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_MRCH_AGGR",
+            "encrypted_name": "6b6e1108ab16224bfed98b8088abba22c62f2d6bc915b0ca914ec19c1db11fc3",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_MRCH_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba22c62f2d6bc915b0ca914ec19c1db11fc3",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '6b6e1108ab16224bfed98b8088abba22c62f2d6bc915b0ca914ec19c1db11fc3' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '6b6e1108ab16224bfed98b8088abba2268a5651c46504426a32b1a4307ad5569' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba2268a5651c46504426a32b1a4307ad5569"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba22c62f2d6bc915b0ca914ec19c1db11fc3"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_CUST_CORP",
+            "encrypted_name": "d8b640f6e233c4a6c59270703c906414",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_CUST_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.d8b640f6e233c4a6c59270703c906414",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'd8b640f6e233c4a6c59270703c906414' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '7036b57d19ead47ebe6c318298c2c2b0' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.7036b57d19ead47ebe6c318298c2c2b0"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.d8b640f6e233c4a6c59270703c906414"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CKBK_RSN_EXCLD",
+            "encrypted_name": "795e4b861aaa0399232fb1ddd3de49d9",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CKBK_RSN_EXCLD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.795e4b861aaa0399232fb1ddd3de49d9",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '795e4b861aaa0399232fb1ddd3de49d9' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'f01f00f2da50c4ed672967d8e46e6d0323748394ddc16fc3e7c234d17e643ca3' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.f01f00f2da50c4ed672967d8e46e6d0323748394ddc16fc3e7c234d17e643ca3"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.795e4b861aaa0399232fb1ddd3de49d9"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CORP_PYR_AGGR",
+            "encrypted_name": "bdfea6cc5f5641706c04029087308890bb57eaa41b903e3b9cd39e4edef75761",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CORP_PYR_AGGR",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890bb57eaa41b903e3b9cd39e4edef75761",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'bdfea6cc5f5641706c04029087308890bb57eaa41b903e3b9cd39e4edef75761' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'bdfea6cc5f5641706c040290873088908e35a4ec007831ae4c88baca5935c4c4' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c040290873088908e35a4ec007831ae4c88baca5935c4c4"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890bb57eaa41b903e3b9cd39e4edef75761"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_PRJ",
+            "encrypted_name": "fe4dadc36a8183d854f867225c5fc2eb02ce8684c1a0ec3d99db6461d54aaf63",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_PRJ",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb02ce8684c1a0ec3d99db6461d54aaf63",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'fe4dadc36a8183d854f867225c5fc2eb02ce8684c1a0ec3d99db6461d54aaf63' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'fe4dadc36a8183d854f867225c5fc2ebfbea510ac2e0014b8d258ed8973a5cb6' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2ebfbea510ac2e0014b8d258ed8973a5cb6"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.fe4dadc36a8183d854f867225c5fc2eb02ce8684c1a0ec3d99db6461d54aaf63"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_PYR_AGGR_LOAD",
+            "encrypted_name": "ffb3fab38b23351e6a37e03595dad8574313146e1f5f83678b4829642f66ee02",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_PYR_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8574313146e1f5f83678b4829642f66ee02",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ffb3fab38b23351e6a37e03595dad8574313146e1f5f83678b4829642f66ee02' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'ffb3fab38b23351e6a37e03595dad8570cca6fd43fba77ea124e56520aa0226a' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8570cca6fd43fba77ea124e56520aa0226a"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ffb3fab38b23351e6a37e03595dad8574313146e1f5f83678b4829642f66ee02"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "KEY_VAL_ITMS_LOAD",
+            "encrypted_name": "c80315b82050f824e9e286078b824d61671d05b30d492d79f9b555e90d3d3f55",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.KEY_VAL_ITMS_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c80315b82050f824e9e286078b824d61671d05b30d492d79f9b555e90d3d3f55",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'c80315b82050f824e9e286078b824d61671d05b30d492d79f9b555e90d3d3f55' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'b00bbb13e9d139f7fbdcfaa102d0ff8f' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.b00bbb13e9d139f7fbdcfaa102d0ff8f"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c80315b82050f824e9e286078b824d61671d05b30d492d79f9b555e90d3d3f55"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_DIV_CORP",
+            "encrypted_name": "ec8603b1243dc011308058eb61b072e2",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_DIV_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.ec8603b1243dc011308058eb61b072e2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'ec8603b1243dc011308058eb61b072e2' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'ed72f4dae9e9801a12bbc440d4e1afa7' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ed72f4dae9e9801a12bbc440d4e1afa7"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.ec8603b1243dc011308058eb61b072e2"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_CUST_CLSFCTN_CORP",
+            "encrypted_name": "426b088ae4481260ead9b5366d97db940ac262c501fd3cf6990794b809d16914",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SYN_CUST_CLSFCTN_CORP",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.426b088ae4481260ead9b5366d97db940ac262c501fd3cf6990794b809d16914",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '426b088ae4481260ead9b5366d97db940ac262c501fd3cf6990794b809d16914' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'dae10c3db84becb01a5f27f69c8dc0a5104ad5b6771aacb5d4fc8cf75f84667e' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.dae10c3db84becb01a5f27f69c8dc0a5104ad5b6771aacb5d4fc8cf75f84667e"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.426b088ae4481260ead9b5366d97db940ac262c501fd3cf6990794b809d16914"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PIM_CORP_AGGR_LOAD",
+            "encrypted_name": "da285294918e9b52c9b949e37926a8d108ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.PIM_CORP_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.da285294918e9b52c9b949e37926a8d108ac4a62f4c1dc983c7f49ffd4bd6f44",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'da285294918e9b52c9b949e37926a8d108ac4a62f4c1dc983c7f49ffd4bd6f44' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '8365be3fdf4daacb04f04c5a342fe507' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.8365be3fdf4daacb04f04c5a342fe507"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.da285294918e9b52c9b949e37926a8d108ac4a62f4c1dc983c7f49ffd4bd6f44"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SALES_SUMM_MRCH_AGGR_LOAD",
+            "encrypted_name": "6b6e1108ab16224bfed98b8088abba222d32801b780bcd7658be8387ccb752c7",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.SALES_SUMM_MRCH_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba222d32801b780bcd7658be8387ccb752c7",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym '6b6e1108ab16224bfed98b8088abba222d32801b780bcd7658be8387ccb752c7' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object '6b6e1108ab16224bfed98b8088abba22250d21ee821ad95aa6c2a3e9e3c9fe08' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba22250d21ee821ad95aa6c2a3e9e3c9fe08"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.6b6e1108ab16224bfed98b8088abba222d32801b780bcd7658be8387ccb752c7"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_CORP_PYR_AGGR_LOAD",
+            "encrypted_name": "bdfea6cc5f5641706c04029087308890c81bd5196d8a3d7deba246d9fabe1065",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_CORP_PYR_AGGR_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890c81bd5196d8a3d7deba246d9fabe1065",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'bdfea6cc5f5641706c04029087308890c81bd5196d8a3d7deba246d9fabe1065' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'bdfea6cc5f5641706c04029087308890a3ee3b58850feab156ed7888978aab3e' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890a3ee3b58850feab156ed7888978aab3e"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.bdfea6cc5f5641706c04029087308890c81bd5196d8a3d7deba246d9fabe1065"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "CUST_AVG_PNTRTN_RATE_LOAD",
+            "encrypted_name": "c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b",
+            "type": "synonym",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "f9d1f529ac0e430221845fbfa66b3160",
+            "fully_qualified_name": "XDMADM.CUST_AVG_PNTRTN_RATE_LOAD",
+            "encrypted_fqn": "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The synonym 'c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b' is created or replaced in the schema 'f9d1f529ac0e430221845fbfa66b3160'.",
+                    "2. The synonym is created for the object 'c113240d89b9e84181fcee634c6590d44dd6ac40c468e1a2206ab51fa0489cf7' in the same schema."
+                ]
+            },
+            "upstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b"
+            ],
+            "downstream_dependencies": [
+                "f9d1f529ac0e430221845fbfa66b3160.c113240d89b9e84181fcee634c6590d4efccac69b0e5814eee4dbac684628b4b"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

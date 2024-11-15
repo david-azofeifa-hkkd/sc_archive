@@ -1,0 +1,240 @@
+{
+    "filename": "ddl_view.sql",
+    "numb_objects": 11,
+    "type": "view",
+    "type_hex": "",
+    "encryption_key_type": "",
+    "inventory": [
+        {
+            "name": "V_CUSTOMER_ORDERS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_CUSTOMER_ORDERS AS\nSELECT \n  c.CUSTOMER_ID, \n  c.FIRST_NAME, \n  c.LAST_NAME, \n  o.ORDER_ID, \n  o.ORDER_DATE, \n  o.TOTAL\nFROM store_demo_db.store_demo_sch.CUSTOMERS c\nJOIN ORDERS o ON c.CUSTOMER_ID = o.CUSTOMER_ID;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_ORDER_ITEMS_DETAILS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_ITEMS_DETAILS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_ORDER_ITEMS_DETAILS AS\nSELECT \n  oi.ORDER_ITEM_ID, \n  oi.ORDER_ID, \n  oi.PRODUCT_ID, \n  p.PRODUCT_NAME, \n  oi.QUANTITY, \n  oi.UNIT_PRICE\nFROM store_demo_db.store_demo_sch.ORDER_ITEMS oi\nJOIN store_demo_db.store_demo_sch.PRODUCTS p ON oi.PRODUCT_ID = p.PRODUCT_ID;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_ITEMS_DETAILS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_CUSTOMER_ORDER_HISTORY",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDER_HISTORY",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_CUSTOMER_ORDER_HISTORY AS\nSELECT \n  c.CUSTOMER_ID, \n  c.FIRST_NAME, \n  c.LAST_NAME, \n  o.ORDER_ID, \n  o.ORDER_DATE, \n  o.TOTAL\nFROM store_demo_db.store_demo_sch.CUSTOMERS c\nJOIN store_demo_db.store_demo_sch.ORDERS o ON c.CUSTOMER_ID = o.CUSTOMER_ID\nORDER BY o.ORDER_DATE DESC;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDER_HISTORY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_TOP_SELLING_PRODUCTS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_TOP_SELLING_PRODUCTS AS\nSELECT \n  p.PRODUCT_ID, \n  p.PRODUCT_NAME, \n  SUM(oi.QUANTITY) AS TOTAL_QUANTITY\nFROM store_demo_db.store_demo_sch.ORDER_ITEMS oi\nJOIN store_demo_db.store_demo_sch.PRODUCTS p ON oi.PRODUCT_ID = p.PRODUCT_ID\nGROUP BY p.PRODUCT_ID, p.PRODUCT_NAME\nORDER BY TOTAL_QUANTITY DESC;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_CUSTOMER_PURCHASES",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PURCHASES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_CUSTOMER_PURCHASES AS\nSELECT \n  c.CUSTOMER_ID, \n  c.FIRST_NAME, \n  c.LAST_NAME, \n  SUM(o.TOTAL) AS TOTAL_PURCHASES\nFROM store_demo_db.store_demo_sch.CUSTOMERS c\nJOIN store_demo_db.store_demo_sch.ORDERS o ON c.CUSTOMER_ID = o.CUSTOMER_ID\nGROUP BY c.CUSTOMER_ID, c.FIRST_NAME, c.LAST_NAME;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PURCHASES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_ORDER_TOTALS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_TOTALS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_ORDER_TOTALS AS\nSELECT \n  o.ORDER_ID, \n  SUM(oi.UNIT_PRICE * oi.QUANTITY) AS ORDER_TOTAL\nFROM store_demo_db.store_demo_sch.ORDERS o\nJOIN store_demo_db.store_demo_sch.ORDER_ITEMS oi ON o.ORDER_ID = oi.ORDER_ID\nGROUP BY o.ORDER_ID;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_TOTALS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_PRODUCTS_IN_STOCK",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_PRODUCTS_IN_STOCK",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_PRODUCTS_IN_STOCK AS\nSELECT \n  p.PRODUCT_ID, \n  p.PRODUCT_NAME, \n  p.STOCK_QUANTITY\nFROM store_demo_db.store_demo_sch.PRODUCTS p\nWHERE p.STOCK_QUANTITY > 0;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_PRODUCTS_IN_STOCK"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_CUSTOMER_PAYMENT_METHODS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PAYMENT_METHODS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_CUSTOMER_PAYMENT_METHODS AS\nSELECT \n  c.CUSTOMER_ID, \n  c.FIRST_NAME, \n  c.LAST_NAME, \n  p.PAYMENT_METHOD\nFROM store_demo_db.store_demo_sch.CUSTOMERS c\nJOIN PAYMENTS p ON c.CUSTOMER_ID = p.ORDER_ID;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PAYMENT_METHODS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_AVERAGE_ORDER_VALUE",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_AVERAGE_ORDER_VALUE",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_AVERAGE_ORDER_VALUE AS\nSELECT \n  AVG(o.TOTAL) AS AVERAGE_ORDER_VALUE\nFROM store_demo_db.store_demo_sch.ORDERS o;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_AVERAGE_ORDER_VALUE"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_TOTAL_SALES",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOTAL_SALES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.V_TOTAL_SALES AS\nSELECT \n  SUM(o.TOTAL) AS TOTAL_SALES\nFROM store_demo_db.store_demo_sch.ORDERS o;\n\n\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOTAL_SALES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "STORE_MANAGER_KPIS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.STORE_MANAGER_KPIS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": "CREATE VIEW store_demo_db.store_demo_sch.STORE_MANAGER_KPIS AS\nSELECT\n    \n    (SELECT SUM(TOTAL) FROM store_demo_db.store_demo_sch.ORDERS) AS TOTAL_SALES,\n    \n    \n    (SELECT AVG(TOTAL) FROM store_demo_db.store_demo_sch.ORDERS) AS AVERAGE_ORDER_VALUE,\n    \n    \n    (SELECT COUNT(*) FROM store_demo_db.store_demo_sch.ORDERS) AS TOTAL_ORDERS,\n    \n    \n    (SELECT COUNT(*) FROM store_demo_db.store_demo_sch.CUSTOMERS) AS TOTAL_CUSTOMERS,\n    \n    \n    (SELECT COUNT(*) FROM store_demo_db.store_demo_sch.PRODUCTS) AS TOTAL_PRODUCTS,\n    \n    \n    (SELECT COUNT(*) FROM store_demo_db.store_demo_sch.PRODUCTS WHERE STOCK_QUANTITY > 0) AS PRODUCTS_IN_STOCK,\n    \n    \n    (SELECT PRODUCT_NAME FROM (\n        SELECT p.PRODUCT_NAME, SUM(oi.QUANTITY) AS TOTAL_QUANTITY\n        FROM ORDER_ITEMS oi\n        JOIN store_demo_db.store_demo_sch.PRODUCTS p ON oi.PRODUCT_ID = p.PRODUCT_ID\n        GROUP BY p.PRODUCT_NAME\n        ORDER BY TOTAL_QUANTITY DESC\n    ) WHERE ROWNUM = 1) AS TOP_SELLING_PRODUCT,\n    \n    \n    (SELECT SUM(TOTAL_PURCHASES) FROM store_demo_db.store_demo_sch.V_CUSTOMER_PURCHASES) AS TOTAL_CUSTOMER_PURCHASES,\n    \n    \n    (SELECT AVG(TOTAL_PURCHASES) FROM store_demo_db.store_demo_sch.V_CUSTOMER_PURCHASES) AS AVERAGE_CUSTOMER_PURCHASE,\n    \n    \n    (SELECT SUM(AMOUNT) FROM store_demo_db.store_demo_sch.PAYMENTS) AS TOTAL_PAYMENTS_RECEIVED,\n    \n    \n    (SELECT AVG(AMOUNT) FROM store_demo_db.store_demo_sch.PAYMENTS) AS AVERAGE_PAYMENT_PER_ORDER,\n    \n    \n    (SELECT SUM(QUANTITY) FROM store_demo_db.store_demo_sch.INVENTORY) AS TOTAL_INVENTORY_QUANTITY,\n    \n    \n    (SELECT FIRST_NAME || ' ' || LAST_NAME FROM (\n        SELECT c.FIRST_NAME, c.LAST_NAME, SUM(o.TOTAL) AS TOTAL_PURCHASES\n        FROM store_demo_db.store_demo_sch.CUSTOMERS c\n        JOIN store_demo_db.store_demo_sch.ORDERS o ON c.CUSTOMER_ID = o.CUSTOMER_ID\n        GROUP BY c.FIRST_NAME, c.LAST_NAME\n        ORDER BY TOTAL_PURCHASES DESC\n    ) WHERE ROWNUM = 1) AS TOP_CUSTOMER\nFROM dual;\n",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.STORE_MANAGER_KPIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

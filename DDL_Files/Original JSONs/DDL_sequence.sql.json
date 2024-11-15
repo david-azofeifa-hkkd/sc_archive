@@ -1,0 +1,42 @@
+{
+    "filename": "ddl_sequence.sql",
+    "numb_objects": 1,
+    "type": "sequence",
+    "type_hex": "fbcf43d30e0b83d7285b0300147090bb",
+    "encryption_key_type": "sequence.key",
+    "inventory": [
+        {
+            "name": "CUST_PLUS_PRSPCT_SEQ",
+            "encrypted_name": "a074b2455b6b74ebfb7414e596940e981d53aee0cb9fbec1d3c000e02bc9b0de",
+            "type": "sequence",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "c31d4e458251e47e260d3f4f0a97d4f2",
+            "fully_qualified_name": "XDMADM.CUST_PLUS_PRSPCT_SEQ",
+            "encrypted_fqn": "c31d4e458251e47e260d3f4f0a97d4f2.a074b2455b6b74ebfb7414e596940e981d53aee0cb9fbec1d3c000e02bc9b0de",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The sequence is created in the schema 'XDMADM'.",
+                    "2. The sequence name is 'CUST_PLUS_PRSPCT_SEQ'.",
+                    "3. The minimum value for the sequence is 1.",
+                    "4. The maximum value for the sequence is 9999999999999999999999999999.",
+                    "5. The sequence increments by 1.",
+                    "6. The sequence starts with 84959465.",
+                    "7. The sequence does not use cache.",
+                    "8. The sequence is ordered.",
+                    "9. The sequence does not cycle."
+                ]
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.CUST_PLUS_PRSPCT_SEQ"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

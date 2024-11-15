@@ -1,0 +1,230 @@
+{
+    "filename": "ddl_table.sql",
+    "numb_objects": 7,
+    "type": "table",
+    "type_hex": "",
+    "encryption_key_type": "",
+    "inventory": [
+        {
+            "name": "CUSTOMERS",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named CUSTOMERS and is created in the store_demo_db database under the store_demo_sch schema.",
+                    "2. The table has six columns: CUSTOMER_ID, FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, and PHONE.",
+                    "3. The CUSTOMER_ID column is defined as the primary key and is of data type NUMBER.",
+                    "4. The FIRST_NAME and LAST_NAME columns are of data type VARCHAR2(50) and are defined as NOT NULL.",
+                    "5. The EMAIL column is of data type VARCHAR2(100) and is defined as UNIQUE and NOT NULL.",
+                    "6. The ADDRESS column is of data type VARCHAR2(200) and is nullable.",
+                    "7. The PHONE column is of data type NUMBER and is nullable."
+                ]
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PRODUCTS",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named PRODUCTS and is created in the store_demo_db database and store_demo_sch schema.",
+                    "2. The table has five columns: PRODUCT_ID, PRODUCT_NAME, DESCRIPTION, PRICE, and STOCK_QUANTITY.",
+                    "3. The PRODUCT_ID column is defined as the primary key and is of data type NUMBER.",
+                    "4. The PRODUCT_NAME column is of data type VARCHAR2(100) and is NOT NULL.",
+                    "5. The DESCRIPTION column is of data type VARCHAR2(200) and is nullable.",
+                    "6. The PRICE column is of data type NUMBER(10, 2) and is NOT NULL.",
+                    "7. The STOCK_QUANTITY column is of data type NUMBER and is NOT NULL."
+                ]
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "ORDERS",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named ORDERS and is created in the store_demo_db database and store_demo_sch schema.",
+                    "2. The table has four columns: ORDER_ID, CUSTOMER_ID, ORDER_DATE, and TOTAL.",
+                    "3. The ORDER_ID column is defined as the primary key and is of data type NUMBER.",
+                    "4. The CUSTOMER_ID column is of data type NUMBER and has a NOT NULL constraint.",
+                    "5. The ORDER_DATE column is of data type DATE and has a NOT NULL constraint.",
+                    "6. The TOTAL column is of data type NUMBER(10, 2) and has a NOT NULL constraint.",
+                    "7. A foreign key constraint named FK_ORDERS_CUSTOMER is defined on the CUSTOMER_ID column, referencing the CUSTOMER_ID column in the CUSTOMERS table."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "ORDER_ITEMS",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named ORDER_ITEMS and is created in the store_demo_db schema, under the store_demo_sch tablespace.",
+                    "2. The table has five columns: ORDER_ITEM_ID, ORDER_ID, PRODUCT_ID, QUANTITY, and UNIT_PRICE.",
+                    "3. The ORDER_ITEM_ID column is defined as the primary key of the table.",
+                    "4. The ORDER_ID and PRODUCT_ID columns have foreign key constraints referencing the ORDERS and PRODUCTS tables, respectively.",
+                    "5. The QUANTITY and UNIT_PRICE columns are defined as NOT NULL, indicating that they must contain a value for each row in the table.",
+                    "6. The UNIT_PRICE column has a precision of 10 and a scale of 2, indicating that it can store decimal values with up to 10 digits and 2 of those digits can be after the decimal point."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PAYMENTS",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.PAYMENTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named PAYMENTS and is created in the store_demo_db schema and store_demo_sch sub-schema.",
+                    "2. The table has five columns: PAYMENT_ID, ORDER_ID, PAYMENT_DATE, PAYMENT_METHOD, and AMOUNT.",
+                    "3. The PAYMENT_ID column is defined as the primary key of the table.",
+                    "4. The ORDER_ID column has a foreign key constraint referencing the ORDER_ID column in the ORDERS table.",
+                    "5. The PAYMENT_DATE and PAYMENT_METHOD columns are defined as NOT NULL, indicating that they must always contain a value.",
+                    "6. The AMOUNT column is defined with a precision of 10 and a scale of 2, indicating that it can store decimal values with up to 10 digits and 2 of those digits can be after the decimal point."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PAYMENTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "WAREHOUSES",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.WAREHOUSES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named WAREHOUSES and is located in the store_demo_db database and store_demo_sch schema.",
+                    "2. The table has three columns: WAREHOUSE_ID, WAREHOUSE_NAME, and LOCATION.",
+                    "3. The WAREHOUSE_ID column is of type NUMBER and is defined as the primary key.",
+                    "4. The WAREHOUSE_NAME column is of type VARCHAR2(100) and is not nullable.",
+                    "5. The LOCATION column is of type VARCHAR2(200) and is not nullable."
+                ]
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.WAREHOUSES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "INVENTORY",
+            "encrypted_name": "null",
+            "type": "table",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.INVENTORY",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The table is named INVENTORY and is created in the store_demo_db database and store_demo_sch schema.",
+                    "2. The table has five columns: INVENTORY_ID, WAREHOUSE_ID, PRODUCT_ID, QUANTITY, with their respective data types as NUMBER, NUMBER, NUMBER, and NUMBER.",
+                    "3. The INVENTORY_ID column is defined as the primary key.",
+                    "4. The WAREHOUSE_ID and PRODUCT_ID columns have NOT NULL constraints.",
+                    "5. Two foreign key constraints are defined: FK_INVENTORY_WAREHOUSE referencing the WAREHOUSE_ID column in the WAREHOUSES table, and FK_INVENTORY_PRODUCT referencing the PRODUCT_ID column in the PRODUCTS table."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.WAREHOUSES",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.INVENTORY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

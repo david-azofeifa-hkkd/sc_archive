@@ -1,0 +1,36 @@
+{
+    "filename": "ddl_type.sql",
+    "numb_objects": 1,
+    "type": "type",
+    "type_hex": "9fec2dd4bb9a68ae4ab0cb3e9aa6faee",
+    "encryption_key_type": "type.key",
+    "inventory": [
+        {
+            "name": "ICM_REC",
+            "encrypted_name": "1bab561c60c2065e5cb12c7ee37caa39",
+            "type": "type",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "aea3fc2724db7a20fa103182460225d6",
+            "fully_qualified_name": "XDMADM.ICM_REC",
+            "encrypted_fqn": "aea3fc2724db7a20fa103182460225d6.1bab561c60c2065e5cb12c7ee37caa39",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The type '1bab561c60c2065e5cb12c7ee37caa39' is created in the schema 'aea3fc2724db7a20fa103182460225d6'.",
+                    "2. The type is defined as an object with multiple attributes of NUMBER data type.",
+                    "3. The attributes include div_nbr, fisc_yr_wk, each_ship, prime_min_mrk_amt, rep_cost_extnd, dvt_cost_extnd, dwa_cost_extnd, grs_sls_extnd, net_wt_ship, prime_mrk_amt, srchrg, qty_ship, orig_mrgn_bsis_amt_extnd, unfrm_qty_ship, unit_ship, ttl_alwnc, ttl_dvt, prod_alw, prod_chrg, non_prod_alwnc, non_prod_chrg, rbt_loc_accrl_amt, rbt_natl_accrl_amt, rbt_loc_exp_amt, and rbt_natl_exp_amt."
+                ]
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "aea3fc2724db7a20fa103182460225d6.1bab561c60c2065e5cb12c7ee37caa39"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

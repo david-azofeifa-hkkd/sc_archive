@@ -1,0 +1,47 @@
+{
+    "filename": "ddl_trigger.sql",
+    "numb_objects": 2,
+    "type": "trigger",
+    "type_hex": "3355eb48330a6eb996fa7964e6f7ec2e",
+    "encryption_key_type": "trigger.key",
+    "inventory": [
+        {
+            "name": "DROP_CORP_ORIG_LDR_TM_T",
+            "encrypted_name": "432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1",
+            "type": "trigger",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "c224a659ac51407e33e2c01acaad6eea",
+            "fully_qualified_name": "XDMADM.DROP_CORP_ORIG_LDR_TM_T",
+            "encrypted_fqn": "c224a659ac51407e33e2c01acaad6eea.432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE TRIGGER \"c224a659ac51407e33e2c01acaad6eea\".\"432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1\"\n  BEFORE INSERT ON c224a659ac51407e33e2c01acaad6eea.37addc8974200bdea7b9cdd7969836d5     FOR EACH ROW\nBEGIN\n        :3dc7f4a98ff17e8ee14c3aee3e1bf434.af64a5868028fcae9229cde413083ed3 := :3dc7f4a98ff17e8ee14c3aee3e1bf434.14a6941f1ca7c6289382781d100b9d71;\n      END;\n/\nALTER TRIGGER \"c224a659ac51407e33e2c01acaad6eea\".\"432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1\" ENABLE;",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "TRG_U_I_CUST_CHNSUMM_CORP",
+            "encrypted_name": "749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df",
+            "type": "trigger",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "c224a659ac51407e33e2c01acaad6eea",
+            "fully_qualified_name": "XDMADM.TRG_U_I_CUST_CHNSUMM_CORP",
+            "encrypted_fqn": "c224a659ac51407e33e2c01acaad6eea.749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE TRIGGER \"c224a659ac51407e33e2c01acaad6eea\".\"749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df\"\n\nBEFORE UPDATE OR INSERT ON c224a659ac51407e33e2c01acaad6eea.45a4c2807bda212518fd1ab00699fff05a2ae6e41220fa7e51c9ecf29c41b30f\n     FOR EACH ROW\nBEGIN\n          IF :3dc7f4a98ff17e8ee14c3aee3e1bf434.a0714157a300cfda58102228995b2b3a is NOT NULL and :12819f94b51db10aa14d7bf4328af791.a0714157a300cfda58102228995b2b3a <> :3d70b1acfb4ccdf30ca3d16164aa9eef.a0714157a300cfda58102228995b2b3a then\n            null;\n          else\n            :3dc7f4a98ff17e8ee14c3aee3e1bf434.a0714157a300cfda58102228995b2b3a := to_number(to_char( sysdate , 'yyyymmddhh24miss'));\n          end if;\n      END;\n/\nALTER TRIGGER \"c224a659ac51407e33e2c01acaad6eea\".\"749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df\" ENABLE;",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

@@ -1,0 +1,513 @@
+{
+    "filename": "ddl_package.sql",
+    "numb_objects": 13,
+    "type": "package",
+    "type_hex": "00e308bf670f4e8deeb698f78dff87e6",
+    "encryption_key_type": "package.key",
+    "inventory": [
+        {
+            "name": "PKG_CPAT_MARKUP_DEV_BASIS",
+            "encrypted_name": "1b876f1061cd9941af8d7fd80a6be04734a1757f4bad54138c2efb5761614607",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_CPAT_MARKUP_DEV_BASIS",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.1b876f1061cd9941af8d7fd80a6be04734a1757f4bad54138c2efb5761614607",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 3
+                },
+                "Halstead": {
+                    "Program Length": 16,
+                    "Unique Operators": 8,
+                    "Unique Operands": 10,
+                    "Vocabulary Size": 18,
+                    "Program Volume": 47.5,
+                    "Program Difficulty": 1.25,
+                    "Program Effort": 59.375,
+                    "Program Bugs": 0.0158
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_CPAT_MARKUP_DEV_BASIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_ICM_AUDIT_YRLY",
+            "encrypted_name": "d4f8f6d68b3396b7668667be00b478d13cacc2b8843d282f4cbbeb45fa96287c",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_ICM_AUDIT_YRLY",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.d4f8f6d68b3396b7668667be00b478d13cacc2b8843d282f4cbbeb45fa96287c",
+            "synonyms": [],
+            "metadata_analysis": {},
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_ICM_AUDIT_YRLY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_CPAT_MARGIN_PRICE_BASIS",
+            "encrypted_name": "13cc009a6f63064b046af6d41a3c6429de092c5a4c267643cf4f0e56dfb61562",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_CPAT_MARGIN_PRICE_BASIS",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.13cc009a6f63064b046af6d41a3c6429de092c5a4c267643cf4f0e56dfb61562",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The package named 'PKG_CPAT_MARGIN_PRICE_BASIS' is created in the schema 'XDMADM'.",
+                    "2. The package contains three functions: \"get_full_cs_margin1\", \"get_full_cs_sellprice\", and \"get_calculated_each_csmargin\".",
+                    "3. Each function takes multiple input parameters of various data types.",
+                    "4. The functions return a NUMBER data type.",
+                    "5. The functions are declared as DETERMINISTIC and PARALLEL_ENABLE.",
+                    "6. The package body is also created, which includes the implementation of the three functions."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 20,
+                    "Unique Operators": 9,
+                    "Unique Operands": 10,
+                    "Vocabulary Size": 19,
+                    "Program Volume": 47.5,
+                    "Program Difficulty": 2.2222222222222223,
+                    "Program Effort": 105.55555555555556,
+                    "Program Bugs": 0.015833333333333335
+                }
+            },
+            "upstream_dependencies": [
+                "XDMADM.751F7AC5BEC4014FAB09B1CCD1279A22A1D1AA8CAFF5F2DCB2C49786C4D8695E.9010E789133857B410F4887B74BB63EC",
+                "XDMADM.6576B17D54A79A6220D45B548E333D474F0602D7AFCBAA786B2E18B070F7E009.E2DFB0F3CC33631D89B9E241773A7878",
+                "XDMADM.6576B17D54A79A6220D45B548E333D474F0602D7AFCBAA786B2E18B070F7E009.693D34E960E52AD60C34F4FD90BEC392",
+                "XDMADM.6576B17D54A79A6220D45B548E333D474F0602D7AFCBAA786B2E18B070F7E009.C60DD3969E45DA722F87E5FFF6AA04CB",
+                "XDMADM.6576B17D54A79A6220D45B548E333D474F0602D7AFCBAA786B2E18B070F7E009.DBB2FA6FCB4F5F3FFB633DD8C2C0CA2EF28F22FD3F47A13957FE413C2F24FC1D",
+                "XDMADM.6576B17D54A79A6220D45B548E333D474F0602D7AFCBAA786B2E18B070F7E009.82D85B44190BB07E1EC36A6993EFFA5E",
+                "XDMADM.B4CC2B1F8AD969DA905636DCABD58593.F83148B8A968CD69EBD102662821A830",
+                "XDMADM.6576B17D54A79A6220D45B548E333D474F0602D7AFCBAA786B2E18B070F7E009.82D9566A9A9C431B139992A2430D2E6C"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PKG_CPAT_MARGIN_PRICE_BASIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_816_867",
+            "encrypted_name": "ef5fdf018209be7d8cb936d5087654b5",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_816_867",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.ef5fdf018209be7d8cb936d5087654b5",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 2,
+                    "Unique Operators": 1,
+                    "Unique Operands": 1,
+                    "Vocabulary Size": 2,
+                    "Program Volume": 0.6931471805599453,
+                    "Program Difficulty": 0.5,
+                    "Program Effort": 0.34657359027997264,
+                    "Program Bugs": 0.0002310490601866484
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_816_867"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_DISCO10G_USF",
+            "encrypted_name": "025fa8ccf93890fb4e2ddbf36ce60b8e53a0c0fe76045acdb204ca36f43c8ecf",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_DISCO10G_USF",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.025fa8ccf93890fb4e2ddbf36ce60b8e53a0c0fe76045acdb204ca36f43c8ecf",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The package 'PKG_DISCO10G_USF' is created in the schema 'XDMADM'.",
+                    "2. The package contains three functions: USF_GET_PARAM, USF_GET_VENDOR_NAME, and USF_GET_DODAAC_CONTRACT.",
+                    "3. The USF_GET_PARAM function takes a parameter \"p_param_code\" of type VARCHAR2 and returns a NUMBER.",
+                    "4. The USF_GET_VENDOR_NAME function takes a parameter \"P_CMPNY_VNDR_NBR\" of type NUMBER and returns a VARCHAR2.",
+                    "5. The USF_GET_DODAAC_CONTRACT function takes two parameters \"I_BRANCH_CODE\" and \"I_CUSTOMER_NUMBER\" of type VARCHAR2 and returns a VARCHAR2.",
+                    "6. The package body contains the implementation of the three functions.",
+                    "7. The USF_GET_PARAM function retrieves the PARAM_VALUE_NBR from a table 'PARAM_VALUE' based on the PARAM_TYPE and PARAM_CODE.",
+                    "8. The USF_GET_VENDOR_NAME function retrieves the CMPNY_VNDR_NM from a table 'COV_CORP' based on the CMPNY_VNDR_NBR.",
+                    "9. The USF_GET_DODAAC_CONTRACT function retrieves the concatenation of two columns from a table 'DODACC_CORP' based on the I_BRANCH_CODE and I_CUSTOMER_NUMBER.",
+                    "10. The package body includes exception handling for each function to handle errors and return appropriate values."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 9,
+                    "Unique Operators": 6,
+                    "Unique Operands": 7,
+                    "Vocabulary Size": 13,
+                    "Program Volume": 39.86313713864835,
+                    "Program Difficulty": 1.1666666666666667,
+                    "Program Effort": 46.42857142857143,
+                    "Program Bugs": 0.01328771237954945
+                }
+            },
+            "upstream_dependencies": [
+                "XDMADM.PARAM_VALUE",
+                "XDMADM.COV_CORP",
+                "XDMADM.DODACC_CORP"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PKG_DISCO10G_USF"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_SLS_RGN",
+            "encrypted_name": "b9580f20dce751a68259e8bcecebddc2",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_SLS_RGN",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.b9580f20dce751a68259e8bcecebddc2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 10,
+                    "Unique Operators": 6,
+                    "Unique Operands": 8,
+                    "Vocabulary Size": 14,
+                    "Program Volume": 33.219280948873624,
+                    "Program Difficulty": 1.3333333333333333,
+                    "Program Effort": 44.29237459849817,
+                    "Program Bugs": 0.01107309364964939
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_SLS_RGN"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_NON_SHIP_DIV",
+            "encrypted_name": "e3b737fbc9b936d18a8535bea489792e53a0c0fe76045acdb204ca36f43c8ecf",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_NON_SHIP_DIV",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.e3b737fbc9b936d18a8535bea489792e53a0c0fe76045acdb204ca36f43c8ecf",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The package 'PKG_NON_SHIP_DIV' is created in the schema 'XDMADM'.",
+                    "2. The package contains multiple functions and overloaded functions.",
+                    "3. The package body 'PKG_NON_SHIP_DIV' is also created in the schema 'XDMADM'.",
+                    "4. The package body contains the implementations of the functions defined in the package specification.",
+                    "5. The functions in the package are used to retrieve non-ship division lists and check if a division is a non-ship division.",
+                    "6. The functions use a table named 'PARAM_VALUE' to fetch data based on certain conditions.",
+                    "7. The functions return either a SYS_REFCURSOR or a VARCHAR2 value.",
+                    "8. The functions accept input parameters of type VARCHAR2.",
+                    "9. The package body includes exception handling to catch and log any errors that may occur during execution."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 1,
+                    "Unique Operators": 1,
+                    "Unique Operands": 1,
+                    "Vocabulary Size": 2,
+                    "Program Volume": 2,
+                    "Program Difficulty": 0.5,
+                    "Program Effort": 1,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [
+                "XDMADM.PARAM_VALUE",
+                "XDMADM.PARAM_VALUE"
+            ],
+            "downstream_dependencies": [
+                "XDMADM.PKG_NON_SHIP_DIV"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_CPAT_MARKUP_PRICE_BASIS",
+            "encrypted_name": "1b876f1061cd9941af8d7fd80a6be047de092c5a4c267643cf4f0e56dfb61562",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_CPAT_MARKUP_PRICE_BASIS",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.1b876f1061cd9941af8d7fd80a6be047de092c5a4c267643cf4f0e56dfb61562",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The package named 'PKG_CPAT_MARKUP_PRICE_BASIS' is created in the schema 'XDMADM'.",
+                    "2. The package contains two functions: \"fn_get_calculated_markup1\" and \"fn_get_calculated_sell_price\".",
+                    "3. \"fn_get_calculated_markup1\" function takes multiple input parameters of various data types and returns a NUMBER value.",
+                    "4. \"fn_get_calculated_sell_price\" function also takes multiple input parameters of various data types and returns a NUMBER value.",
+                    "5. Both functions have the DETERMINISTIC and PARALLEL_ENABLE attributes.",
+                    "6. The package body is also created, which includes the implementation of the two functions."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 6
+                },
+                "Halstead": {
+                    "Program Length": 32,
+                    "Unique Operators": 12,
+                    "Unique Operands": 19,
+                    "Vocabulary Size": 31,
+                    "Program Volume": 123.47,
+                    "Program Difficulty": 4.33,
+                    "Program Effort": 534.84,
+                    "Program Bugs": 0.04
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_CPAT_MARKUP_PRICE_BASIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_FWB_CMDTY",
+            "encrypted_name": "944be2d86896c962a6664ca50d173cc0",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_FWB_CMDTY",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.944be2d86896c962a6664ca50d173cc0",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 20,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 67,
+                    "Program Volume": 315.47,
+                    "Program Difficulty": 4.05,
+                    "Program Effort": 1277.84,
+                    "Program Bugs": 0.11
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_FWB_CMDTY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_CPAT_MARGIN_DEV_BASIS",
+            "encrypted_name": "13cc009a6f63064b046af6d41a3c642934a1757f4bad54138c2efb5761614607",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_CPAT_MARGIN_DEV_BASIS",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.13cc009a6f63064b046af6d41a3c642934a1757f4bad54138c2efb5761614607",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The package named 'PKG_CPAT_MARGIN_DEV_BASIS' is created in the schema 'XDMADM'.",
+                    "2. The package contains three functions: \"get_dev_cost_full_cs_margin1\", \"get_dev_cost_full_cs_sellprice\", and \"get_dev_cost_calceach_csmargin\".",
+                    "3. Each function takes multiple input parameters of various data types.",
+                    "4. The functions return a NUMBER data type.",
+                    "5. The functions are declared as DETERMINISTIC and PARALLEL_ENABLE.",
+                    "6. The package body is also created, which includes the implementation of the three functions."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 16,
+                    "Unique Operators": 9,
+                    "Unique Operands": 10,
+                    "Vocabulary Size": 19,
+                    "Program Volume": 47.5,
+                    "Program Difficulty": 2.2222222222222223,
+                    "Program Effort": 105.55555555555556,
+                    "Program Bugs": 0.015833333333333335
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_CPAT_MARGIN_DEV_BASIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_EDI_816_867_EXTRCT",
+            "encrypted_name": "2f7537400c01953cca3b2c16a51c6e7da087ad812ff84062aa3b7d538a53ef2a",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_EDI_816_867_EXTRCT",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.2f7537400c01953cca3b2c16a51c6e7da087ad812ff84062aa3b7d538a53ef2a",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 2,
+                    "Unique Operators": 1,
+                    "Unique Operands": 1,
+                    "Vocabulary Size": 2,
+                    "Program Volume": 0.6931471805599453,
+                    "Program Difficulty": 0.5,
+                    "Program Effort": 0.34657359027997264,
+                    "Program Bugs": 0.0002310490601866484
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_EDI_816_867_EXTRCT"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_SLS_RNK",
+            "encrypted_name": "ae1ae99b0366cfa872a132fcd972dcd2",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_SLS_RNK",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.ae1ae99b0366cfa872a132fcd972dcd2",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 9
+                },
+                "Halstead": {
+                    "Program Length": 68,
+                    "Unique Operators": 20,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 67,
+                    "Program Volume": 315.47,
+                    "Program Difficulty": 11.95,
+                    "Program Effort": 3769.47,
+                    "Program Bugs": 0.11
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_SLS_RNK"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "PKG_SLS_PYR",
+            "encrypted_name": "f9e834d0ce032038958b136eeedc3902",
+            "type": "package",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "da238e96cf2cb791a097ca6946c096b4",
+            "fully_qualified_name": "XDMADM.PKG_SLS_PYR",
+            "encrypted_fqn": "da238e96cf2cb791a097ca6946c096b4.f9e834d0ce032038958b136eeedc3902",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 10,
+                    "Unique Operators": 6,
+                    "Unique Operands": 8,
+                    "Vocabulary Size": 14,
+                    "Program Volume": 33.219280948873624,
+                    "Program Difficulty": 1.3333333333333333,
+                    "Program Effort": 44.29237459849817,
+                    "Program Bugs": 0.01107309364964939
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "XDMADM.PKG_SLS_PYR"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

@@ -1,0 +1,289 @@
+{
+    "filename": "ddl_procedure.sql",
+    "numb_objects": 6,
+    "type": "procedure",
+    "type_hex": "292b130ac21d47a6d91108e12383ec2c",
+    "encryption_key_type": "procedure.key",
+    "inventory": [
+        {
+            "name": "PROC_XDM_ORD_GD_MAINT",
+            "encrypted_name": "89e68d17d531adb2101c65ec47c52f5842db972fd474b9a9fddc6696d6b94ecc",
+            "type": "procedure",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "2ddcb6a6d265b3329028a96c19731808",
+            "fully_qualified_name": "XDMADM.PROC_XDM_ORD_GD_MAINT",
+            "encrypted_fqn": "2ddcb6a6d265b3329028a96c19731808.89e68d17d531adb2101c65ec47c52f5842db972fd474b9a9fddc6696d6b94ecc",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 5
+                },
+                "Halstead": {
+                    "Program Length": 84,
+                    "Unique Operators": 23,
+                    "Unique Operands": 47,
+                    "Vocabulary Size": 70,
+                    "Program Volume": 322.47,
+                    "Program Difficulty": 11.74,
+                    "Program Effort": 3787.84,
+                    "Program Bugs": 0.11
+                }
+            },
+            "upstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.e28c3d06356e2f53d190d8ca9b253972",
+                "2ddcb6a6d265b3329028a96c19731808.9bab81acfd9a20cd7393c395041f4954",
+                "8ed37da78b0173e3de7b6390c914c9b3.a5435bb114c45f7cfb9b67fc5c92f6e5",
+                "25dba3ee357520e7fbb06d44d4294eac.e54416cf798433b8d452fd1cdb2365d9",
+                "25dba3ee357520e7fbb06d44d4294eac.739f11a26afeb306178a3e9cff0269b2",
+                "25dba3ee357520e7fbb06d44d4294eac.946ff0d4cf575845006ade10ae69c6f2",
+                "7000ac0346d01caa04ae3fc822852be7.d0a22ffceae2e5cb49bc82d69a8869dd",
+                "8ed37da78b0173e3de7b6390c914c9b3.5d1d3c2ad1dc0300826a82a983ae537b",
+                "25dba3ee357520e7fbb06d44d4294eac.1648e4bcb2b242e53a65ab22cd7d9eef",
+                "c5e9db0c861e7a2ec35a2cca6f3087c5.0e8c5c4de29f10b5c6dc96871dbe0952",
+                "c5e9db0c861e7a2ec35a2cca6f3087c5.9dc3171f96b351c0d3634e445d53c59d",
+                "c5e9db0c861e7a2ec35a2cca6f3087c5.d0a22ffceae2e5cb49bc82d69a8869dd",
+                "c5e9db0c861e7a2ec35a2cca6f3087c5.57aea29376acf2aebe3c9a36673c7392",
+                "e61c2bbc83ae2a4e4521ccb5ab981e00.a5435bb114c45f7cfb9b67fc5c92f6e5"
+            ],
+            "downstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.89e68d17d531adb2101c65ec47c52f5842db972fd474b9a9fddc6696d6b94ecc"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "TRUNC_TBL",
+            "encrypted_name": "a9fa9926b6d7764cee9f22ccf32f34f8",
+            "type": "procedure",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "2ddcb6a6d265b3329028a96c19731808",
+            "fully_qualified_name": "XDMADM.TRUNC_TBL",
+            "encrypted_fqn": "2ddcb6a6d265b3329028a96c19731808.a9fa9926b6d7764cee9f22ccf32f34f8",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The procedure takes four input parameters: p_trgt_schm (VARCHAR2), p_trgt_tbl (VARCHAR2), p_trgt_part (VARCHAR2) with a default value of null, and p_trgt_type (VARCHAR2) with a default value of null.",
+                    "2. Local variables v_trgt_schm, v_trgt_tbl, and v_trgt_part are declared and assigned values based on the input parameters.",
+                    "3. The procedure checks if the value of v_trgt_part is null.",
+                    "4. If v_trgt_part is null, the procedure constructs a truncate statement for the table specified by v_trgt_schm and v_trgt_tbl.",
+                    "5. If v_trgt_part is not null, the procedure constructs an alter table statement to truncate a specific partition of the table specified by v_trgt_schm, v_trgt_tbl, p_trgt_type, and v_trgt_part.",
+                    "6. The constructed statement is printed using dbms_output.put_line.",
+                    "7. The constructed statement is executed dynamically using execute immediate."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 12,
+                    "Unique Operators": 7,
+                    "Unique Operands": 8,
+                    "Vocabulary Size": 15,
+                    "Program Volume": 47.24,
+                    "Program Difficulty": 2.29,
+                    "Program Effort": 108.18,
+                    "Program Bugs": 0.02
+                }
+            },
+            "upstream_dependencies": [],
+            "downstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.a9fa9926b6d7764cee9f22ccf32f34f8"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "INCR_LOAD_STAT",
+            "encrypted_name": "52321dd05ff919168d056641c2826618",
+            "type": "procedure",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "2ddcb6a6d265b3329028a96c19731808",
+            "fully_qualified_name": "XDMADM.INCR_LOAD_STAT",
+            "encrypted_fqn": "2ddcb6a6d265b3329028a96c19731808.52321dd05ff919168d056641c2826618",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 100,
+                    "Unique Operators": 20,
+                    "Unique Operands": 38,
+                    "Vocabulary Size": 58,
+                    "Program Volume": 267.68,
+                    "Program Difficulty": 9.5,
+                    "Program Effort": 2543.2,
+                    "Program Bugs": 0.09
+                }
+            },
+            "upstream_dependencies": [
+                "5ded13d6d14659363f5e912cc49d5792.33089db804c0c75abd403d74f20b0dcd",
+                "606cb8ef2b1001c14a7350e19dfa6538.4e9c10cc327b88d207b2adf10ec0e261",
+                "606cb8ef2b1001c14a7350e19dfa6538.80d31fe0ea18d3cbb78b8653f32c7e0a",
+                "dbms_output.put_line",
+                "sysdate",
+                "trunc",
+                "sql%ROWCOUNT",
+                "COMMIT",
+                "ROLLBACK",
+                "NO_DATA_FOUND",
+                "OTHERS",
+                "SQLERRM",
+                "SQLERRM"
+            ],
+            "downstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.52321dd05ff919168d056641c2826618"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "RESET_LOAD_STAT",
+            "encrypted_name": "65317d56b6c939b13dadc6ca7ee15000",
+            "type": "procedure",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "2ddcb6a6d265b3329028a96c19731808",
+            "fully_qualified_name": "XDMADM.RESET_LOAD_STAT",
+            "encrypted_fqn": "2ddcb6a6d265b3329028a96c19731808.65317d56b6c939b13dadc6ca7ee15000",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 4
+                },
+                "Halstead": {
+                    "Program Length": 61,
+                    "Unique Operators": 17,
+                    "Unique Operands": 33,
+                    "Vocabulary Size": 50,
+                    "Program Volume": 207.47,
+                    "Program Difficulty": 7.94,
+                    "Program Effort": 1647.84,
+                    "Program Bugs": 0.07
+                }
+            },
+            "upstream_dependencies": [
+                "5ded13d6d14659363f5e912cc49d5792.6e5c32168d75c8a36e8690f803edfd23",
+                "5ded13d6d14659363f5e912cc49d5792.33089db804c0c75abd403d74f20b0dcd",
+                "cb3282c078638f07b13a9f25e6f7bd8c.8d8390ff0a8c194daf6e133712ea6bc9",
+                "c1910bccdd57062ccac47420c40e2843.8d8390ff0a8c194daf6e133712ea6bc9",
+                "c1910bccdd57062ccac47420c40e2843.f2c833a931f5f1312fd85c6b6b8f67b7",
+                "c1910bccdd57062ccac47420c40e2843.92ac05241155ae43778fa8eb777fa97b",
+                "div_corp",
+                "dual"
+            ],
+            "downstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.65317d56b6c939b13dadc6ca7ee15000"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "FACT_LOAD_STAT_BAKUP",
+            "encrypted_name": "63b73b47e5c7676e8b4910edff46ab825b41d78431b87c27a1c2e84ee343f76b",
+            "type": "procedure",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "2ddcb6a6d265b3329028a96c19731808",
+            "fully_qualified_name": "XDMADM.FACT_LOAD_STAT_BAKUP",
+            "encrypted_fqn": "2ddcb6a6d265b3329028a96c19731808.63b73b47e5c7676e8b4910edff46ab825b41d78431b87c27a1c2e84ee343f76b",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The procedure takes one input parameter, p_odate (Date).",
+                    "2. A constant declaration is made for bakTs, which is assigned the value of SYSDATE.",
+                    "3. Begin Block:",
+                    "3.1. The procedure outputs 'Start' using the dbms_output.put_line function.",
+                    "3.2. An INSERT statement is executed to insert data into the table FACT_LOAD_STAT_BAK. The data is selected from the table fact_load_stat, with specific columns being inserted into the target table.",
+                    "3.3. The number of rows inserted is outputted using the dbms_output.put_line function.",
+                    "3.4. The procedure outputs 'End Process' using the dbms_output.put_line function.",
+                    "3.5. A COMMIT statement is executed to save the changes made in the transaction.",
+                    "4. Exception Handling Block:",
+                    "4.1. The exception handling block includes a WHEN NO_DATA_FOUND clause to handle the case when no data is found during the execution of the INSERT statement. In this case, it does nothing.",
+                    "4.2. The exception handling block also includes a WHEN OTHERS clause to handle any other exceptions that may occur during execution. It performs a ROLLBACK to undo any changes made in the transaction and outputs the error message using the dbms_output.put_line function."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 0
+                },
+                "Halstead": {
+                    "Program Length": 0,
+                    "Unique Operators": 0,
+                    "Unique Operands": 0,
+                    "Vocabulary Size": 0,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [
+                "fact_load_stat"
+            ],
+            "downstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.63b73b47e5c7676e8b4910edff46ab825b41d78431b87c27a1c2e84ee343f76b"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "COMPRESS_SUBPARTITION",
+            "encrypted_name": "fd8c623d72ef2c02397ace273c3d5a004add06061f1d0aca459dcd274ff0e987",
+            "type": "procedure",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "2ddcb6a6d265b3329028a96c19731808",
+            "fully_qualified_name": "XDMADM.COMPRESS_SUBPARTITION",
+            "encrypted_fqn": "2ddcb6a6d265b3329028a96c19731808.fd8c623d72ef2c02397ace273c3d5a004add06061f1d0aca459dcd274ff0e987",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 16,
+                    "Unique Operators": 9,
+                    "Unique Operands": 10,
+                    "Vocabulary Size": 19,
+                    "Program Volume": 57.051,
+                    "Program Difficulty": 1.111,
+                    "Program Effort": 63.39,
+                    "Program Bugs": 0.019
+                }
+            },
+            "upstream_dependencies": [
+                "5ded13d6d14659363f5e912cc49d5792.571e59d82c7b9e71dfa8dc36478a5c3c",
+                "user_tab_partitions",
+                "user_tab_subpartitions",
+                "user_indexes",
+                "user_ind_partitions",
+                "user_ind_subpartitions",
+                "sysdate"
+            ],
+            "downstream_dependencies": [
+                "2ddcb6a6d265b3329028a96c19731808.fd8c623d72ef2c02397ace273c3d5a004add06061f1d0aca459dcd274ff0e987"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

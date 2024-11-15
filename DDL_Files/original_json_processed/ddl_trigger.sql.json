@@ -1,0 +1,101 @@
+{
+    "filename": "ddl_trigger.sql",
+    "numb_objects": 2,
+    "type": "trigger",
+    "type_hex": "3355eb48330a6eb996fa7964e6f7ec2e",
+    "encryption_key_type": "trigger.key",
+    "inventory": [
+        {
+            "name": "DROP_CORP_ORIG_LDR_TM_T",
+            "encrypted_name": "432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1",
+            "type": "trigger",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "c224a659ac51407e33e2c01acaad6eea",
+            "fully_qualified_name": "XDMADM.DROP_CORP_ORIG_LDR_TM_T",
+            "encrypted_fqn": "c224a659ac51407e33e2c01acaad6eea.432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The trigger is created or replaced with the name '432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1'.",
+                    "2. The trigger is defined to execute before an insert operation on the table 'c224a659ac51407e33e2c01acaad6eea.37addc8974200bdea7b9cdd7969836d5'.",
+                    "3. The trigger is set to execute for each row being inserted.",
+                    "4. The trigger code begins with the assignment of a value from the column 'af64a5868028fcae9229cde413083ed3' in the table '3dc7f4a98ff17e8ee14c3aee3e1bf434' to the column 'af64a5868028fcae9229cde413083ed3' in the same table.",
+                    "5. The trigger code ends with the 'END;' statement.",
+                    "6. The trigger is enabled using the 'ALTER TRIGGER' statement."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 1
+                },
+                "Halstead": {
+                    "Program Length": 1,
+                    "Unique Operators": 1,
+                    "Unique Operands": 1,
+                    "Vocabulary Size": 2,
+                    "Program Volume": 0,
+                    "Program Difficulty": 0,
+                    "Program Effort": 0,
+                    "Program Bugs": 0
+                }
+            },
+            "upstream_dependencies": [
+                "c224a659ac51407e33e2c01acaad6eea.37addc8974200bdea7b9cdd7969836d5",
+                "c224a659ac51407e33e2c01acaad6eea.3dc7f4a98ff17e8ee14c3aee3e1bf434"
+            ],
+            "downstream_dependencies": [
+                "c224a659ac51407e33e2c01acaad6eea.432e3c503cfb2836e1b37ba35a0a048a53ad20923db8f37613e6d70aa99332b1"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "TRG_U_I_CUST_CHNSUMM_CORP",
+            "encrypted_name": "749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df",
+            "type": "trigger",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "c224a659ac51407e33e2c01acaad6eea",
+            "fully_qualified_name": "XDMADM.TRG_U_I_CUST_CHNSUMM_CORP",
+            "encrypted_fqn": "c224a659ac51407e33e2c01acaad6eea.749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The trigger is named '749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df'.",
+                    "2. The trigger is defined as a BEFORE UPDATE OR INSERT trigger on the table 'c224a659ac51407e33e2c01acaad6eea.45a4c2807bda212518fd1ab00699fff05a2ae6e41220fa7e51c9ecf29c41b30f'.",
+                    "3. The trigger is executed for each row affected by the UPDATE or INSERT operation.",
+                    "4. The trigger includes an IF-THEN-ELSE statement to check if the value of ':3dc7f4a98ff17e8ee14c3aee3e1bf434.a0714157a300cfda58102228995b2b3a' is not NULL and if it is different from the value of ':12819f94b51db10aa14d7bf4328af791.a0714157a300cfda58102228995b2b3a'.",
+                    "5. If the condition in step 4 is true, the trigger does nothing (null statement).",
+                    "6. If the condition in step 4 is false, the trigger assigns the current date and time in the format 'yyyymmddhh24miss' to the variable ':3dc7f4a98ff17e8ee14c3aee3e1bf434.a0714157a300cfda58102228995b2b3a'.",
+                    "7. The trigger is enabled."
+                ],
+                "Complexity": {
+                    "Cyclomatic Complexity": 2
+                },
+                "Halstead": {
+                    "Program Length": 10,
+                    "Unique Operators": 7,
+                    "Unique Operands": 9,
+                    "Vocabulary Size": 16,
+                    "Program Volume": 34.506,
+                    "Program Difficulty": 2.571,
+                    "Program Effort": 88.787,
+                    "Program Bugs": 0.0115
+                }
+            },
+            "upstream_dependencies": [
+                "c224a659ac51407e33e2c01acaad6eea.45a4c2807bda212518fd1ab00699fff05a2ae6e41220fa7e51c9ecf29c41b30f"
+            ],
+            "downstream_dependencies": [
+                "c224a659ac51407e33e2c01acaad6eea.749632b00f55381cd20ecc87b57892cef5d722752058a03b7c23c18710ecb3df"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

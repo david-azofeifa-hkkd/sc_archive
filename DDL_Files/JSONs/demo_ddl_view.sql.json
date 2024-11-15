@@ -1,0 +1,374 @@
+{
+    "filename": "ddl_view.sql",
+    "numb_objects": 11,
+    "type": "view",
+    "type_hex": "",
+    "encryption_key_type": "",
+    "inventory": [
+        {
+            "name": "V_CUSTOMER_ORDERS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement with the name store_demo_db.store_demo_sch.V_CUSTOMER_ORDERS.",
+                    "2. The view selects specific columns from two tables: CUSTOMERS and ORDERS.",
+                    "3. The selected columns from the CUSTOMERS table are CUSTOMER_ID, FIRST_NAME, and LAST_NAME.",
+                    "4. The selected columns from the ORDERS table are ORDER_ID, ORDER_DATE, and TOTAL.",
+                    "5. The CUSTOMERS table is aliased as \"c\" and the ORDERS table is aliased as \"o\".",
+                    "6. A JOIN operation is performed between the CUSTOMERS and ORDERS tables based on the CUSTOMER_ID column, which is common to both tables."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_ORDER_ITEMS_DETAILS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_ITEMS_DETAILS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement with the name store_demo_db.store_demo_sch.V_ORDER_ITEMS_DETAILS.",
+                    "2. The view selects specific columns from the ORDER_ITEMS table (aliased as oi) and the PRODUCTS table (aliased as p).",
+                    "3. The selected columns from the ORDER_ITEMS table are ORDER_ITEM_ID, ORDER_ID, PRODUCT_ID, QUANTITY, and UNIT_PRICE.",
+                    "4. The selected column from the PRODUCTS table is PRODUCT_NAME.",
+                    "5. The view joins the ORDER_ITEMS table and the PRODUCTS table on the PRODUCT_ID column, ensuring that only matching records from both tables are included in the result set."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_ITEMS_DETAILS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_CUSTOMER_ORDER_HISTORY",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDER_HISTORY",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement with the name store_demo_db.store_demo_sch.V_CUSTOMER_ORDER_HISTORY.",
+                    "2. The SELECT statement within the view retrieves data from two tables: store_demo_db.store_demo_sch.CUSTOMERS (aliased as c) and store_demo_db.store_demo_sch.ORDERS (aliased as o).",
+                    "3. The columns selected from the CUSTOMERS table are CUSTOMER_ID, FIRST_NAME, and LAST_NAME.",
+                    "4. The columns selected from the ORDERS table are ORDER_ID, ORDER_DATE, and TOTAL.",
+                    "5. The JOIN condition is specified using the CUSTOMER_ID column, which is common to both the CUSTOMERS and ORDERS tables.",
+                    "6. The results of the SELECT statement are ordered by the ORDER_DATE column in descending order."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDER_HISTORY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_TOP_SELLING_PRODUCTS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement with the name store_demo_db.store_demo_sch.V_TOP_SELLING_PRODUCTS.",
+                    "2. The view selects three columns: PRODUCT_ID, PRODUCT_NAME, and TOTAL_QUANTITY.",
+                    "3. The TOTAL_QUANTITY column is calculated using the SUM function on the QUANTITY column from the ORDER_ITEMS table.",
+                    "4. The view joins the ORDER_ITEMS table (aliased as oi) with the PRODUCTS table (aliased as p) on the PRODUCT_ID column.",
+                    "5. The results are grouped by the PRODUCT_ID and PRODUCT_NAME columns.",
+                    "6. The results are ordered by the TOTAL_QUANTITY column in descending order."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_CUSTOMER_PURCHASES",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PURCHASES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement and is named store_demo_db.store_demo_sch.V_CUSTOMER_PURCHASES.",
+                    "2. The view selects four columns: CUSTOMER_ID, FIRST_NAME, LAST_NAME from the CUSTOMERS table, and a calculated column TOTAL_PURCHASES which is the sum of the TOTAL column from the ORDERS table.",
+                    "3. The view joins the CUSTOMERS table (aliased as c) with the ORDERS table (aliased as o) on the CUSTOMER_ID column.",
+                    "4. The results are grouped by CUSTOMER_ID, FIRST_NAME, and LAST_NAME to ensure that the SUM function calculates the total purchases per customer."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PURCHASES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_ORDER_TOTALS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_TOTALS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created with the name store_demo_db.store_demo_sch.V_ORDER_TOTALS.",
+                    "2. The view selects two columns: ORDER_ID and ORDER_TOTAL.",
+                    "3. The ORDER_ID is selected directly from the ORDERS table (aliased as o).",
+                    "4. The ORDER_TOTAL is calculated as the sum of the product of UNIT_PRICE and QUANTITY from the ORDER_ITEMS table (aliased as oi).",
+                    "5. The ORDERS table (o) is joined with the ORDER_ITEMS table (oi) on the ORDER_ID column.",
+                    "6. The results are grouped by the ORDER_ID column."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_TOTALS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_PRODUCTS_IN_STOCK",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_PRODUCTS_IN_STOCK",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement.",
+                    "2. The view is named store_demo_db.store_demo_sch.V_PRODUCTS_IN_STOCK.",
+                    "3. The view selects three columns from the store_demo_db.store_demo_sch.PRODUCTS table: PRODUCT_ID, PRODUCT_NAME, and STOCK_QUANTITY.",
+                    "4. The view includes a WHERE clause that filters the rows to include only those where the STOCK_QUANTITY is greater than 0."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_PRODUCTS_IN_STOCK"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_CUSTOMER_PAYMENT_METHODS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PAYMENT_METHODS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement with the name store_demo_db.store_demo_sch.V_CUSTOMER_PAYMENT_METHODS.",
+                    "2. The view selects specific columns from the CUSTOMERS and PAYMENTS tables.",
+                    "3. The selected columns are CUSTOMER_ID, FIRST_NAME, LAST_NAME from the CUSTOMERS table and PAYMENT_METHOD from the PAYMENTS table.",
+                    "4. The CUSTOMERS table is aliased as \"c\" and the PAYMENTS table is aliased as \"p\".",
+                    "5. The view joins the CUSTOMERS table and the PAYMENTS table on the condition that CUSTOMER_ID from the CUSTOMERS table matches ORDER_ID from the PAYMENTS table."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PAYMENTS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PAYMENT_METHODS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_AVERAGE_ORDER_VALUE",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_AVERAGE_ORDER_VALUE",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement.",
+                    "2. The view is named store_demo_db.store_demo_sch.V_AVERAGE_ORDER_VALUE.",
+                    "3. The view is defined to select the average value of the TOTAL column from the ORDERS table.",
+                    "4. The ORDERS table is located in the store_demo_db.store_demo_sch schema.",
+                    "5. The view contains a single column named AVERAGE_ORDER_VALUE, which is the result of the AVG function applied to the TOTAL column from the ORDERS table."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_AVERAGE_ORDER_VALUE"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "V_TOTAL_SALES",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOTAL_SALES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created using the CREATE VIEW statement.",
+                    "2. The view is named store_demo_db.store_demo_sch.V_TOTAL_SALES.",
+                    "3. The view is defined to select the sum of the TOTAL column from the store_demo_db.store_demo_sch.ORDERS table.",
+                    "4. The selected sum is aliased as TOTAL_SALES."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOTAL_SALES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "STORE_MANAGER_KPIS",
+            "encrypted_name": "null",
+            "type": "view",
+            "database": "V_STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "V_STORE_DEMO_DB.STORE_DEMO_SCH.STORE_MANAGER_KPIS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The view is created with the name STORE_MANAGER_KPIS in the schema store_demo_sch of the database store_demo_db.",
+                    "2. The view selects various key performance indicators (KPIs) for store managers from different tables and views within the schema.",
+                    "3. The TOTAL_SALES KPI is calculated as the sum of the TOTAL column from the ORDERS table.",
+                    "4. The AVERAGE_ORDER_VALUE KPI is calculated as the average of the TOTAL column from the ORDERS table.",
+                    "5. The TOTAL_ORDERS KPI is calculated as the count of all rows in the ORDERS table.",
+                    "6. The TOTAL_CUSTOMERS KPI is calculated as the count of all rows in the CUSTOMERS table.",
+                    "7. The TOTAL_PRODUCTS KPI is calculated as the count of all rows in the PRODUCTS table.",
+                    "8. The PRODUCTS_IN_STOCK KPI is calculated as the count of rows in the PRODUCTS table where STOCK_QUANTITY is greater than 0.",
+                    "9. The TOP_SELLING_PRODUCT KPI is determined by selecting the PRODUCT_NAME with the highest total quantity sold from the ORDER_ITEMS table joined with the PRODUCTS table.",
+                    "10. The TOTAL_CUSTOMER_PURCHASES KPI is calculated as the sum of the TOTAL_PURCHASES column from the V_CUSTOMER_PURCHASES view.",
+                    "11. The AVERAGE_CUSTOMER_PURCHASE KPI is calculated as the average of the TOTAL_PURCHASES column from the V_CUSTOMER_PURCHASES view.",
+                    "12. The TOTAL_PAYMENTS_RECEIVED KPI is calculated as the sum of the AMOUNT column from the PAYMENTS table.",
+                    "13. The AVERAGE_PAYMENT_PER_ORDER KPI is calculated as the average of the AMOUNT column from the PAYMENTS table.",
+                    "14. The TOTAL_INVENTORY_QUANTITY KPI is calculated as the sum of the QUANTITY column from the INVENTORY table.",
+                    "15. The TOP_CUSTOMER KPI is determined by selecting the concatenated FIRST_NAME and LAST_NAME of the customer with the highest total purchases from the CUSTOMERS table joined with the ORDERS table."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PAYMENTS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.INVENTORY",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS",
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PURCHASES"
+            ],
+            "downstream_dependencies": [
+                "V_STORE_DEMO_DB.STORE_DEMO_SCH.STORE_MANAGER_KPIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

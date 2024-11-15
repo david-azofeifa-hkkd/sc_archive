@@ -1,0 +1,28 @@
+{
+    "filename": "ddl_type.sql",
+    "numb_objects": 1,
+    "type": "type",
+    "type_hex": "9fec2dd4bb9a68ae4ab0cb3e9aa6faee",
+    "encryption_key_type": "type.key",
+    "inventory": [
+        {
+            "name": "ICM_REC",
+            "encrypted_name": "1bab561c60c2065e5cb12c7ee37caa39",
+            "type": "type",
+            "database": "null",
+            "encrypted_database": "null",
+            "schema": "XDMADM",
+            "encrypted_schema": "aea3fc2724db7a20fa103182460225d6",
+            "fully_qualified_name": "XDMADM.ICM_REC",
+            "encrypted_fqn": "aea3fc2724db7a20fa103182460225d6.1bab561c60c2065e5cb12c7ee37caa39",
+            "synonyms": [],
+            "metadata_analysis": "CREATE OR REPLACE TYPE \"aea3fc2724db7a20fa103182460225d6\".\"1bab561c60c2065e5cb12c7ee37caa39\" as object\n(\ndiv_nbr                NUMBER,\nfisc_yr_wk             NUMBER,\neach_ship              NUMBER,\nprime_min_mrk_amt      NUMBER,\nrep_cost_extnd         NUMBER,\ndvt_cost_extnd         NUMBER,\ndwa_cost_extnd         NUMBER,\ngrs_sls_extnd          NUMBER,\nnet_wt_ship            NUMBER,\nprime_mrk_amt          NUMBER,\nsrchrg                 NUMBER,\nqty_ship               NUMBER,\norig_mrgn_bsis_amt_extnd                NUMBER,\nunfrm_qty_ship         NUMBER,\nunit_ship              NUMBER,\nttl_alwnc              NUMBER,\nttl_dvt                NUMBER,\nprod_alw               NUMBER,\nprod_chrg              NUMBER,\nnon_prod_alwnc         NUMBER,\nnon_prod_chrg          NUMBER,\nrbt_loc_accrl_amt      NUMBER,\nrbt_natl_accrl_amt     NUMBER,\nrbt_loc_exp_amt        NUMBER,\nrbt_natl_exp_amt       NUMBER\n);",
+            "upstream_dependencies": [],
+            "downstream_dependencies": [],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}

@@ -1,0 +1,928 @@
+{
+    "filename": "ddl_synonym.sql",
+    "numb_objects": 30,
+    "type": "synonym",
+    "type_hex": "",
+    "encryption_key_type": "",
+    "inventory": [
+        {
+            "name": "SYN_CUSTOMERS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_CUSTOMERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The CREATE SYNONYM statement is used to create the synonym.",
+                    "3. The synonym is named 'SYN_CUSTOMERS'.",
+                    "4. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The synonym 'SYN_CUSTOMERS' points to the table 'CUSTOMERS' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.CUSTOMERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_CUSTOMERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_PRODUCTS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PRODUCTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym named 'SYN_PRODUCTS' in the 'store_demo_sch' schema of the 'store_demo_db' database.",
+                    "2. The synonym 'SYN_PRODUCTS' is an alias for the 'PRODUCTS' table in the same schema and database.",
+                    "3. The 'CREATE SYNONYM' statement is used to create a database object that provides an alternative name for another database object.",
+                    "4. The synonym is created within the 'store_demo_sch' schema, which is specified before the synonym name.",
+                    "5. The 'FOR' keyword is used to specify the target object that the synonym will reference, which in this case is the 'PRODUCTS' table."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PRODUCTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ORDERS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ORDERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is named 'SYN_ORDERS'.",
+                    "3. The synonym is created in the schema 'store_demo_sch' within the database 'store_demo_db'.",
+                    "4. The synonym 'SYN_ORDERS' points to the object 'ORDERS' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ORDERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ORDER_ITEMS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ORDER_ITEMS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The CREATE SYNONYM statement is used to create the synonym.",
+                    "3. The synonym is named 'SYN_ORDER_ITEMS'.",
+                    "4. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The synonym 'SYN_ORDER_ITEMS' refers to the object 'ORDER_ITEMS'.",
+                    "6. The object 'ORDER_ITEMS' is located in the same schema 'store_demo_sch' of the database 'store_demo_db'."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ORDER_ITEMS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ORDER_ITEMS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_PAYMENTS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PAYMENTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym named 'SYN_PAYMENTS' in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "2. The synonym 'SYN_PAYMENTS' is created for the object 'PAYMENTS' which is located in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym allows for an alternative name to be used for the 'PAYMENTS' table, simplifying access and potentially providing a layer of abstraction.",
+                    "4. The fully qualified name of the synonym is 'store_demo_db.store_demo_sch.SYN_PAYMENTS'.",
+                    "5. The fully qualified name of the target object is 'store_demo_db.store_demo_sch.PAYMENTS'."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PAYMENTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PAYMENTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_WAREHOUSES",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_WAREHOUSES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is named 'SYN_WAREHOUSES'.",
+                    "3. The synonym is created in the schema 'store_demo_sch' within the database 'store_demo_db'.",
+                    "4. The synonym 'SYN_WAREHOUSES' points to the object 'WAREHOUSES' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.WAREHOUSES"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_WAREHOUSES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_INVENTORY",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_INVENTORY",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym named 'SYN_INVENTORY'.",
+                    "2. The synonym is created in the schema 'store_demo_sch' within the database 'store_demo_db'.",
+                    "3. The synonym 'SYN_INVENTORY' is an alias for the table 'INVENTORY' located in the same schema 'store_demo_sch' within the database 'store_demo_db'.",
+                    "4. The synonym allows users to reference the 'INVENTORY' table using the name 'SYN_INVENTORY' instead of the full table name."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.INVENTORY"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_INVENTORY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_CUSTOMER_ORDERS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_ORDERS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_CUSTOMER_ORDERS'.",
+                    "4. The synonym points to the object 'V_CUSTOMER_ORDERS' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDERS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_ORDERS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_ORDER_ITEMS_DETAILS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_ORDER_ITEMS_DETAILS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_ORDER_ITEMS_DETAILS'.",
+                    "4. The synonym points to the object 'V_ORDER_ITEMS_DETAILS' in the same schema and database.",
+                    "5. The 'CREATE SYNONYM' statement is used to create an alias for the object, allowing it to be referenced by the synonym name."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_ITEMS_DETAILS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_ORDER_ITEMS_DETAILS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_CUSTOMER_ORDER_HISTORY",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_ORDER_HISTORY",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in the Oracle database.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_CUSTOMER_ORDER_HISTORY'.",
+                    "4. The synonym points to the object 'V_CUSTOMER_ORDER_HISTORY' in the same schema and database.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'V_CUSTOMER_ORDER_HISTORY' view, potentially simplifying access or providing a layer of abstraction."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_ORDER_HISTORY"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_ORDER_HISTORY"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_TOP_SELLING_PRODUCTS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_TOP_SELLING_PRODUCTS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The CREATE SYNONYM statement is used to create a synonym named 'SYN_V_TOP_SELLING_PRODUCTS'.",
+                    "3. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "4. The synonym 'SYN_V_TOP_SELLING_PRODUCTS' refers to the object 'V_TOP_SELLING_PRODUCTS' in the same schema and database.",
+                    "5. The synonym allows for easier reference to the 'V_TOP_SELLING_PRODUCTS' object, potentially simplifying SQL queries and improving code readability."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_TOP_SELLING_PRODUCTS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_CUSTOMER_PURCHASES",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_PURCHASES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_CUSTOMER_PURCHASES'.",
+                    "4. The synonym points to the object 'V_CUSTOMER_PURCHASES' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PURCHASES"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_PURCHASES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_ORDER_TOTALS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_ORDER_TOTALS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_ORDER_TOTALS'.",
+                    "4. The synonym points to the object 'V_ORDER_TOTALS' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_ORDER_TOTALS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_ORDER_TOTALS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_PRODUCTS_IN_STOCK",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_PRODUCTS_IN_STOCK",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_PRODUCTS_IN_STOCK'.",
+                    "4. The synonym points to the object 'V_PRODUCTS_IN_STOCK' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_PRODUCTS_IN_STOCK"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_PRODUCTS_IN_STOCK"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_CUSTOMER_PAYMENT_METHODS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_PAYMENT_METHODS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_CUSTOMER_PAYMENT_METHODS'.",
+                    "4. The synonym points to the object 'V_CUSTOMER_PAYMENT_METHODS' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_CUSTOMER_PAYMENT_METHODS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_CUSTOMER_PAYMENT_METHODS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_AVERAGE_ORDER_VALUE",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_AVERAGE_ORDER_VALUE",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in the Oracle database.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_AVERAGE_ORDER_VALUE'.",
+                    "4. The synonym points to the object 'V_AVERAGE_ORDER_VALUE' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the object 'V_AVERAGE_ORDER_VALUE', which can simplify SQL queries and improve code readability."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_AVERAGE_ORDER_VALUE"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_AVERAGE_ORDER_VALUE"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_TOTAL_SALES",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_TOTAL_SALES",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_TOTAL_SALES'.",
+                    "4. The synonym 'SYN_V_TOTAL_SALES' points to the object 'V_TOTAL_SALES' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the object 'V_TOTAL_SALES', which can simplify SQL queries and provide a layer of abstraction."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_TOTAL_SALES"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_TOTAL_SALES"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_V_STORE_MANAGER_KPIS",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_STORE_MANAGER_KPIS",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_V_STORE_MANAGER_KPIS'.",
+                    "4. The synonym points to the object 'V_STORE_MANAGER_KPIS' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.V_STORE_MANAGER_KPIS"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_V_STORE_MANAGER_KPIS"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_CUSTOMER_FUNC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_CUSTOMER_FUNC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym's name is 'SYN_ADD_CUSTOMER_FUNC'.",
+                    "4. The synonym 'SYN_ADD_CUSTOMER_FUNC' points to the object 'ADD_CUSTOMER' in the same schema 'store_demo_sch' of the database 'store_demo_db'."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_CUSTOMER"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_CUSTOMER_FUNC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_PRODUCT_FUNC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_PRODUCT_FUNC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym name is 'SYN_ADD_PRODUCT_FUNC'.",
+                    "4. The synonym 'SYN_ADD_PRODUCT_FUNC' refers to the object 'ADD_PRODUCT' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'ADD_PRODUCT' object, which can be a function, procedure, table, or other database object."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_PRODUCT"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_PRODUCT_FUNC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_PLACE_ORDER_FUNC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PLACE_ORDER_FUNC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym's name is 'SYN_PLACE_ORDER_FUNC'.",
+                    "4. The synonym 'SYN_PLACE_ORDER_FUNC' refers to the object 'PLACE_ORDER' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PLACE_ORDER"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PLACE_ORDER_FUNC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_ORDER_ITEM_FUNC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_ORDER_ITEM_FUNC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The CREATE SYNONYM statement is used to create the synonym.",
+                    "3. The synonym is named 'SYN_ADD_ORDER_ITEM_FUNC'.",
+                    "4. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The synonym points to the object 'ADD_ORDER_ITEM' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_ORDER_ITEM"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_ORDER_ITEM_FUNC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_MAKE_PAYMENT_FUNC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_MAKE_PAYMENT_FUNC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_MAKE_PAYMENT_FUNC'.",
+                    "4. The synonym 'SYN_MAKE_PAYMENT_FUNC' refers to the object 'MAKE_PAYMENT' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'MAKE_PAYMENT' object, which can be used in SQL statements."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.MAKE_PAYMENT"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_MAKE_PAYMENT_FUNC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_CUSTOMER_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_CUSTOMER_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is named 'SYN_ADD_CUSTOMER_PROC'.",
+                    "3. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "4. The synonym points to the object 'ADD_CUSTOMER' in the same schema and database."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_CUSTOMER"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_CUSTOMER_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_PRODUCT_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_PRODUCT_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym's name is 'SYN_ADD_PRODUCT_PROC'.",
+                    "4. The synonym 'SYN_ADD_PRODUCT_PROC' refers to the object 'ADD_PRODUCT' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'ADD_PRODUCT' object, which can be a procedure, function, or any other database object."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_PRODUCT"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_PRODUCT_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_PLACE_ORDER_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PLACE_ORDER_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym name is 'SYN_PLACE_ORDER_PROC'.",
+                    "4. The synonym 'SYN_PLACE_ORDER_PROC' refers to the object 'PLACE_ORDER' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'PLACE_ORDER' object, which can simplify SQL statements and provide a layer of abstraction."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.PLACE_ORDER"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_PLACE_ORDER_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_ORDER_ITEM_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_ORDER_ITEM_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The CREATE SYNONYM statement is used to create a synonym named 'SYN_ADD_ORDER_ITEM_PROC'.",
+                    "3. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "4. The synonym 'SYN_ADD_ORDER_ITEM_PROC' refers to the object 'ADD_ORDER_ITEM' in the same schema and database.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'ADD_ORDER_ITEM' object, which can simplify SQL statements and provide a layer of abstraction."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_ORDER_ITEM"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_ORDER_ITEM_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_MAKE_PAYMENT_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_MAKE_PAYMENT_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_db.store_demo_sch'.",
+                    "3. The name of the synonym is 'SYN_MAKE_PAYMENT_PROC'.",
+                    "4. The synonym points to the object 'MAKE_PAYMENT' in the same schema 'store_demo_db.store_demo_sch'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'MAKE_PAYMENT' object, which can be a table, view, sequence, or stored procedure."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.MAKE_PAYMENT"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_MAKE_PAYMENT_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_INVENTORY_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_INVENTORY_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in Oracle.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The synonym's name is 'SYN_ADD_INVENTORY_PROC'.",
+                    "4. The synonym points to the object 'ADD_INVENTORY' in the same schema and database.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'ADD_INVENTORY' object, which could be a procedure, function, or other database object."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_INVENTORY"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_INVENTORY_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        },
+        {
+            "name": "SYN_ADD_WAREHOUSE_PROC",
+            "encrypted_name": "null",
+            "type": "synonym",
+            "database": "STORE_DEMO_DB",
+            "encrypted_database": "null",
+            "schema": "STORE_DEMO_SCH",
+            "encrypted_schema": "null",
+            "fully_qualified_name": "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_WAREHOUSE_PROC",
+            "encrypted_fqn": "null",
+            "synonyms": [],
+            "metadata_analysis": {
+                "Description": [
+                    "1. The DDL statement creates a synonym in the Oracle database.",
+                    "2. The synonym is created in the schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "3. The name of the synonym is 'SYN_ADD_WAREHOUSE_PROC'.",
+                    "4. The synonym 'SYN_ADD_WAREHOUSE_PROC' points to the object 'ADD_WAREHOUSE' in the same schema 'store_demo_sch' of the database 'store_demo_db'.",
+                    "5. The purpose of the synonym is to provide an alternative name for the 'ADD_WAREHOUSE' object, which could be a procedure, function, or other database object."
+                ]
+            },
+            "upstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.ADD_WAREHOUSE"
+            ],
+            "downstream_dependencies": [
+                "STORE_DEMO_DB.STORE_DEMO_SCH.SYN_ADD_WAREHOUSE_PROC"
+            ],
+            "dag_location": "null",
+            "gantt_location": "null",
+            "created_at": "null",
+            "updated_at": "null"
+        }
+    ]
+}
