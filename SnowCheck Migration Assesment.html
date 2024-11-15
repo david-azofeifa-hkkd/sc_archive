@@ -1,0 +1,49 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>SnowCheck Migration Assesment</title>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <section>
+                    <div class="logo">
+                        <img src="Snowcheck.png" alt="SNOWCHECK REPORT">
+                    </div>
+                    <h1>Migration assessment</h1>
+
+                    <h1>Overall analysis for STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS</h1>
+                    <p>This report shows the corresponding analysis for STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS:</p>
+
+                    <ul><li>1. The view is named V_TOP_SELLING_PRODUCTS and is created in the store_demo_db.store_demo_sch schema.</li><li>2. The view is based on a SELECT statement that joins two tables: ORDER_ITEMS and PRODUCTS.</li><li>3. The join is performed on the PRODUCT_ID column, which is common to both tables.</li><li>4. The view selects three columns: PRODUCT_ID, PRODUCT_NAME, and TOTAL_QUANTITY, which is calculated using the SUM aggregation function on the QUANTITY column of the ORDER_ITEMS table.</li><li>5. The view groups the results by PRODUCT_ID and PRODUCT_NAME.</li><li>6. The view orders the results in descending order based on the TOTAL_QUANTITY column.</li></ul>
+                    
+                    <p>Overall Complexity:</p>
+                    
+                    
+
+                </section>
+
+                <section>
+                    <h2>Dag Diagram</h2>
+                    <img src="../DDL_Files/Diagrams/DAG/DAG_STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS.png" alt="Dag Diagram Image"  
+                    style='height: 125%; width: 130%; object-fit: contain'
+                    />
+                    <p>Diagram that shows dependencies required to migrate the object: STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS</p>
+                    <ul><li>Each hierarchy layer of sub-dependencies is represented by color degradation according to the previous root node.</li><li>Leaf nodes must be migrated first.</li><li>Nodes with dark red outlines aren't yet into Snowflake database.</li></ul>
+                </section>
+
+                <section>
+                    <h2>Gantt Diagram</h2>
+                    <img src="../DDL_Files/Diagrams/Gantt/GANTT_STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS.png" alt="Gantt Diagram Image">
+                    <p>Diagram that shows the migration workflow to build the object: STORE_DEMO_DB.STORE_DEMO_SCH.V_TOP_SELLING_PRODUCTS</p>
+                    <ul><li>Graph X-axis is represented by dates, with the corresponding start date up to the final date approximation of migration time required.</li><li>Graph Y-axis is represented by all objects required to migrate the specified object.</li><li>Red bars aren't yet into the Snowflake database.</li><li>The workflow represents the migration process, parallelizing each sub-dependencies until the principal object and the time required to migrate.</li></ul>
+                </section>
+
+                <section>
+                    <h2>General Dashboard</h2>
+                    <a href="https://app.snowflake.com/xqefmfm/hakkodainc_partner/#/snowcheck-dashboard-dNfN0YVid" target="_blank"><button>Snowflake Dashboard</button></a>
+                    <p>Dashboard with the general analysis of all objects contained into Snowflake database.</p>
+                </section>
+            </body>
+            </html>
+            
